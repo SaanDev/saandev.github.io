@@ -52,3 +52,24 @@ test("server-renders every requested primary page", async () => {
     assert.match(await response.text(), expected, path);
   }
 });
+
+test("research and CV pages contain verified supplied details without private contact data", async () => {
+  const [researchResponse, cvResponse, homeResponse] = await Promise.all([
+    render("/research"),
+    render("/cv"),
+    render("/"),
+  ]);
+
+  const research = await researchResponse.text();
+  assert.match(research, /343 to 1032 km\/s/);
+  assert.match(research, /Raman Spectroscopic Analysis of Common Minerals in Sri Lanka/);
+  assert.match(research, /Arecibo Observatory Type II event of 2 March 2022/);
+
+  const cv = await cvResponse.text();
+  assert.match(cv, /May 2026 - Present/);
+  assert.match(cv, /3\.57 \/ 4\.00/);
+  assert.match(cv, /COSPAR Capacity Building Workshop 2024/);
+  assert.doesNotMatch(cv, /Gunananda Mawatha|\+94 71 409 0587|adassuriya@phys\.cmb\.ac\.lk/);
+
+  assert.match(await homeResponse.text(), /\/images\/sahan-liyanage-portrait\.jpg/);
+});

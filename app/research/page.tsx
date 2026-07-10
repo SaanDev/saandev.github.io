@@ -89,12 +89,14 @@ export default function ResearchPage() {
                 <div className="project-detail-head">
                   <div>
                     <p className="eyebrow">Project {String(projectIndex + 1).padStart(2, "0")} · {project.eyebrow}</p>
-                    <h2 className={project.title.startsWith("[") ? "placeholder-text" : ""}>{project.title}</h2>
+                    <h2>{project.title}</h2>
+                    <p className="project-detail-duration">{project.duration}</p>
                     <p>{project.summary}</p>
                   </div>
                   <PlaceholderMedia
                     label={project.imageLabel}
-                    alt={`Representative image placeholder for ${project.title}`}
+                    src={project.image}
+                    alt={project.imageAlt}
                     className="project-detail-hero"
                   />
                 </div>
@@ -130,21 +132,30 @@ export default function ResearchPage() {
                   </section>
                 </div>
 
+                <section className="project-findings-panel">
+                  <p className="eyebrow">Verified findings</p>
+                  <ul className="arrow-list">
+                    {project.findings.map((finding) => <li key={finding}>{finding}</li>)}
+                  </ul>
+                </section>
+
                 <div className="project-record-grid">
-                  <div><span>Main findings</span><strong className="placeholder-text">[ADD VERIFIED FINDINGS — DO NOT PUBLISH UNTIL VERIFIED]</strong></div>
-                  <div><span>Current status</span><strong className="placeholder-text">[ADD VERIFIED STATUS]</strong></div>
-                  <div><span>Collaborators & supervisors</span><strong className="placeholder-text">[ADD VERIFIED NAMES AND ROLES]</strong></div>
-                  <div><span>Related publication</span><strong className="placeholder-text">[ADD VERIFIED CITATION]</strong></div>
-                  <div><span>Software or dataset</span><strong className="placeholder-text">[ADD VERIFIED PUBLIC URL]</strong></div>
+                  <div><span>Current status</span><strong>{project.status}</strong></div>
+                  <div><span>Collaborators & supervisors</span><strong>{project.people}</strong></div>
+                  <div className="project-links-cell">
+                    <span>Related outputs</span>
+                    {project.links.map((link) => (
+                      <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label} ↗</a>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="project-gallery" aria-label={`${project.title} image gallery placeholders`}>
-                  {[1, 2, 3].map((image) => (
-                    <PlaceholderMedia
-                      key={image}
-                      label={`[UPLOAD PROJECT IMAGE ${image}]`}
-                      alt={`Project gallery image ${image} placeholder for ${project.title}`}
-                    />
+                <div className="project-gallery" aria-label={`${project.title} document figures`}>
+                  {project.gallery.map((image) => (
+                    <figure key={image.src}>
+                      <PlaceholderMedia label="" src={image.src} alt={image.alt} />
+                      <figcaption>{image.caption}</figcaption>
+                    </figure>
                   ))}
                 </div>
               </article>
@@ -200,13 +211,14 @@ export default function ResearchPage() {
                 GitHub or documentation
               </a>
             </div>
-            <p id="ecallisto-url-note" className="editing-note placeholder-note">
-              [ADD OFFICIAL E-CALLISTO SOFTWARE URL] · [ADD GITHUB OR DOCUMENTATION URL, IF PUBLIC]
+            <p id="ecallisto-url-note" className="editing-note verified-note">
+              Native installers are available through the official e-CALLISTO software page, and the source code is published on GitHub.
             </p>
           </div>
           <PlaceholderMedia
-            label="[UPLOAD SOFTWARE SCREENSHOT]"
-            alt="Placeholder for an e-CALLISTO FITS Analyzer interface screenshot"
+            label=""
+            src="/images/research/ecallisto-interface.png"
+            alt="e-CALLISTO FITS Analyzer interface showing Type II solar-radio analysis"
             className="research-software-image"
           />
         </div>
@@ -220,16 +232,21 @@ export default function ResearchPage() {
           </div>
           <div className="experience-list">
             <article>
-              <p className="placeholder-text">[ADD EMPLOYMENT DATES]</p>
+              <p>May 2026 - Present</p>
               <h3>Research Assistant</h3>
               <p>Arthur C. Clarke Institute for Modern Technologies, Sri Lanka</p>
-              <p>Observational and computational work related to solar radio astronomy, solar imaging, space weather, and scientific instrumentation.</p>
-              <span className="placeholder-note">[REPLACE WITH VERIFIED RESPONSIBILITIES AND PROJECT DETAILS]</span>
+              <p>Working on spectropolarimetric observations of band-split Type II solar radio bursts using a long-wave antenna; contributing to an integrated CALLISTO and H-alpha observing system, automated data acquisition, archiving, monitoring, visualization, and a real-time dashboard.</p>
             </article>
-            <article className="placeholder-note">
-              <p>[ADD DATES]</p>
-              <h3>[ADD VERIFIED RESEARCH ROLE OR PROJECT]</h3>
-              <p>[ADD INSTITUTION, SUPERVISOR, AND CONCISE DESCRIPTION]</p>
+            <article>
+              <p>March 2025 - Present</p>
+              <h3>Research Assistant</h3>
+              <p>Astronomy and Space Science Unit, University of Colombo</p>
+              <p>Studying metric Type II burst drift rates and their links with CMEs, solar flares, solar energetic-particle events, and geomagnetic storms; developing and applying the e-CALLISTO FITS Analyzer under the supervision of Dr. Janaka Adassuriya.</p>
+            </article>
+            <article>
+              <p>May 2025 - April 2026</p>
+              <h3>Undergraduate Research Mentor</h3>
+              <p>Final-year project: Estimating Coronal Magnetic Field Strength from Band Splitting in Type II Solar Radio Bursts.</p>
             </article>
           </div>
         </div>

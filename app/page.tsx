@@ -48,12 +48,13 @@ export default function HomePage() {
               <span>01 AU</span>
             </div>
             <PlaceholderMedia
-              label="[UPLOAD PROFESSIONAL PORTRAIT]"
-              alt="Placeholder for Sahan S Liyanage’s professional portrait"
+              label=""
+              src="/images/sahan-liyanage-portrait.jpg"
+              alt="Professional portrait of Sahan S Liyanage"
               className="portrait-frame"
               eager
             />
-            <p className="image-caption placeholder-note">Editorial portrait · [ADD PHOTO CREDIT, IF NEEDED]</p>
+            <p className="image-caption">Sahan S Liyanage</p>
           </div>
         </div>
         <div className="container hero-footnote">
@@ -93,14 +94,11 @@ export default function HomePage() {
               <div>
                 <h2>Research Assistant</h2>
                 <p>Arthur C. Clarke Institute for Modern Technologies, Sri Lanka</p>
-                <p className="placeholder-text">[ADD EMPLOYMENT DATES]</p>
+                <p>May 2026 - Present</p>
               </div>
               <div>
                 <p>
-                  Working on observational and computational projects related to solar radio astronomy, solar imaging, space weather, and scientific instrumentation.
-                </p>
-                <p className="editing-note placeholder-note">
-                  [EDITABLE DESCRIPTION — REPLACE WITH VERIFIED INSTITUTIONAL RESPONSIBILITIES]
+                  Working on spectropolarimetric observations of band-split Type II solar radio bursts, an integrated CALLISTO and H-alpha observing system, automated data acquisition, and real-time solar-data monitoring.
                 </p>
               </div>
             </div>
@@ -153,19 +151,20 @@ export default function HomePage() {
             <p>
               A cross-platform scientific application for visualizing, preparing, and analysing solar-radio dynamic spectra, with an expanding set of tools for complementary solar imaging and space-weather data.
             </p>
-            <p className="platform-line"><strong>Supported platforms</strong> <span className="placeholder-text">[ADD VERIFIED PLATFORMS]</span></p>
+            <p className="platform-line"><strong>Supported platforms</strong> Windows · macOS · Linux</p>
             <div className="button-row">
-              <Link className="button button-primary" href="/research#software-access-note">
+              <a className="button button-primary" href={siteConfig.eCallistoUrl} target="_blank" rel="noreferrer">
                 Access through e-CALLISTO
-              </Link>
+              </a>
               <Link className="button button-secondary" href="/research#ecallisto-fits-analyzer">
                 Technical overview
               </Link>
             </div>
           </div>
           <PlaceholderMedia
-            label="[UPLOAD SOFTWARE SCREENSHOT]"
-            alt="Placeholder for an e-CALLISTO FITS Analyzer software screenshot"
+            label=""
+            src="/images/research/ecallisto-interface.png"
+            alt="e-CALLISTO FITS Analyzer interface showing a Type II solar-radio burst"
             className="software-screenshot"
           />
           <ul className="capability-list">
@@ -173,9 +172,9 @@ export default function HomePage() {
               <li key={capability}>{capability}</li>
             ))}
           </ul>
-          <div className="software-links placeholder-note">
-            <span>[ADD OFFICIAL E-CALLISTO SOFTWARE URL]</span>
-            <span>[ADD GITHUB OR DOCUMENTATION URL, IF PUBLIC]</span>
+          <div className="software-links">
+            <a href={siteConfig.eCallistoUrl} target="_blank" rel="noreferrer">Official e-CALLISTO installers ↗</a>
+            <a href={siteConfig.softwareUrl} target="_blank" rel="noreferrer">GitHub source code ↗</a>
           </div>
         </div>
       </section>
@@ -188,7 +187,7 @@ export default function HomePage() {
           </div>
           <article className="timeline-entry">
             <div className="timeline-marker" aria-hidden="true" />
-            <p className="placeholder-text">[ADD GRADUATION YEAR]</p>
+            <p>January 2020 - May 2024</p>
             <h3>Bachelor of Science Honours in Physics</h3>
             <p className="timeline-institution">University of Colombo, Sri Lanka</p>
             <p>

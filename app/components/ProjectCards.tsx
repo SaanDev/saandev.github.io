@@ -9,14 +9,14 @@ export function ProjectCards() {
         <article className="project-card" key={project.id}>
           <PlaceholderMedia
             label={project.imageLabel}
-            alt={`Image placeholder for ${project.title}`}
+            src={project.image}
+            alt={project.imageAlt}
             className="project-card-media"
           />
           <div className="project-card-body">
             <p className="card-index">0{index + 1} · {project.eyebrow}</p>
-            <h3 className={project.title.startsWith("[") ? "placeholder-text" : ""}>
-              {project.title}
-            </h3>
+            <h3>{project.title}</h3>
+            <p className="project-duration">{project.duration}</p>
             <p>{project.summary}</p>
             <ul className="tag-list" aria-label={`${project.title} keywords`}>
               {project.keywords.map((keyword) => (

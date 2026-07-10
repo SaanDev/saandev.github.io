@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ContactForm } from "../components/ContactForm";
 import { PageIntro } from "../components/PageIntro";
-import { socialProfiles } from "../data/content";
+import { siteConfig, socialProfiles } from "../data/content";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -45,8 +45,8 @@ export default function ContactPage() {
             </ul>
             <div className="direct-email">
               <span>Direct email</span>
-              <strong className="placeholder-text">[ADD CONTACT EMAIL ADDRESS]</strong>
-              <p>A verified professional address will appear here before public launch.</p>
+              <a href={`mailto:${siteConfig.email}`}><strong>{siteConfig.email}</strong></a>
+              <p>Use this address for research and professional enquiries.</p>
             </div>
           </aside>
           <div>
