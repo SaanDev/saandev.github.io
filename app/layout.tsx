@@ -1,0 +1,117 @@
+import type { Metadata, Viewport } from "next";
+import { Inter, Source_Serif_4 } from "next/font/google";
+import { RevealObserver } from "./components/RevealObserver";
+import { SiteFooter, SiteHeader } from "./components/SiteChrome";
+import { siteConfig } from "./data/content";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const sourceSerif = Source_Serif_4({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.siteUrl),
+  title: {
+    default: "Sahan S Liyanage | Solar and Space Physics Researcher",
+    template: "%s | Sahan S Liyanage",
+  },
+  description: siteConfig.description,
+  applicationName: "Sahan S Liyanage Academic Website",
+  authors: [{ name: siteConfig.name }],
+  creator: siteConfig.name,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: siteConfig.name,
+    title: "Sahan S Liyanage | Solar and Space Physics Researcher",
+    description: siteConfig.description,
+    url: "/",
+    images: [
+      {
+        url: "/og.png",
+        width: 1730,
+        height: 900,
+        alt: "Sahan S Liyanage — Solar and Space Physics Researcher and Scientific Software Developer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sahan S Liyanage | Solar and Space Physics Researcher",
+    description: siteConfig.description,
+    images: ["/og.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#f8f5ef",
+  colorScheme: "light",
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: siteConfig.name,
+  url: siteConfig.siteUrl,
+  jobTitle: "Research Assistant",
+  description: siteConfig.description,
+  affiliation: {
+    "@type": "Organization",
+    name: "Arthur C. Clarke Institute for Modern Technologies",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "Sri Lanka",
+    },
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "University of Colombo",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "Sri Lanka",
+    },
+  },
+  knowsAbout: [
+    "Solar physics",
+    "Space physics",
+    "Plasma physics",
+    "Solar radio astronomy",
+    "Space weather",
+    "Scientific software development",
+  ],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+      <body>
+        <a className="skip-link" href="#main-content">
+          Skip to main content
+        </a>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+        <RevealObserver />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </body>
+    </html>
+  );
+}
