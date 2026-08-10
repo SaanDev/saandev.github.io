@@ -13,12 +13,12 @@ import {
 export const metadata: Metadata = {
   title: "Research",
   description:
-    "Research by Sahan S Liyanage in solar radio astronomy, coronal shock waves, space weather, plasma physics, solar imaging, and scientific software.",
+    "Current physics research by Sahan S Liyanage spanning space, solar, plasma, and astrophysical phenomena, supported by experiment, modelling, computation, and scientific software.",
   alternates: { canonical: "/research" },
   openGraph: {
     title: "Research | Sahan S Liyanage",
     description:
-      "Observations, plasma physics, physical models, and computation applied to dynamic solar and space phenomena.",
+      "Current projects and wider research interests connected through experiment, physical modelling, and computation.",
     url: "/research",
   },
 };
@@ -28,8 +28,8 @@ export default function ResearchPage() {
     <main id="main-content">
       <PageIntro
         eyebrow="Research"
-        title="Observing dynamic processes in the solar atmosphere."
-        description="My research interests centre on linking observations, plasma physics, physical models, and computation to study solar and space phenomena—from radio signatures of coronal shocks to the software needed for reliable, reproducible analysis."
+        title="Following physical questions across scales."
+        description="My current projects use observations, experiments, physical models, and computation to study solar, space, plasma, and astrophysical phenomena. The same approach shapes a wider interest in matter, radiation, fields, and energy across diverse physical systems."
       >
         <div className="button-row">
           <a className="button button-primary" href="#projects">View featured projects</a>
@@ -41,17 +41,17 @@ export default function ResearchPage() {
         <div className="container split-heading-layout">
           <div>
             <p className="eyebrow">01 · Research overview</p>
-            <h2>A multi-observational approach</h2>
+            <h2>A broad experimental and computational foundation</h2>
           </div>
           <div className="prose-large">
             <p>
-              Dynamic events in the solar atmosphere reveal themselves differently across the electromagnetic spectrum. Radio observations can trace plasma emission and shock propagation, while extreme-ultraviolet images, magnetic-field measurements, and white-light coronagraph data provide complementary views of the evolving solar environment.
+              My present research examines dynamic processes in the solar atmosphere and near-Earth environment. Radio, extreme-ultraviolet, magnetic-field, and white-light observations provide complementary evidence, while plasma theory and numerical analysis connect those measurements to physical mechanisms.
             </p>
             <p>
-              My work is motivated by the value of bringing those observations together with physically meaningful models and transparent computational tools. The aim is not only to extract measurements, but to understand which physical interpretation is supported by the combined evidence and how sensitive it is to the assumptions used in the analysis.
+              These projects have developed a research approach that is not tied to one instrument or scale: define a measurable question, understand the governing physics, test interpretations against data, and make the analysis transparent and reproducible. Experimental spectroscopy and scientific software development provide complementary experience beyond astronomical observations.
             </p>
             <p>
-              I am interested in future doctoral research opportunities that would allow me to deepen my work in solar, space, and plasma physics while expanding into broader problems in astrophysics.
+              Questions involving light–matter interactions, atomic and molecular systems, nuclei and energetic particles, material behaviour, plasmas, and astrophysical environments share many of these habits of thought. This breadth guides the kind of doctoral training and research problems I am seeking.
             </p>
           </div>
         </div>
@@ -61,10 +61,10 @@ export default function ResearchPage() {
         <div className="container">
           <div className="section-heading section-heading-row">
             <div>
-              <p className="eyebrow">02 · Current interests</p>
-              <h2>Connected research themes</h2>
+              <p className="eyebrow">02 · Research interests</p>
+              <h2>Questions across physical scales</h2>
             </div>
-            <p>Topics that shape current projects and possible future directions.</p>
+            <p>A spectrum of interests connected by measurement, modelling, and quantitative analysis.</p>
           </div>
           <ol className="theme-list">
             {researchThemes.map((theme, index) => (
@@ -86,19 +86,21 @@ export default function ResearchPage() {
           <div className="project-details-list">
             {projects.map((project, projectIndex) => (
               <article className="project-detail" id={project.id} key={project.id}>
-                <div className="project-detail-head">
+                <div className={`project-detail-head${project.image ? "" : " project-detail-head-text-only"}`}>
                   <div>
                     <p className="eyebrow">Project {String(projectIndex + 1).padStart(2, "0")} · {project.eyebrow}</p>
                     <h2>{project.title}</h2>
                     <p className="project-detail-duration">{project.duration}</p>
                     <p>{project.summary}</p>
                   </div>
-                  <PlaceholderMedia
-                    label={project.imageLabel}
-                    src={project.image}
-                    alt={project.imageAlt}
-                    className="project-detail-hero"
-                  />
+                  {project.image && (
+                    <PlaceholderMedia
+                      label=""
+                      src={project.image}
+                      alt={project.imageAlt}
+                      className="project-detail-hero"
+                    />
+                  )}
                 </div>
 
                 <div className="project-detail-grid">
@@ -150,25 +152,35 @@ export default function ResearchPage() {
                   </div>
                 </div>
 
-                <div className="project-gallery" aria-label={`${project.title} document figures`}>
-                  {project.gallery.map((image) => (
-                    <figure key={image.src}>
-                      <PlaceholderMedia label="" src={image.src} alt={image.alt} />
-                      <figcaption>{image.caption}</figcaption>
-                    </figure>
-                  ))}
-                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section section-tint">
+      <section className="section section-tint" id="workshops-training">
+        <div className="container split-heading-layout">
+          <div>
+            <p className="eyebrow">04 · Workshops and trainings</p>
+            <h2>Developing research practice through shared learning.</h2>
+          </div>
+          <article className="timeline-entry">
+            <div className="timeline-marker" aria-hidden="true" />
+            <p>19-30 August 2024</p>
+            <h3>COSPAR Capacity Building Workshop 2024</h3>
+            <p className="timeline-institution">Samarkand State University, Samarkand City, Uzbekistan</p>
+            <p>
+              Training on coronal and interplanetary shocks using SOHO, SDO, STEREO, ground-based observations, SolarSoft, SunPy, Astropy, and Python.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <div className="section-heading section-heading-row">
             <div>
-              <p className="eyebrow">04 · Research methods</p>
+              <p className="eyebrow">05 · Research methods</p>
               <h2>From signal to physical interpretation</h2>
             </div>
             <p>A working cycle that connects multiple observations with computation and physical reasoning.</p>
@@ -188,7 +200,7 @@ export default function ResearchPage() {
       <section className="section" id="scientific-software">
         <div className="container research-software-grid">
           <div>
-            <p className="eyebrow">05 · Scientific software</p>
+            <p className="eyebrow">06 · Scientific software</p>
             <h2>Tools designed around the analysis process</h2>
             <p className="prose-large">
               The e-CALLISTO FITS Analyzer brings data preparation, visualization, interactive measurement, model-based estimation, and scientific export into a single cross-platform workflow.
@@ -217,8 +229,8 @@ export default function ResearchPage() {
           </div>
           <PlaceholderMedia
             label=""
-            src="/images/research/ecallisto-interface.png"
-            alt="e-CALLISTO FITS Analyzer interface showing Type II solar-radio analysis"
+            src="/images/research/Analyzer/main_window.png"
+            alt="Main window of the e-CALLISTO FITS Analyzer software"
             className="research-software-image"
           />
         </div>
@@ -227,21 +239,15 @@ export default function ResearchPage() {
       <section className="section section-tint research-experience">
         <div className="container split-heading-layout">
           <div>
-            <p className="eyebrow">06 · Research experience</p>
+            <p className="eyebrow">07 · Research experience</p>
             <h2>Academic appointments and project work</h2>
           </div>
           <div className="experience-list">
             <article>
               <p>May 2026 - Present</p>
               <h3>Research Assistant</h3>
-              <p>Arthur C. Clarke Institute for Modern Technologies, Sri Lanka</p>
-              <p>Working on spectropolarimetric observations of band-split Type II solar radio bursts using a long-wave antenna; contributing to an integrated CALLISTO and H-alpha observing system, automated data acquisition, archiving, monitoring, visualization, and a real-time dashboard.</p>
-            </article>
-            <article>
-              <p>March 2025 - Present</p>
-              <h3>Research Assistant</h3>
-              <p>Astronomy and Space Science Unit, University of Colombo</p>
-              <p>Studying metric Type II burst drift rates and their links with CMEs, solar flares, solar energetic-particle events, and geomagnetic storms; developing and applying the e-CALLISTO FITS Analyzer under the supervision of Dr. Janaka Adassuriya.</p>
+              <p>Astronomy and Space Applications Division, Arthur C. Clarke Institute for Modern Technologies</p>
+              <p>Conducting calibrated e-CALLISTO solar-radio observations, H-alpha imaging, and astronomical spectroscopy; maintaining observing hardware; and developing automated pipelines for data acquisition, processing, archiving, and monitoring.</p>
             </article>
             <article>
               <p>May 2025 - April 2026</p>
@@ -255,15 +261,15 @@ export default function ResearchPage() {
       <section className="section future-directions">
         <div className="container future-directions-grid">
           <div>
-            <p className="eyebrow">07 · Future directions</p>
-            <h2>Deepening the connection between observation, theory, and computation.</h2>
+            <p className="eyebrow">08 · Future directions</p>
+            <h2>Building transferable insight through experiment, theory, and computation.</h2>
           </div>
           <div>
             <p>
-              I am interested in extending current work on coronal shocks and solar-radio signatures through coordinated multi-wavelength observations, more detailed plasma and MHD interpretation, and reproducible computational methods. I am also interested in carefully evaluated machine-learning approaches for event detection and prediction, particularly where physical understanding and uncertainty remain visible within the analysis.
+              My current work on coronal shocks and solar-radio signatures continues to develop my experience in multi-instrument observations, plasma interpretation, signal analysis, and reproducible computation. Raman spectroscopy, instrumentation, and software development have also strengthened my interest in experimental measurement and the interaction of radiation with matter.
             </p>
             <p>
-              Future doctoral research could provide a valuable setting for pursuing these questions while expanding into related problems in solar, space, plasma, and broader astrophysics.
+              At the doctoral level, I hope to pursue a well-defined physical problem whose methods can reveal deeper connections across scales—whether through precision measurement, spectroscopy, material or particle behaviour, field and plasma dynamics, astrophysical observation, or computational modelling.
             </p>
           </div>
         </div>
@@ -272,7 +278,7 @@ export default function ResearchPage() {
       <section className="section research-contact">
         <div className="container contact-callout-inner">
           <div>
-            <p className="eyebrow">08 · Research collaboration contact</p>
+            <p className="eyebrow">09 · Research collaboration contact</p>
             <h2>Interested in a shared question?</h2>
             <p>I welcome conversations about observational projects, scientific software, complementary data, and future research directions.</p>
           </div>

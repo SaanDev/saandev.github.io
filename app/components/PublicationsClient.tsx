@@ -23,17 +23,12 @@ export function PublicationsClient() {
     [topic, type, year],
   );
 
-  function showLinkPlaceholder(label: string, title: string) {
-    setNotice(`${label} is not linked yet for “${title}”. Add the verified URL before publication.`);
-  }
-
-  async function copyBibTeX(title: string) {
-    const template = `@misc{add_verified_key,\n  title = {${title}},\n  author = {[ADD VERIFIED AUTHORS]},\n  year = {[ADD YEAR]}\n}`;
+  async function copyBibTeX(citation: string) {
     try {
-      await navigator.clipboard.writeText(template);
-      setNotice("A clearly marked BibTeX template was copied. Replace every placeholder with verified citation data.");
+      await navigator.clipboard.writeText(citation);
+      setNotice("BibTeX citation copied.");
     } catch {
-      setNotice("Copying is unavailable in this browser. Add the verified BibTeX citation before publication.");
+      setNotice("Copying is unavailable in this browser.");
     }
   }
 
@@ -67,7 +62,7 @@ export function PublicationsClient() {
       </div>
 
       <p className="filter-summary" aria-live="polite">
-        Showing {visible.length} editable {visible.length === 1 ? "entry" : "entries"}
+        Showing {visible.length} {visible.length === 1 ? "entry" : "entries"}
       </p>
 
       <div className="publication-list">
@@ -79,35 +74,36 @@ export function PublicationsClient() {
             <div className="publication-content">
               <div className="publication-meta">
                 <span>{publication.type}</span>
-                <span className="placeholder-text">{publication.year}</span>
+                <span>{publication.year}</span>
                 <span>{publication.topic}</span>
               </div>
-              <p className="publication-authors placeholder-text">{publication.authors}</p>
-              <h2 className="placeholder-text">{publication.title}</h2>
+              <p className="publication-authors">{publication.authors}</p>
+              <h2>{publication.title}</h2>
               <p className="publication-venue">
-                <span className="placeholder-text">{publication.venue}</span>
+                <span>{publication.venue}</span>
                 {" · "}
-                <span className="placeholder-text">{publication.details}</span>
+                <span>{publication.details}</span>
               </p>
               <details>
-                <summary>Abstract</summary>
-                <p className="placeholder-text">{publication.abstract}</p>
+                <summary>Summary</summary>
+                <p>{publication.abstract}</p>
               </details>
               <div className="publication-actions" aria-label={`Links for ${publication.title}`}>
-                {["DOI", "PDF", "Publisher", "Code"].map((label) => (
-                  <button
-                    type="button"
+                {publication.links.map((link) => (
+                  <a
                     className="chip-button"
-                    key={label}
-                    onClick={() => showLinkPlaceholder(label, publication.title)}
+                    href={link.href}
+                    key={link.href}
+                    target="_blank"
+                    rel="noreferrer"
                   >
-                    {label}
-                  </button>
+                    {link.label}
+                  </a>
                 ))}
                 <button
                   type="button"
                   className="chip-button"
-                  onClick={() => copyBibTeX(publication.title)}
+                  onClick={() => copyBibTeX(publication.bibtex)}
                 >
                   BibTeX
                 </button>
@@ -117,7 +113,7 @@ export function PublicationsClient() {
         ))}
       </div>
       {notice && (
-        <div className="action-notice placeholder-note" role="status">
+        <div className="action-notice" role="status">
           {notice}
           <button type="button" onClick={() => setNotice("")} aria-label="Dismiss notice">
             ×

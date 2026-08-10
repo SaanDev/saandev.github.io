@@ -10,7 +10,7 @@ import {
 } from "./data/content";
 
 export const metadata: Metadata = {
-  title: { absolute: "Sahan S Liyanage | Solar and Space Physics Researcher" },
+  title: { absolute: "Sahan S Liyanage | Experimental and Computational Physicist" },
   description: siteConfig.description,
   alternates: { canonical: "/" },
 };
@@ -21,14 +21,14 @@ export default function HomePage() {
       <section className="hero section-shell">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Physics · computation · observation</p>
+            <p className="eyebrow">Physics · experiment · computation</p>
             <h1>{siteConfig.name}</h1>
             <p className="hero-title">{siteConfig.title}</p>
             <p className="hero-intro">
-              I am a physics graduate and Research Assistant at the Arthur C. Clarke Institute for Modern Technologies in Sri Lanka. My research interests include solar radio bursts, coronal shock waves, space weather, plasma physics, solar observations, and scientific software development. I am particularly interested in connecting observations, physical models, and computational methods to study dynamic processes in the solar atmosphere.
+              I am a Research Assistant in the Astronomy and Space Applications Division at the Arthur C. Clarke Institute for Modern Technologies. My work combines solar-radio and optical observations, astronomical spectroscopy, instrumentation, automated data pipelines, and scientific software.
             </p>
             <p className="hero-secondary">
-              I am also interested in future doctoral research opportunities in solar, space, and plasma physics, as well as related areas of astrophysics.
+              With peer-reviewed work in solar-radio analysis and experience in spectroscopy, teaching, and laboratory coordination, I am motivated by research that connects rigorous physics with reliable experiment and computation.
             </p>
             <div className="button-row">
               <Link className="button button-primary" href="/research">
@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
         <div className="container hero-footnote">
           <span>Based in Sri Lanka</span>
-          <span>Working across solar radio, imaging, and scientific software</span>
+          <span>Working across observation, experiment, modelling, and scientific software</span>
         </div>
       </section>
 
@@ -71,10 +71,10 @@ export default function HomePage() {
           </div>
           <div className="prose-large">
             <p>
-              I am a physics graduate from the University of Colombo, Sri Lanka, and currently work as a Research Assistant at the Arthur C. Clarke Institute for Modern Technologies. My work lies mainly within solar and space physics, with particular attention to solar radio observations, coronal shock waves, space-weather events, and scientific data analysis.
+              I graduated from the University of Colombo with a BSc Honours in Physics, Second Class Upper Division, and a cumulative GPA of 3.57/4.00. I now work at the Arthur C. Clarke Institute for Modern Technologies in Sri Lanka.
             </p>
             <p>
-              My research combines observational data, physical modelling, and software development. I am interested in understanding how energetic processes in the solar atmosphere produce observable signatures across radio, extreme-ultraviolet, magnetic-field, and white-light measurements.
+              My background spans experimental and computational physics, astrophysics, Raman and astronomical spectroscopy, electronics, instrumentation, signal processing, and scientific programming. I have also led university classes and laboratories, mentored student research, and presented work to academic and public audiences.
             </p>
             <p>
               Beyond research, I am interested in astronomy outreach, astrophotography, wildlife photography, and music.
@@ -98,7 +98,7 @@ export default function HomePage() {
               </div>
               <div>
                 <p>
-                  Working on spectropolarimetric observations of band-split Type II solar radio bursts, an integrated CALLISTO and H-alpha observing system, automated data acquisition, and real-time solar-data monitoring.
+                  Conducting e-CALLISTO solar-radio and H-alpha observations, astronomical spectroscopy, instrument calibration and maintenance, and the development of automated acquisition, processing, archiving, and monitoring software.
                 </p>
               </div>
             </div>
@@ -110,11 +110,11 @@ export default function HomePage() {
         <div className="container">
           <div className="section-heading section-heading-row">
             <div>
-              <p className="eyebrow">Areas of enquiry</p>
+              <p className="eyebrow">Physics across scales</p>
               <h2>Research Interests</h2>
             </div>
             <p>
-              A connected programme of observational solar physics, plasma interpretation, and computational methods.
+              Current experience and developing interests connected by experiment, quantitative reasoning, and computation.
             </p>
           </div>
           <div className="interest-grid">
@@ -139,7 +139,7 @@ export default function HomePage() {
               View all research <span aria-hidden="true">→</span>
             </Link>
           </div>
-          <ProjectCards />
+          <ProjectCards showImages={false} limit={3} />
         </div>
       </section>
 
@@ -149,7 +149,7 @@ export default function HomePage() {
             <p className="eyebrow">Scientific software</p>
             <h2>e-CALLISTO FITS Analyzer</h2>
             <p>
-              A cross-platform scientific application for visualizing, preparing, and analysing solar-radio dynamic spectra, with an expanding set of tools for complementary solar imaging and space-weather data.
+              A peer-reviewed, cross-platform framework for retrieving, cleaning, combining, visualising, and analysing e-CALLISTO solar-radio dynamic spectra at event level.
             </p>
             <p className="platform-line"><strong>Supported platforms</strong> Windows · macOS · Linux</p>
             <div className="button-row">
@@ -163,8 +163,8 @@ export default function HomePage() {
           </div>
           <PlaceholderMedia
             label=""
-            src="/images/research/ecallisto-interface.png"
-            alt="e-CALLISTO FITS Analyzer interface showing a Type II solar-radio burst"
+            src="/images/research/Analyzer/main_window.png"
+            alt="Main window of the e-CALLISTO FITS Analyzer software"
             className="software-screenshot"
           />
           <ul className="capability-list">
@@ -207,7 +207,7 @@ export default function HomePage() {
               <p className="eyebrow">Observation beyond the laboratory</p>
               <h2>Photography</h2>
             </div>
-            <Link className="text-link" href="/photography">
+            <Link className="text-link" href="/beyond#gallery">
               Enter the gallery <span aria-hidden="true">↗</span>
             </Link>
           </div>
@@ -220,7 +220,7 @@ export default function HomePage() {
                 <p>
                   A visual record of the night sky, solar observations, and astronomical events, accompanied by notes on the equipment, location, and imaging process.
                 </p>
-                <Link href="/photography#gallery-heading" className="text-link">Explore astrophotography →</Link>
+                <Link href="/beyond#gallery" className="text-link">Explore astrophotography →</Link>
               </div>
             </article>
             <article className="photo-preview-card">
@@ -231,7 +231,7 @@ export default function HomePage() {
                 <p>
                   Photographs of birds, mammals, insects, and natural landscapes, with attention to animal behaviour and the environments in which each image was made.
                 </p>
-                <Link href="/photography#gallery-heading" className="text-link">Explore wildlife photography →</Link>
+                <Link href="/beyond#gallery" className="text-link">Explore wildlife photography →</Link>
               </div>
             </article>
           </div>
@@ -262,7 +262,7 @@ export default function HomePage() {
               <p className="eyebrow">Community & participation</p>
               <h2>Outreach and Extracurricular Activities</h2>
             </div>
-            <p>Editable records for verified talks, observing programmes, teaching, training, and public engagement.</p>
+            <p>Talks, workshops, observation sessions, student activities, and public science projects recorded in my current CV.</p>
           </div>
           <div className="outreach-grid">
             {outreachEntries.map((entry, index) => (
@@ -270,15 +270,11 @@ export default function HomePage() {
                 <span className="card-index">{String(index + 1).padStart(2, "0")}</span>
                 <h3>{entry.title}</h3>
                 <dl>
-                  <div><dt>Role</dt><dd className="placeholder-text">{entry.role}</dd></div>
-                  <div><dt>Event</dt><dd className="placeholder-text">{entry.institution}</dd></div>
-                  <div><dt>Date</dt><dd className="placeholder-text">{entry.date}</dd></div>
+                  <div><dt>Role</dt><dd>{entry.role}</dd></div>
+                  <div><dt>Event</dt><dd>{entry.institution}</dd></div>
+                  <div><dt>Date</dt><dd>{entry.date}</dd></div>
                 </dl>
-                <p className="placeholder-text">{entry.description}</p>
-                <div className="outreach-options placeholder-note">
-                  <span>{entry.image}</span>
-                  <span>{entry.link}</span>
-                </div>
+                <p>{entry.description}</p>
               </article>
             ))}
           </div>
@@ -291,7 +287,7 @@ export default function HomePage() {
             <p className="eyebrow">Start a conversation</p>
             <h2>Research thrives through exchange.</h2>
             <p>
-              I welcome conversations about research collaboration, solar and space physics, scientific software, observational projects, and future doctoral research.
+              I welcome conversations about physics research, scientific software, experimental or computational projects, and future doctoral study.
             </p>
           </div>
           <div className="button-row">

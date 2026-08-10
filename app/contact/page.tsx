@@ -6,12 +6,12 @@ import { siteConfig, socialProfiles } from "../data/content";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Sahan S Liyanage about solar and space physics, research collaboration, scientific software, outreach, and photography.",
+    "Contact Sahan S Liyanage about physics research, doctoral opportunities, scientific software, outreach, and photography.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | Sahan S Liyanage",
     description:
-      "Research collaboration, doctoral opportunities, scientific software, solar observation, outreach, and photography enquiries.",
+      "Physics research collaboration, doctoral opportunities, scientific software, outreach, and photography enquiries.",
     url: "/contact",
   },
 };
@@ -20,7 +20,7 @@ const conversationTopics = [
   "Research collaboration",
   "PhD opportunities",
   "Scientific software discussions",
-  "Solar observational projects",
+  "Experimental or computational projects",
   "Astronomy outreach",
   "Photography-related communication",
 ];
@@ -31,7 +31,7 @@ export default function ContactPage() {
       <PageIntro
         eyebrow="Contact"
         title="Let’s discuss a research question."
-        description="I welcome thoughtful messages about research collaboration, future doctoral opportunities, scientific software, solar observational projects, astronomy outreach, and photography."
+        description="I welcome thoughtful messages about physics research, future doctoral opportunities, experimental or computational projects, scientific software, astronomy outreach, and photography."
       />
 
       <section className="section contact-main">
@@ -67,7 +67,7 @@ export default function ContactPage() {
               <p className="eyebrow">Professional profiles</p>
               <h2>Find my work elsewhere</h2>
             </div>
-            <p>Links remain inactive as external profiles until verified URLs are supplied.</p>
+            <p>Verified academic and professional profiles listed in my current CV.</p>
           </div>
           <div className="profile-grid">
             {socialProfiles.map((profile) => (

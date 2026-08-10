@@ -29,7 +29,7 @@ test("server-renders the academic homepage with complete primary navigation", as
 
   const html = await response.text();
   assert.match(html, /Sahan S Liyanage/);
-  assert.match(html, /Solar and Space Physics Researcher/);
+  assert.match(html, /Experimental &amp; Computational Physicist/);
   assert.match(html, /Featured Research/);
   assert.match(html, /Scientific Software/);
   assert.match(html, /Photography/);
@@ -41,6 +41,8 @@ test("server-renders every requested primary page", async () => {
   const routes = [
     ["/research", /Research and development in detail/],
     ["/publications", /Browse scientific outputs/],
+    ["/outreach", /Outreach and participation/],
+    ["/beyond", /Beyond academic work/],
     ["/photography", /Selected photographs/],
     ["/cv", /Academic experience and research practice/],
     ["/contact", /What would you like to explore/],
@@ -64,12 +66,18 @@ test("research and CV pages contain verified supplied details without private co
   assert.match(research, /343 to 1032 km\/s/);
   assert.match(research, /Raman Spectroscopic Analysis of Common Minerals in Sri Lanka/);
   assert.match(research, /Arecibo Observatory Type II event of 2 March 2022/);
+  assert.match(research, /Space Weather Monitoring Dashboard/);
+  assert.match(research, /ecallistolib/);
 
   const cv = await cvResponse.text();
   assert.match(cv, /May 2026 - Present/);
   assert.match(cv, /3\.57 \/ 4\.00/);
   assert.match(cv, /COSPAR Capacity Building Workshop 2024/);
+  assert.match(cv, /Dean.s List/);
+  assert.match(cv, /University of Colombo School of Computing/);
   assert.doesNotMatch(cv, /Gunananda Mawatha|\+94 71 409 0587|adassuriya@phys\.cmb\.ac\.lk/);
 
-  assert.match(await homeResponse.text(), /\/images\/sahan-liyanage-portrait\.jpg/);
+  const home = await homeResponse.text();
+  assert.match(home, /\/images\/sahan-liyanage-portrait\.jpg/);
+  assert.doesNotMatch(home, /paper-cover|report-cover/);
 });

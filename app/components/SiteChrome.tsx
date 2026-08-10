@@ -54,6 +54,24 @@ export function SiteHeader() {
         >
           {navigation.map((item) => {
             const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+            if (item.children) {
+              return (
+                <div className="nav-item-with-submenu" key={item.href}>
+                  <Link
+                    href={item.href}
+                    aria-current={active ? "page" : undefined}
+                    className={active ? "active" : ""}
+                  >
+                    {item.label} <span className="submenu-indicator" aria-hidden="true">⌄</span>
+                  </Link>
+                  <div className="nav-submenu" aria-label={`${item.label} submenu`}>
+                    {item.children.map((child) => (
+                      <Link href={child.href} key={child.href}>{child.label}</Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
             return (
               <Link
                 href={item.href}

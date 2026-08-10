@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageIntro } from "../components/PageIntro";
 import { PublicationsClient } from "../components/PublicationsClient";
-import { publicationCategories, siteConfig } from "../data/content";
+import { publicationCategories, publications, siteConfig } from "../data/content";
 
 export const metadata: Metadata = {
   title: "Publications",
@@ -21,8 +21,16 @@ const collectionSchema = {
   name: "Publications by Sahan S Liyanage",
   url: `${siteConfig.siteUrl}/publications`,
   description:
-    "A publication list prepared for verified academic citations. Placeholder entries are excluded from scholarly-article markup.",
+    "Peer-reviewed journal and conference publications by Sahan S Liyanage.",
   author: { "@type": "Person", name: siteConfig.name },
+  hasPart: publications.map((publication) => ({
+    "@type": "ScholarlyArticle",
+    name: publication.title,
+    author: publication.authors,
+    datePublished: publication.year,
+    isPartOf: publication.venue,
+    url: publication.links[0]?.href,
+  })),
 };
 
 export default function PublicationsPage() {
@@ -31,17 +39,11 @@ export default function PublicationsPage() {
       <PageIntro
         eyebrow="Publications"
         title="Research outputs, clearly documented."
-        description="This page is structured for verified journal articles, conference work, software publications, manuscripts, and related scientific outputs. Citation details remain visibly marked until confirmed from an authoritative source."
+        description="Peer-reviewed work in solar radio astronomy, coronal-shock analysis, and scientific software, with direct links to each publication and its supporting research materials."
       />
 
       <section className="section publication-categories-section">
         <div className="container">
-          <div className="publication-editor-note placeholder-note" role="note">
-            <strong>Editing note</strong>
-            <p>
-              Replace all sample publication entries with verified citations from Sahan’s CV, ORCID, Google Scholar, or publication list before publication.
-            </p>
-          </div>
           <div className="category-strip" aria-label="Publication categories">
             {publicationCategories.map((category, index) => (
               <div key={category}>
@@ -57,7 +59,7 @@ export default function PublicationsPage() {
         <div className="container">
           <div className="section-heading section-heading-row">
             <div>
-              <p className="eyebrow">Publication index</p>
+              <p className="eyebrow">Verified publication index</p>
               <h2>Browse scientific outputs</h2>
             </div>
             <p>Filter by year, publication type, or research topic.</p>
@@ -70,14 +72,14 @@ export default function PublicationsPage() {
         <div className="container split-heading-layout">
           <div>
             <p className="eyebrow">Citation integrity</p>
-            <h2>Verified records only</h2>
+            <h2>Citations ready to use</h2>
           </div>
           <div className="prose-large">
             <p>
-              Each completed entry can include its full author list, year, title, venue, volume and page information, DOI, abstract, publisher page, PDF, code or data, and a BibTeX export.
+              Each entry includes the full author list, year, title, venue, publication details, a concise research summary, and the available DOI, PDF, thesis, or code links.
             </p>
             <p>
-              Scholarly-article structured data will be added only after a citation has been verified. This prevents placeholder details from entering search indexes as academic records.
+              Copyable BibTeX records and scholarly-article metadata make the work easier to cite and discover.
             </p>
           </div>
         </div>

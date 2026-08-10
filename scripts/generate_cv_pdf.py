@@ -74,7 +74,7 @@ styles.add(
         fontSize=9.5,
         leading=12,
         textColor=NAVY,
-        spaceBefore=8,
+        spaceBefore=6,
         spaceAfter=5,
         borderWidth=0,
     )
@@ -116,8 +116,8 @@ styles.add(
         name="BodySmall",
         parent=styles["BodyText"],
         fontName="Helvetica",
-        fontSize=8.25,
-        leading=11.5,
+        fontSize=8,
+        leading=10.6,
         textColor=CHARCOAL,
         spaceAfter=3,
     )
@@ -127,8 +127,8 @@ styles.add(
         name="BodySmallBold",
         parent=styles["BodyText"],
         fontName="Helvetica-Bold",
-        fontSize=8.25,
-        leading=11.5,
+        fontSize=8,
+        leading=10.6,
         textColor=CHARCOAL,
         spaceAfter=3,
     )
@@ -138,8 +138,8 @@ styles.add(
         name="Citation",
         parent=styles["BodyText"],
         fontName="Helvetica",
-        fontSize=8.1,
-        leading=11.2,
+        fontSize=7.9,
+        leading=10.6,
         textColor=CHARCOAL,
         leftIndent=0,
         firstLineIndent=0,
@@ -175,7 +175,7 @@ def section(title):
                 ]
             ),
         ),
-        Spacer(1, 4),
+        Spacer(1, 3),
     ]
 
 
@@ -194,7 +194,7 @@ def bullets(items):
         bulletFontName="Helvetica",
         bulletFontSize=5.5,
         bulletColor=GOLD,
-        spaceAfter=4,
+        spaceAfter=2,
     )
 
 
@@ -221,7 +221,7 @@ def role(title, organisation, dates, items=None, subtitle=None):
     content = [table]
     if items:
         content.append(bullets(items))
-    content.append(Spacer(1, 3))
+    content.append(Spacer(1, 2))
     return KeepTogether(content)
 
 
@@ -246,8 +246,8 @@ def build():
         pagesize=A4,
         rightMargin=16 * mm,
         leftMargin=16 * mm,
-        topMargin=14 * mm,
-        bottomMargin=20 * mm,
+        topMargin=12 * mm,
+        bottomMargin=18 * mm,
         title="Sahan S Liyanage - Curriculum Vitae",
         author="Sahan S Liyanage",
         subject="Academic curriculum vitae",
@@ -256,19 +256,20 @@ def build():
     story = [
         Paragraph("Sahan S Liyanage", styles["Name"]),
         Paragraph(
-            "Solar and Space Physics Researcher | Scientific Software Developer",
+            "Experimental and Computational Physicist | Researcher | Scientific Software Developer",
             styles["ProfessionalTitle"],
         ),
         Paragraph(
             '<link href="mailto:sahanslst@gmail.com">sahanslst@gmail.com</link> &nbsp; | &nbsp; '
-            '<link href="https://linkedin.com/in/saanliyanage">LinkedIn</link> &nbsp; | &nbsp; '
-            '<link href="https://www.researchgate.net/profile/Sahan-Liyanage">ResearchGate</link> &nbsp; | &nbsp; '
-            '<link href="https://orcid.org/0000-0002-0849-6739">ORCID</link>',
+            '<link href="https://www.linkedin.com/in/saanliyanage/">LinkedIn</link> &nbsp; | &nbsp; '
+            '<link href="https://orcid.org/0000-0002-0849-6739">ORCID</link> &nbsp; | &nbsp; '
+            '<link href="https://github.com/SaanDev">GitHub</link> &nbsp; | &nbsp; '
+            '<link href="https://scholar.google.com/citations?user=bOW7eCAAAAAJ&amp;hl=en">Google Scholar</link>',
             styles["Contact"],
         ),
         Table(
             [[Paragraph(
-                "Physics researcher working across solar radio astronomy, coronal shock waves, space weather, observational solar physics, and scientific software. Current work connects automated observations, physical models, and reproducible computation.",
+                "Driven researcher with a strong background in experimental and computational physics, spanning astrophysics, spectroscopy, instrumentation, and scientific programming. Experienced in coordinating university courses and laboratories, publishing peer-reviewed work, presenting research, and supporting academic growth.",
                 styles["BodySmall"],
             )]],
             colWidths=[178 * mm],
@@ -292,8 +293,18 @@ def build():
             "University of Colombo, Sri Lanka",
             "Jan 2020 - May 2024",
             [
-                "Cumulative GPA: 3.57/4.00 (126 credits; 252 ECTS). Physics GPA: 3.65/4.00 (66 credits; 132 ECTS).",
+                "Cumulative GPA: 3.57/4.00 (126 credit hours).",
                 "Relevant coursework included quantum mechanics, classical mechanics, electromagnetic fields, statistical physics, advanced optics, solid-state physics, nuclear and particle physics, computational physics, electronics, data acquisition, signal processing, and advanced physics laboratories.",
+            ],
+        )
+    )
+    story.append(
+        role(
+            "Secondary Education",
+            "Central College, Anuradhapura, Sri Lanka",
+            "2015 - 2017",
+            [
+                "GCE Advanced Level (2018), Physical Sciences: Combined Mathematics - B, Physics - B, Chemistry - B.",
             ],
         )
     )
@@ -301,32 +312,20 @@ def build():
     story += section("Professional Experience")
     story.append(
         role(
-            "Research Assistant (Contract)",
-            "Arthur C. Clarke Institute for Modern Technologies, Sri Lanka",
+            "Research Assistant - Astronomy and Space Applications Division",
+            "Arthur C. Clarke Institute for Modern Technologies, Katubedda, Moratuwa, Sri Lanka",
             "May 2026 - Present",
             [
-                "Project: Spectropolarimetric observations of band-split Type II solar radio bursts using a long-wave antenna.",
-                "Contribute to an integrated CALLISTO and H-alpha solar-observation system.",
-                "Work on automated acquisition, archiving, monitoring, and visualization of solar-radio and optical observations.",
-                "Support a real-time monitoring dashboard for CALLISTO dynamic spectra and H-alpha imaging data.",
+                "Conduct solar-radio observations with the e-CALLISTO antenna system, including calibration, performance checks, and hardware maintenance.",
+                "Carry out H-alpha solar observations and record, process, and interpret the resulting images.",
+                "Perform astronomical spectroscopy with optical telescopes and reduce and interpret the resulting spectra.",
+                "Develop software and automated pipelines for observational data acquisition, processing, and archiving.",
+                "Support public workshops and observation sessions in space physics and astronomy.",
             ],
         )
     )
 
     story += section("Research Experience")
-    story.append(
-        role(
-            "Research Assistant",
-            "Astronomy and Space Science Unit, University of Colombo",
-            "Mar 2025 - Present",
-            [
-                "Study metric Type II solar-radio-burst drift rates and links with CMEs, solar flares, solar energetic-particle events, and geomagnetic storms.",
-                "Analyze e-CALLISTO dynamic spectra and develop a Python GUI for FITS reading, processing, merging, visualization, and physical analysis.",
-                "Supervisor: Dr. Janaka Adassuriya.",
-            ],
-            "Analysis of Metric Type II Solar Radio Burst Drift Rates and Their Space-Weather Connections Using a GUI Tool for e-CALLISTO",
-        )
-    )
     story.append(
         role(
             "Undergraduate Research Project",
@@ -365,16 +364,51 @@ def build():
         )
     )
 
-    story += section("Scientific Software")
+    story += section("Projects and Scientific Software")
+    story.append(
+        role(
+            "Space Weather Monitoring Dashboard",
+            "Full-stack solar and geospace monitoring application",
+            "2026 - Present",
+            [
+                "Combines e-CALLISTO spectra, GOES flux, SDO and SOHO imagery, Kp and Dst indices, and solar-wind and interplanetary magnetic-field data with alerts, a combined timeline, and archive search.",
+                "ResNet-18 models achieved a test F1 score of 0.932 for burst detection and 0.966 validation accuracy with macro F1 0.889 for three-class burst typing.",
+                '<link href="https://github.com/SaanDev/Solar_Monitoring_Dashboard">github.com/SaanDev/Solar_Monitoring_Dashboard</link>',
+            ],
+        )
+    )
+    story.append(
+        role(
+            "ecallistolib",
+            "MIT-licensed Python library, version 1.3.1",
+            "2025 - Present",
+            [
+                "Downloads, reads, processes, combines, and plots e-CALLISTO FITS dynamic spectra with metadata-preserving parsing, RFI mitigation, background subtraction, and publication-quality output.",
+                "Supports Python 3.10 through 3.14, a command-line interface, optional accelerated dependencies, and a pytest test suite.",
+                '<link href="https://github.com/SaanDev/ecallistolib">github.com/SaanDev/ecallistolib</link>',
+            ],
+        )
+    )
     story.append(
         role(
             "e-CALLISTO FITS Analyzer",
-            "Open-source, cross-platform scientific application",
-            "Active",
+            "Peer-reviewed, open-source Python desktop application",
+            "2024 - Present",
             [
-                "Python and PySide6 application for Windows, macOS, and Linux.",
-                "Supports archive acquisition, time/frequency merging, background subtraction, polygon burst isolation, drift-rate fitting, shock-parameter estimation, GOES X-ray visualization, SOHO/LASCO CME browsing, and scientific export.",
+                "Cross-platform framework for retrieving, cleaning, combining, visualizing, and analyzing e-CALLISTO dynamic spectra at event level.",
+                "Uses Python, PySide6, NumPy, SciPy, Astropy, SunPy, Matplotlib, PyQtGraph, netCDF4, OpenPyXL, Requests, and BeautifulSoup.",
                 '<link href="https://github.com/SaanDev/e-Callisto_FITS_Analyzer">github.com/SaanDev/e-Callisto_FITS_Analyzer</link>',
+            ],
+        )
+    )
+    story.append(
+        role(
+            "Spectral Analysis of Fluids to Determine the Effects of Temperature",
+            "General Physics Laboratory II, University of Colombo",
+            "2021",
+            [
+                "Used a home-made spectrometer and image-based absorbance measurements to estimate liquid temperature.",
+                "Distilled water at 462 nm produced the best response: T = 73A + 230, with model errors of 4-12%.",
             ],
         )
     )
@@ -382,13 +416,13 @@ def build():
     story += section("Publications")
     story.append(
         Paragraph(
-            "Liyanage, G. L. S. S., Adassuriya, J., Jayaratne, K. P. S. C., &amp; Monstein, C. (2025). Determination of speed and source height of coronal shock waves using Type II solar radio bursts. <i>Proceedings of the Technical Sessions</i>, 41, 59-67. Institute of Physics, Sri Lanka.",
+            'Liyanage, G. L. S. S., Adassuriya, J., Jayaratne, K. P. S. C., Monstein, C., &amp; Manoharan, P. K. (2026). e-CALLISTO FITS Analyzer: A software framework for CALLISTO solar radio data. <i>RAS Techniques and Instruments</i>, rzag056. <link href="https://doi.org/10.1093/rasti/rzag056">doi:10.1093/rasti/rzag056</link>',
             styles["Citation"],
         )
     )
     story.append(
         Paragraph(
-            "Liyanage, G. L. S. S., Adassuriya, J., Jayaratne, K. P. S. C., Monstein, C., &amp; Manoharan, P. K. (2026). e-CALLISTO FITS Analyzer: A Software Framework for CALLISTO Solar Radio Data. Manuscript submitted for publication.",
+            'Liyanage, G. L. S. S., Adassuriya, J., Jayaratne, K. P. S. C., &amp; Monstein, C. (2025). Determination of speed and source height of coronal shock waves using Type II solar radio bursts. <i>Proceedings of the Technical Sessions</i>, 41, 59-67. Institute of Physics, Sri Lanka. <link href="https://doi.org/10.48550/arXiv.2504.00622">doi:10.48550/arXiv.2504.00622</link>',
             styles["Citation"],
         )
     )
@@ -399,7 +433,7 @@ def build():
             "Determination of Speed and Source Height of Coronal Shock Waves Using Type II Solar Radio Bursts",
             "41st Technical Sessions, Institute of Physics, Sri Lanka - University of Colombo",
             "22 Mar 2025",
-            ["On-site oral presentation."],
+            ["On-site oral presentation of undergraduate research findings."],
         )
     )
     story.append(
@@ -407,7 +441,15 @@ def build():
             "Solar Radio Bursts and Space Weather",
             "Physics Society, University of Colombo",
             "20 Nov 2024",
-            ["On-site invited presentation to physics students."],
+            ["On-site oral presentation for physics undergraduates."],
+        )
+    )
+    story.append(
+        role(
+            "Introduction to Solar Physics",
+            "Astronomical Society, Rajarata University of Sri Lanka",
+            "18 Jul 2024",
+            ["Online introductory lecture for university students."],
         )
     )
 
@@ -418,9 +460,9 @@ def build():
             "University of Colombo School of Computing",
             "Aug 2025 - Mar 2026",
             [
-                "Probability and Statistics for first-year computer-science majors.",
-                "Digital Signal Processing for second-year students.",
-                "Cryptography and Information Security for second-year students.",
+                "Probability and Statistics for first-year Computer Science majors.",
+                "Digital Signal Processing for second-year Computer Science majors.",
+                "Cryptography and Information Security for second-year Computer Science majors.",
             ],
         )
     )
@@ -430,63 +472,100 @@ def build():
             "Department of Physics, University of Colombo",
             "May 2024 - May 2025",
             [
-                "Computational Electrodynamics and Advanced Physics Laboratory I.",
-                "Analogue and Digital Electronic Principles Laboratory.",
-                "General Physics Laboratory I and II.",
+                "Instructor in charge of Computational Electrodynamics and Advanced Physics Laboratory I.",
+                "Instructor for Analogue and Digital Electronic Principles Laboratory.",
+                "Instructor for General Physics Laboratory I and II.",
             ],
         )
     )
 
+    story += section("Academic Engagements")
     story.append(
-        KeepTogether(
-            section("Workshop and Training")
-            + [
-                role(
-                    "Participant - COSPAR Capacity Building Workshop 2024",
-                    "Samarkand State University, Samarkand City, Uzbekistan",
-                    "19-30 Aug 2024",
-                    [
-                        "Training on coronal and interplanetary shocks using SOHO, SDO, STEREO, and ground-based observations with SolarSoft, SunPy, AstroPy, and Python.",
-                    ],
-                )
-            ]
+        role(
+            "Participant - COSPAR Capacity Building Workshop 2024",
+            "Samarkand State University, Samarkand, Uzbekistan",
+            "19-30 Aug 2024",
+            [
+                "Practical training on coronal and interplanetary shocks using SOHO, SDO, STEREO, ground-based observations, SolarSoft, SunPy, AstroPy, and Python.",
+            ],
+        )
+    )
+    story.append(
+        role(
+            "Designing Physics Laboratory Experiments",
+            "General Physics Laboratory II, Department of Physics, University of Colombo",
+            "",
+            [
+                "Designed the first-year optical-spectrometer laboratory sheet, including theory, pre-lab questions, prisms, refractive index, diffraction gratings, and atomic emission spectra.",
+            ],
         )
     )
 
-    story += section("Technical Skills")
+    story += section("Skills and Techniques")
     story.append(
         Paragraph(
-            "<b>Programming and computation:</b> Python, MATLAB, C/C++, machine learning, OriginPro, LaTeX, web development, Linux, Microsoft Office.",
+            "<b>Programming and scientific computing:</b> Python, C/C++, MATLAB, SunPy, AstroPy, NumPy, SciPy, Matplotlib, FITS handling, signal processing, and Qt GUI development.",
             styles["BodySmall"],
         )
     )
     story.append(
         Paragraph(
-            "<b>Scientific and technical:</b> FITS data, solar-radio dynamic spectra, Raman spectral processing, Arduino, Adobe Photoshop, data acquisition, signal processing, scientific visualization, and interactive desktop software.",
+            "<b>Software and tools:</b> OriginPro, SolidWorks, Microsoft Office, Adobe Photoshop, LaTeX, Arduino, Linux, and web development.",
+            styles["BodySmall"],
+        )
+    )
+    story.append(
+        Paragraph(
+            "<b>Laboratory and instrumentation:</b> Raman and UV-Vis spectroscopy, astronomical spectroscopy, e-CALLISTO radio spectrometry, analogue and digital electronics, data acquisition, signal processing, and microcontroller programming.",
+            styles["BodySmall"],
+        )
+    )
+    story.append(
+        Paragraph(
+            "<b>Management and leadership:</b> Communication, project planning and execution, teaching, mentoring, and team coordination.",
             styles["BodySmall"],
         )
     )
 
-    story += section("Leadership")
+    story += section("Awards and Honours")
+    story.append(role("Dean's List", "University of Colombo", "Academic Year 2019/2020"))
+
+    story += section("Leadership and Extracurricular Activities")
+    story.append(role("Vice President", "Astronomical Society, University of Colombo", "2022 - 2023"))
+    story.append(role("Coordinator", "Astronomical Society, University of Colombo", "2020 - 2022"))
+    story.append(role("Music Director", "Music Society, University of Colombo", "2022 - 2023"))
+    story.append(role("Marketing Director", "Leo Club, University of Colombo", "2020 - 2021"))
+
+    story += section("Volunteering Experience")
     story.append(
         role(
-            "Vice President",
-            "Astronomical Society, University of Colombo",
-            "2022-2023",
+            "Science Bus - Phases I, II, and III",
+            "Physics Society, University of Colombo",
+            "2021 - 2023",
+            ["Contributed to an SPIE-funded travelling science project for school students in rural Sri Lanka."],
         )
     )
     story.append(
         role(
-            "Coordinator",
+            "Star Quest - All-Island Astronomical Quiz",
             "Astronomical Society, University of Colombo",
-            "2020-2022",
+            "2022 - 2025",
+            ["Helped create questions, coordinate participants, run the event, and grade entries from school students across Sri Lanka."],
+        )
+    )
+    story.append(
+        role(
+            "Naada Nu 23 - Annual Musical Concert",
+            "Music Society, University of Colombo",
+            "2023",
+            ["Served as music director, contributed to event organization, and performed on stage."],
         )
     )
 
     story += section("References")
     story.append(
         Paragraph(
-            "Professional references are available on request. Referee contact details are intentionally omitted from this public web edition.",
+            "Professional references are available on request. Referee names, telephone numbers, and email addresses are intentionally omitted from this public web edition.",
             styles["BodySmall"],
         )
     )
