@@ -32,7 +32,7 @@ test("server-renders the academic homepage with complete primary navigation", as
   assert.match(html, /Experimental &amp; Computational Physicist/);
   assert.match(html, /Featured Research/);
   assert.match(html, /Scientific Software/);
-  assert.match(html, /Photography/);
+  assert.match(html, /Field &amp; Creative Practice/);
   assert.match(html, /Contact Me/i);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
@@ -80,4 +80,30 @@ test("research and CV pages contain verified supplied details without private co
   const home = await homeResponse.text();
   assert.match(home, /\/images\/sahan-liyanage-portrait\.jpg/);
   assert.doesNotMatch(home, /paper-cover|report-cover/);
+});
+
+test("personal image stories distinguish documentary field images from portfolio work", async () => {
+  const [beyondResponse, photographyResponse, outreachResponse, homeResponse] = await Promise.all([
+    render("/beyond"),
+    render("/photography"),
+    render("/outreach"),
+    render("/"),
+  ]);
+
+  const beyond = await beyondResponse.text();
+  assert.match(beyond, /wildlife-photographer-telephoto\.webp/);
+  assert.match(beyond, /astronomy-public-telescope\.webp/);
+  assert.match(beyond, /music-stage-performance\.webp/);
+  assert.match(beyond, /they are not presented as photographs from my wildlife portfolio/i);
+
+  const photography = await photographyResponse.text();
+  assert.match(photography, /The practice before the photograph/);
+  assert.match(photography, /They are not samples of the wildlife photographs I have made/i);
+
+  const outreach = await outreachResponse.text();
+  assert.match(outreach, /From instrument set-up to a first look through the eyepiece/);
+
+  const home = await homeResponse.text();
+  assert.match(home, /Field &amp; Creative Practice/);
+  assert.match(home, /music-percussion-performance\.webp/);
 });

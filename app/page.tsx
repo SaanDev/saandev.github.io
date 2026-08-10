@@ -205,33 +205,41 @@ export default function HomePage() {
           <div className="section-heading section-heading-row">
             <div>
               <p className="eyebrow">Observation beyond the laboratory</p>
-              <h2>Photography</h2>
+              <h2>Field & Creative Practice</h2>
             </div>
-            <Link className="text-link" href="/beyond#gallery">
-              Enter the gallery <span aria-hidden="true">↗</span>
+            <Link className="text-link" href="/beyond">
+              Explore beyond research <span aria-hidden="true">↗</span>
             </Link>
           </div>
           <div className="photo-preview-grid">
             <article className="photo-preview-card">
-              <PlaceholderMedia label="[UPLOAD ASTROPHOTOGRAPHY IMAGE]" alt="User-supplied astrophotography placeholder" />
+              <PlaceholderMedia
+                label=""
+                src="/images/personal/astronomy-public-telescope.webp"
+                alt="Students gathered around a telescope during a public astronomy programme"
+              />
               <div>
-                <p className="eyebrow">Night sky & solar observation</p>
-                <h3>Astrophotography</h3>
+                <p className="eyebrow">Camps, instruments & outreach</p>
+                <h3>Astronomy in Practice</h3>
                 <p>
-                  A visual record of the night sky, solar observations, and astronomical events, accompanied by notes on the equipment, location, and imaging process.
+                  Astronomy has been a shared practice through observing camps, telescope preparation, solar sessions, university societies, and hands-on programmes for students.
                 </p>
-                <Link href="/beyond#gallery" className="text-link">Explore astrophotography →</Link>
+                <Link href="/beyond#astronomy-life" className="text-link">See camps and observations →</Link>
               </div>
             </article>
             <article className="photo-preview-card">
-              <PlaceholderMedia label="[UPLOAD WILDLIFE PHOTOGRAPHY IMAGE]" alt="User-supplied wildlife photography placeholder" />
+              <PlaceholderMedia
+                label=""
+                src="/images/personal/wildlife-wetland-telephoto.webp"
+                alt="Sahan using a telephoto lens from a wetland observation deck"
+              />
               <div>
                 <p className="eyebrow">Field observation</p>
-                <h3>Wildlife Photography</h3>
+                <h3>Behind the Wildlife Lens</h3>
                 <p>
-                  Photographs of birds, mammals, insects, and natural landscapes, with attention to animal behaviour and the environments in which each image was made.
+                  Time in forests, wetlands, and coastal habitats has developed my practice as a wildlife photographer and part-time naturalist.
                 </p>
-                <Link href="/beyond#gallery" className="text-link">Explore wildlife photography →</Link>
+                <Link href="/beyond#wildlife-fieldwork" className="text-link">Join me in the field →</Link>
               </div>
             </article>
           </div>
@@ -244,13 +252,26 @@ export default function HomePage() {
             <p className="eyebrow">Practice & expression</p>
             <h2>Music</h2>
             <p>
-              Music has remained an important part of my life alongside physics and astronomy. I play the violin and value music as a different way of developing patience, concentration, and expression. This section will later include photographs, performances, and selected recordings.
+              Music has remained an important part of my life alongside physics and astronomy. University performances and my time as Music Director developed a different form of attention: listening, timing, coordination, and expression within an ensemble.
             </p>
+            <Link className="text-link" href="/beyond#music">See music and performance →</Link>
           </div>
           <div className="music-gallery">
-            <PlaceholderMedia label="[UPLOAD VIOLIN PHOTO 1]" alt="Placeholder for a violin photograph" />
-            <PlaceholderMedia label="[UPLOAD PERFORMANCE PHOTO]" alt="Placeholder for a performance photograph" />
-            <PlaceholderMedia label="[ADD VIDEO OR AUDIO LINK]" alt="Placeholder for a video or audio thumbnail" />
+            <PlaceholderMedia
+              label=""
+              src="/images/personal/music-percussion-performance.webp"
+              alt="Sahan playing percussion during a live musical performance"
+            />
+            <PlaceholderMedia
+              label=""
+              src="/images/personal/music-stage-performance.webp"
+              alt="Sahan performing on stage with a musical ensemble"
+            />
+            <PlaceholderMedia
+              label=""
+              src="/images/personal/music-ensemble-instruments.webp"
+              alt="Percussion instruments and musicians arranged for an outdoor performance"
+            />
           </div>
         </div>
       </section>

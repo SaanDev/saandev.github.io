@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PageIntro } from "../components/PageIntro";
+import { PersonalStoryGallery } from "../components/PersonalStoryGallery";
 import { PhotographyGallery } from "../components/PhotographyGallery";
+import { wildlifeFieldImages } from "../data/personal-images";
 
 export const metadata: Metadata = {
   title: "Photography",
@@ -41,7 +43,7 @@ export default function PhotographyPage() {
       <PageIntro
         eyebrow="Photography"
         title="Field notes in light."
-        description="Photography is another form of observation: a way to record astronomical events, changing light, animal behaviour, and the conditions under which an image was made. Only user-supplied photographs will appear in this gallery."
+        description="Photography is another form of observation: a way to record astronomical events, changing light, animal behaviour, and the conditions under which an image was made."
         dark
       />
 
@@ -62,13 +64,37 @@ export default function PhotographyPage() {
         </div>
       </section>
 
+      <section className="section photographer-field-section">
+        <div className="container">
+          <div className="personal-story-heading">
+            <div>
+              <p className="eyebrow">Behind the lens</p>
+              <h2>The practice before the photograph</h2>
+            </div>
+            <div>
+              <p>
+                Wildlife photography begins before the shutter: reading a landscape, carrying the right equipment, waiting without disturbing the subject, and learning from other field photographers.
+              </p>
+              <p className="personal-story-note">
+                These documentary images feature me working as a wildlife photographer. They are not samples of the wildlife photographs I have made.
+              </p>
+            </div>
+          </div>
+          <PersonalStoryGallery
+            images={wildlifeFieldImages.slice(0, 6)}
+            label="Sahan working behind the camera in the field"
+            compact
+          />
+        </div>
+      </section>
+
       <section className="photo-gallery-section" aria-labelledby="gallery-heading">
         <div className="container">
           <div className="photo-gallery-heading">
             <p className="eyebrow">Image archive</p>
             <h2 id="gallery-heading">Selected photographs</h2>
-            <p className="placeholder-note">
-              [UPLOAD USER-SUPPLIED IMAGES AND VERIFIED CAPTIONS. EMPTY SLOTS CAN BE HIDDEN WITH THE EDITING-MODE CONTROL.]
+            <p className="gallery-context-note">
+              This gallery is reserved for finished astrophotography and wildlife photographs taken by me. Documentary photographs of me in the field are presented separately above.
             </p>
           </div>
           <PhotographyGallery />

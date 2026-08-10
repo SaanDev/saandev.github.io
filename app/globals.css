@@ -1041,6 +1041,10 @@ p:last-child {
   min-height: 512px;
 }
 
+.music-grid .text-link {
+  margin-top: 18px;
+}
+
 .beyond-pursuits-section {
   background: var(--paper);
 }
@@ -1081,6 +1085,154 @@ p:last-child {
 .beyond-pursuits-grid p {
   max-width: 560px;
   margin-bottom: 0;
+}
+
+.personal-story-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.personal-story-section-dark {
+  background: #070b10;
+  color: #bdc8d0;
+}
+
+.personal-story-section-light {
+  background: var(--paper);
+  color: var(--charcoal);
+}
+
+.personal-story-section-music {
+  background: #211a13;
+  color: #ddd2c4;
+}
+
+.personal-story-heading {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.18fr);
+  align-items: start;
+  gap: clamp(44px, 9vw, 130px);
+  margin-bottom: clamp(42px, 6vw, 72px);
+}
+
+.personal-story-heading h2 {
+  max-width: 680px;
+  margin-bottom: 0;
+}
+
+.personal-story-heading > div:last-child {
+  max-width: 700px;
+  font-size: 1.04rem;
+}
+
+.personal-story-heading > div:last-child p {
+  margin-bottom: 18px;
+}
+
+.personal-story-section-dark .personal-story-heading h2,
+.personal-story-section-music .personal-story-heading h2,
+.outreach-visual-section .personal-story-heading h2,
+.photographer-field-section .personal-story-heading h2 {
+  color: white;
+}
+
+.personal-story-section-dark .eyebrow,
+.personal-story-section-music .eyebrow,
+.outreach-visual-section .eyebrow,
+.photographer-field-section .eyebrow {
+  color: #e6b95d;
+}
+
+.personal-story-note {
+  padding: 14px 0 14px 18px;
+  border-left: 2px solid #d7a94e;
+  color: inherit;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.personal-story-gallery {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.personal-story-image {
+  position: relative;
+  grid-column: span 4;
+  min-height: 480px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #101923;
+}
+
+.personal-story-section-light .personal-story-image {
+  border-color: var(--border);
+  background: var(--blue-grey);
+}
+
+.personal-story-image-landscape {
+  grid-column: span 6;
+  min-height: 360px;
+}
+
+.personal-story-image-wide {
+  grid-column: span 8;
+  min-height: 390px;
+}
+
+.personal-story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 320ms ease;
+}
+
+.personal-story-image:hover img {
+  transform: scale(1.018);
+}
+
+.personal-story-image figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 42px 18px 16px;
+  background: linear-gradient(transparent, rgba(2, 6, 10, 0.9));
+  color: #eef2f4;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.personal-story-gallery-compact .personal-story-image {
+  grid-column: span 4;
+  min-height: 340px;
+}
+
+.personal-story-gallery-compact .personal-story-image-wide {
+  grid-column: span 8;
+}
+
+.outreach-visual-section {
+  background: var(--navy);
+  color: #c8d4dc;
+}
+
+.photographer-field-section {
+  border-top: 1px solid var(--photo-line);
+  border-bottom: 1px solid var(--photo-line);
+  background: #0d151e;
+  color: #bdc8d0;
+}
+
+.gallery-context-note {
+  max-width: 660px;
+  padding-left: 16px;
+  border-left: 2px solid #d7a94e;
+  color: #aab8c2;
+  font-size: 0.82rem;
+  line-height: 1.65;
 }
 
 .outreach-grid {
@@ -2709,6 +2861,24 @@ p:last-child {
     width: min(calc(100% - 36px), var(--container));
   }
 
+  .personal-story-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .personal-story-image,
+  .personal-story-gallery-compact .personal-story-image {
+    grid-column: span 6;
+    min-height: 430px;
+  }
+
+  .personal-story-image-landscape,
+  .personal-story-image-wide,
+  .personal-story-gallery-compact .personal-story-image-wide {
+    grid-column: span 12;
+    min-height: 390px;
+  }
+
   .menu-toggle {
     display: block;
     cursor: pointer;
@@ -2973,6 +3143,24 @@ p:last-child {
 
   .section {
     padding: 74px 0;
+  }
+
+  .personal-story-gallery {
+    gap: 10px;
+  }
+
+  .personal-story-image,
+  .personal-story-image-landscape,
+  .personal-story-image-wide,
+  .personal-story-gallery-compact .personal-story-image,
+  .personal-story-gallery-compact .personal-story-image-wide {
+    grid-column: span 12;
+    min-height: 430px;
+  }
+
+  .personal-story-image-landscape,
+  .personal-story-image-wide {
+    min-height: 300px;
   }
 
   .brand {
