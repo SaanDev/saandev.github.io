@@ -64,7 +64,7 @@ export default function HomePage() {
       </section>
 
       <section className="section about-section" id="about">
-        <div className="container split-heading-layout">
+        <div className="container about-home-grid">
           <div>
             <p className="eyebrow">Profile</p>
             <h2>About Me</h2>
@@ -83,6 +83,15 @@ export default function HomePage() {
               Read my research statement <span aria-hidden="true">↗</span>
             </Link>
           </div>
+          <figure className="about-observation-figure">
+            <img
+              src="/images/personal/astronomy-solar-telescope-setup.webp"
+              alt="Sahan preparing a telescope for a daytime solar observation"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Preparing an instrument for daytime observation.</figcaption>
+          </figure>
         </div>
       </section>
 

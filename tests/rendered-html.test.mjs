@@ -106,4 +106,6 @@ test("personal image stories distinguish documentary field images from portfolio
   const home = await homeResponse.text();
   assert.match(home, /Field &amp; Creative Practice/);
   assert.match(home, /music-percussion-performance\.webp/);
+  assert.match(home, /astronomy-solar-telescope-setup\.webp/);
+  assert.match(home, /Preparing an instrument for daytime observation\./);
 });
