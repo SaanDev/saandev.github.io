@@ -1087,7 +1087,7 @@ p:last-child {
 
 .beyond-pursuits-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--border);
   border-left: 1px solid var(--border);
 }
@@ -1222,18 +1222,6 @@ p:last-child {
 
 .personal-story-image:hover img {
   transform: scale(1.018);
-}
-
-.personal-story-image figcaption {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 42px 18px 16px;
-  background: linear-gradient(transparent, rgba(2, 6, 10, 0.9));
-  color: #eef2f4;
-  font-size: 0.72rem;
-  line-height: 1.45;
 }
 
 .personal-story-gallery-compact .personal-story-image {
@@ -1890,7 +1878,7 @@ p:last-child {
 
 .photo-index-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--photo-line);
 }
@@ -1904,6 +1892,15 @@ p:last-child {
   color: #e6b95d;
   font-size: 0.7rem;
   font-weight: 800;
+}
+
+.photo-index-grid > div > strong {
+  float: right;
+  color: #687a88;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .photo-index-grid h2 {
@@ -1980,7 +1977,11 @@ p:last-child {
 }
 
 .filter-tabs button {
+  display: flex;
   min-height: 42px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
   padding: 9px 14px;
   border: 1px solid #344556;
   border-radius: 2px;
@@ -1991,6 +1992,11 @@ p:last-child {
   font-weight: 700;
 }
 
+.filter-tabs button small {
+  color: #687a88;
+  font-size: 0.62rem;
+}
+
 .filter-tabs button:hover,
 .filter-tabs button.active {
   border-color: #d7a94e;
@@ -1998,42 +2004,36 @@ p:last-child {
 }
 
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+  columns: 3 320px;
+  column-gap: 14px;
 }
 
 .photo-card {
-  grid-column: span 6;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 14px;
   overflow: hidden;
   border: 1px solid var(--photo-line);
-  background: var(--photo-panel);
-}
-
-.photo-card-3 {
-  grid-column: span 12;
+  background: #05080c;
+  break-inside: avoid;
 }
 
 .photo-open {
   position: relative;
   display: block;
   width: 100%;
-  height: 440px;
+  height: auto;
   overflow: hidden;
   border: 0;
-  border-bottom: 1px solid var(--photo-line);
   background: #05080c;
   cursor: pointer;
-}
-
-.photo-card-3 .photo-open {
-  height: 620px;
+  line-height: 0;
 }
 
 .photo-open > img {
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   transition: transform 300ms ease;
 }
 
@@ -2097,6 +2097,33 @@ p:last-child {
   color: white;
   font-size: 0.69rem;
   font-weight: 700;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.photo-sequence {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  display: grid;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 50%;
+  background: rgba(7, 11, 16, 0.62);
+  color: white;
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1;
+  place-items: center;
+}
+
+.photo-open:hover .photo-open-label,
+.photo-open:focus-visible .photo-open-label {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .photo-card-copy {
@@ -2196,6 +2223,11 @@ p:last-child {
   touch-action: pan-y;
 }
 
+.lightbox-visual-full {
+  min-height: calc(100vh - 96px);
+  border-right: 0;
+}
+
 .lightbox-visual > img {
   width: 100%;
   height: 100%;
@@ -2229,6 +2261,15 @@ p:last-child {
 
 .lightbox-next {
   right: 18px;
+}
+
+.lightbox-copyright {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.65rem;
 }
 
 .lightbox-caption {
@@ -3124,7 +3165,11 @@ p:last-child {
 
   .photo-open,
   .photo-card-3 .photo-open {
-    height: min(620px, 85vw);
+    height: auto;
+  }
+
+  .photo-grid {
+    columns: 2 260px;
   }
 
   .lightbox-layout {
@@ -3340,7 +3385,11 @@ p:last-child {
 
   .photo-open,
   .photo-card-3 .photo-open {
-    height: 410px;
+    height: auto;
+  }
+
+  .photo-grid {
+    columns: 1;
   }
 
   .lightbox-backdrop {

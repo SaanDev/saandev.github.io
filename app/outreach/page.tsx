@@ -21,8 +21,8 @@ export default function OutreachPage() {
     <main id="main-content">
       <PageIntro
         eyebrow="Outreach"
-        title="Sharing science beyond the research setting."
-        description="Public observing, astronomy and physics communication, scientific talks, student programmes, and volunteering have been a continuous part of my academic work."
+        title="Astronomy made shared."
+        description="Astronomy camps, public observing, science communication, student programmes, and volunteering bring instruments, ideas, and people together."
       />
 
       <section className="section outreach-visual-section">
@@ -30,18 +30,20 @@ export default function OutreachPage() {
           <div className="personal-story-heading">
             <div>
               <p className="eyebrow">Astronomy in community</p>
-              <h2>From instrument set-up to a first look through the eyepiece.</h2>
+              <h2>Camps, observation, and public engagement.</h2>
             </div>
             <div>
               <p>
-                Camps and observing programmes turn astronomy into a shared experience. These moments document telescope work, student participation, society teamwork, and the practical side of bringing an observation session to life.
+                My astronomical background was built through nights at the telescope, solar-observation sessions, student camps, equipment preparation, public demonstrations, and the teamwork of university astronomy societies.
+              </p>
+              <p>
+                These moments connect practical observing with public engagement: setting up instruments, helping students see through a telescope, speaking to an audience, and keeping a programme running after dark.
               </p>
             </div>
           </div>
           <PersonalStoryGallery
-            images={astronomyImages.slice(0, 6)}
-            label="Astronomy camps and public observation highlights"
-            compact
+            images={astronomyImages}
+            label="Astronomy camps, outreach, and observation sessions"
           />
         </div>
       </section>

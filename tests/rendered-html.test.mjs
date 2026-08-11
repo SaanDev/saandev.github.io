@@ -42,8 +42,8 @@ test("server-renders every requested primary page", async () => {
     ["/research", /Research and development in detail/],
     ["/publications", /Browse scientific outputs/],
     ["/outreach", /Outreach and participation/],
-    ["/beyond", /Beyond academic work/],
-    ["/photography", /Selected photographs/],
+    ["/beyond", /Ways of seeing and making/],
+    ["/photography", /Thirty-four frames\. Three ways of seeing\./],
     ["/cv", /Academic experience and research practice/],
     ["/contact", /What would you like to explore/],
   ];
@@ -82,7 +82,7 @@ test("research and CV pages contain verified supplied details without private co
   assert.doesNotMatch(home, /paper-cover|report-cover/);
 });
 
-test("personal image stories distinguish documentary field images from portfolio work", async () => {
+test("personal stories and photography are organized into their dedicated pages", async () => {
   const [beyondResponse, photographyResponse, outreachResponse, homeResponse] = await Promise.all([
     render("/beyond"),
     render("/photography"),
@@ -92,16 +92,21 @@ test("personal image stories distinguish documentary field images from portfolio
 
   const beyond = await beyondResponse.text();
   assert.match(beyond, /wildlife-photographer-telephoto\.webp/);
-  assert.match(beyond, /astronomy-public-telescope\.webp/);
   assert.match(beyond, /music-stage-performance\.webp/);
   assert.match(beyond, /they are not presented as photographs from my wildlife portfolio/i);
+  assert.doesNotMatch(beyond, /astronom/i);
 
   const photography = await photographyResponse.text();
-  assert.match(photography, /The practice before the photograph/);
-  assert.match(photography, /They are not samples of the wildlife photographs I have made/i);
+  assert.match(photography, /lunar-eclipse-sequence\.webp/);
+  assert.match(photography, /black-winged-stilt\.webp/);
+  assert.match(photography, /airport-light-trails\.webp/);
+  assert.match(photography, /34(?:<!-- -->)? photographs/);
+  assert.doesNotMatch(photography, /\[ADD /);
 
   const outreach = await outreachResponse.text();
-  assert.match(outreach, /From instrument set-up to a first look through the eyepiece/);
+  assert.match(outreach, /Camps, observation, and public engagement/);
+  assert.match(outreach, /astronomy-public-telescope\.webp/);
+  assert.match(outreach, /astronomy-solar-instrument\.webp/);
 
   const home = await homeResponse.text();
   assert.match(home, /Field &amp; Creative Practice/);

@@ -1,58 +1,36 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { galleryItems, type GalleryItem } from "../data/content";
+import {
+  galleryItems,
+  type GalleryCategory,
+  type GalleryItem,
+} from "../data/photography";
 
-const categories = ["All photographs", "Astrophotography", "Wildlife Photography"] as const;
+type GalleryFilter = "All photographs" | GalleryCategory;
+
+const filters: { label: string; value: GalleryFilter }[] = [
+  { label: "All work", value: "All photographs" },
+  { label: "Astrophotography", value: "Astrophotography" },
+  { label: "Wildlife", value: "Wildlife Photography" },
+  { label: "Landscapes & other", value: "Other Photography" },
+];
 
 function GalleryVisual({ item, large = false }: { item: GalleryItem; large?: boolean }) {
-  if (item.image) {
-    return (
-      <img
-        src={item.image}
-        alt={item.alt}
-        loading={large ? "eager" : "lazy"}
-        decoding="async"
-      />
-    );
-  }
-
   return (
-    <div className="photo-placeholder placeholder-note" role="img" aria-label={item.alt}>
-      <span className="photo-crosshair" aria-hidden="true" />
-      <span>[UPLOAD {item.subcategory.toUpperCase()} IMAGE]</span>
-    </div>
-  );
-}
-
-function Metadata({ item }: { item: GalleryItem }) {
-  const rows = [
-    ["Date", item.date],
-    ["Location", item.location],
-    ["Subject", item.subject],
-    ["Camera", item.camera],
-    ["Lens / telescope", item.lens],
-    ["Mount", item.mount],
-    ["Filter", item.filter],
-    ["Exposure", item.exposure],
-    ["Frames", item.frames],
-    ["Processing", item.software],
-  ];
-
-  return (
-    <dl className="photo-metadata">
-      {rows.map(([label, value]) => (
-        <div key={label} className={value.startsWith("[") ? "placeholder-note" : ""}>
-          <dt>{label}</dt>
-          <dd>{value}</dd>
-        </div>
-      ))}
-    </dl>
+    <img
+      src={item.image}
+      alt={item.alt}
+      width={item.width}
+      height={item.height}
+      loading={large ? "eager" : "lazy"}
+      decoding="async"
+    />
   );
 }
 
 export function PhotographyGallery() {
-  const [filter, setFilter] = useState<(typeof categories)[number]>("All photographs");
+  const [filter, setFilter] = useState<GalleryFilter>("All photographs");
   const [activeId, setActiveId] = useState<string | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const triggerRef = useRef<HTMLButtonElement | null>(null);
@@ -64,6 +42,12 @@ export function PhotographyGallery() {
   );
   const activeIndex = visible.findIndex((item) => item.id === activeId);
   const active = activeIndex >= 0 ? visible[activeIndex] : null;
+
+  function countFor(value: GalleryFilter) {
+    return value === "All photographs"
+      ? galleryItems.length
+      : galleryItems.filter((item) => item.category === value).length;
+  }
 
   function close() {
     setActiveId(null);
@@ -116,27 +100,28 @@ export function PhotographyGallery() {
     <>
       <div className="gallery-toolbar">
         <div className="filter-tabs" role="group" aria-label="Filter photographs by category">
-          {categories.map((category) => (
+          {filters.map(({ label, value }) => (
             <button
               type="button"
-              key={category}
-              className={filter === category ? "active" : ""}
-              aria-pressed={filter === category}
+              key={value}
+              className={filter === value ? "active" : ""}
+              aria-pressed={filter === value}
               onClick={() => {
-                setFilter(category);
+                setFilter(value);
                 setActiveId(null);
               }}
             >
-              {category}
+              <span>{label}</span>
+              <small>{String(countFor(value)).padStart(2, "0")}</small>
             </button>
           ))}
         </div>
-        <p aria-live="polite">{visible.length} editable image slots</p>
+        <p aria-live="polite">{visible.length} photographs</p>
       </div>
 
       <div className="photo-grid">
         {visible.map((item, index) => (
-          <article className={`photo-card photo-card-${(index % 3) + 1}`} key={item.id}>
+          <article className="photo-card" key={item.id}>
             <button
               type="button"
               className="photo-open"
@@ -144,16 +129,14 @@ export function PhotographyGallery() {
                 triggerRef.current = event.currentTarget;
                 setActiveId(item.id);
               }}
-              aria-label={`Open ${item.title} in gallery viewer`}
+              aria-label={`Open photograph ${index + 1} of ${visible.length}`}
             >
               <GalleryVisual item={item} />
-              <span className="photo-open-label">View image <span aria-hidden="true">↗</span></span>
+              <span className="photo-sequence" aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span className="photo-open-label">Open <span aria-hidden="true">↗</span></span>
             </button>
-            <div className="photo-card-copy">
-              <p>{item.subcategory}</p>
-              <h2 className="placeholder-text">{item.title}</h2>
-              <span className="placeholder-text">{item.location}</span>
-            </div>
           </article>
         ))}
       </div>
@@ -166,20 +149,17 @@ export function PhotographyGallery() {
             if (event.target === event.currentTarget) close();
           }}
         >
-          <section
-            className="lightbox-dialog"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="lightbox-title"
-          >
+          <section className="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Photograph viewer">
             <div className="lightbox-topbar">
-              <p>{activeIndex + 1} / {visible.length}</p>
+              <p>
+                {active.category} <span aria-hidden="true">·</span> {activeIndex + 1} / {visible.length}
+              </p>
               <button ref={closeRef} type="button" onClick={close} aria-label="Close image viewer">
                 Close <span aria-hidden="true">×</span>
               </button>
             </div>
             <div
-              className="lightbox-layout"
+              className="lightbox-visual lightbox-visual-full"
               onPointerDown={(event) => {
                 pointerStart.current = event.clientX;
               }}
@@ -190,22 +170,14 @@ export function PhotographyGallery() {
                 pointerStart.current = null;
               }}
             >
-              <div className="lightbox-visual">
-                <GalleryVisual item={active} large />
-                <button className="lightbox-prev" type="button" onClick={() => move(-1)} aria-label="Previous image">
-                  ←
-                </button>
-                <button className="lightbox-next" type="button" onClick={() => move(1)} aria-label="Next image">
-                  →
-                </button>
-              </div>
-              <div className="lightbox-caption">
-                <p className="eyebrow">{active.category} · {active.subcategory}</p>
-                <h2 id="lightbox-title" className="placeholder-text">{active.title}</h2>
-                <p className="placeholder-text">{active.note}</p>
-                <Metadata item={active} />
-                <p className="photo-copyright">© Sahan S Liyanage</p>
-              </div>
+              <GalleryVisual item={active} large />
+              <button className="lightbox-prev" type="button" onClick={() => move(-1)} aria-label="Previous image">
+                ←
+              </button>
+              <button className="lightbox-next" type="button" onClick={() => move(1)} aria-label="Next image">
+                →
+              </button>
+              <p className="lightbox-copyright">© Sahan S Liyanage</p>
             </div>
           </section>
         </div>

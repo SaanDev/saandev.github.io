@@ -1,40 +1,37 @@
 import type { Metadata } from "next";
 import { PageIntro } from "../components/PageIntro";
-import { PersonalStoryGallery } from "../components/PersonalStoryGallery";
 import { PhotographyGallery } from "../components/PhotographyGallery";
-import { wildlifeFieldImages } from "../data/personal-images";
+import { galleryItems, type GalleryCategory } from "../data/photography";
 
 export const metadata: Metadata = {
   title: "Photography",
   description:
-    "Astrophotography and wildlife photography by Sahan S Liyanage, with observational notes and technical image details.",
+    "Astrophotography, wildlife photography, landscapes, and other photographic work by Sahan S Liyanage.",
   alternates: { canonical: "/photography" },
   openGraph: {
     title: "Photography | Sahan S Liyanage",
     description:
-      "A dark, immersive gallery for astrophotography, solar observations, wildlife, and field notes.",
+      "A dark, immersive collection of astrophotography, wildlife, landscapes, and other photographic work.",
     url: "/photography",
   },
 };
 
-const astroSubcategories = [
-  "Solar Photography",
-  "Milky Way",
-  "Comets",
-  "Moon",
-  "Planets",
-  "Deep-Sky Objects",
-  "Astronomical Events",
-  "Observatory Work",
-];
-
-const wildlifeSubcategories = [
-  "Birds",
-  "Mammals",
-  "Insects",
-  "Reptiles",
-  "Landscapes",
-  "Animal Behaviour",
+const collections: { number: string; title: GalleryCategory; text: string }[] = [
+  {
+    number: "01",
+    title: "Astrophotography",
+    text: "Moonlight, eclipses, the Milky Way, and transient objects recorded under the night sky.",
+  },
+  {
+    number: "02",
+    title: "Wildlife Photography",
+    text: "Birds and animals photographed through patient, low-impact observation in the field.",
+  },
+  {
+    number: "03",
+    title: "Other Photography",
+    text: "Landscapes, architecture, light, and moments that sit outside the two primary collections.",
+  },
 ];
 
 export default function PhotographyPage() {
@@ -42,59 +39,33 @@ export default function PhotographyPage() {
     <main id="main-content" className="photo-page">
       <PageIntro
         eyebrow="Photography"
-        title="Field notes in light."
-        description="Photography is another form of observation: a way to record astronomical events, changing light, animal behaviour, and the conditions under which an image was made."
+        title="A living archive of light."
+        description="Thirty-four photographs move between the night sky, wildlife encounters, landscapes, architecture, and the changing character of light."
         dark
       />
 
       <section className="photo-index-section">
         <div className="container photo-index-grid">
-          <div>
-            <span>01</span>
-            <h2>Astrophotography</h2>
-            <p>Night-sky, solar, planetary, and observatory work with equipment and processing notes.</p>
-            <ul>{astroSubcategories.map((item) => <li key={item}>{item}</li>)}</ul>
-          </div>
-          <div>
-            <span>02</span>
-            <h2>Wildlife Photography</h2>
-            <p>Field observations of animals, landscapes, and behaviour, presented with respectful context.</p>
-            <ul>{wildlifeSubcategories.map((item) => <li key={item}>{item}</li>)}</ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="section photographer-field-section">
-        <div className="container">
-          <div className="personal-story-heading">
-            <div>
-              <p className="eyebrow">Behind the lens</p>
-              <h2>The practice before the photograph</h2>
+          {collections.map((collection) => (
+            <div key={collection.title}>
+              <span>{collection.number}</span>
+              <strong>
+                {String(galleryItems.filter((item) => item.category === collection.title).length).padStart(2, "0")} photographs
+              </strong>
+              <h2>{collection.title}</h2>
+              <p>{collection.text}</p>
             </div>
-            <div>
-              <p>
-                Wildlife photography begins before the shutter: reading a landscape, carrying the right equipment, waiting without disturbing the subject, and learning from other field photographers.
-              </p>
-              <p className="personal-story-note">
-                These documentary images feature me working as a wildlife photographer. They are not samples of the wildlife photographs I have made.
-              </p>
-            </div>
-          </div>
-          <PersonalStoryGallery
-            images={wildlifeFieldImages.slice(0, 6)}
-            label="Sahan working behind the camera in the field"
-            compact
-          />
+          ))}
         </div>
       </section>
 
       <section className="photo-gallery-section" aria-labelledby="gallery-heading">
         <div className="container">
           <div className="photo-gallery-heading">
-            <p className="eyebrow">Image archive</p>
-            <h2 id="gallery-heading">Selected photographs</h2>
+            <p className="eyebrow">The collection</p>
+            <h2 id="gallery-heading">Thirty-four frames. Three ways of seeing.</h2>
             <p className="gallery-context-note">
-              This gallery is reserved for finished astrophotography and wildlife photographs taken by me. Documentary photographs of me in the field are presented separately above.
+              Browse the complete collection or isolate one body of work. Select any frame for an uninterrupted full-screen view; arrow keys and swipe gestures move through the sequence.
             </p>
           </div>
           <PhotographyGallery />
