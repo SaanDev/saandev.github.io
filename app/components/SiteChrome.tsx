@@ -81,7 +81,6 @@ export function SiteHeader() {
           aria-label="Sahan S Liyanage, home"
           onClick={() => setOpen(false)}
         >
-          <SolarMark />
           <span>{siteConfig.name}</span>
         </Link>
         <nav
