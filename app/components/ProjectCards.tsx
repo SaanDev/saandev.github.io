@@ -24,7 +24,7 @@ export function ProjectCards({ showImages = true, limit }: ProjectCardsProps) {
               <PlaceholderMedia
                 label=""
                 src={project.image}
-                alt={project.imageAlt}
+                alt=""
                 className="project-card-media"
               />
             )}

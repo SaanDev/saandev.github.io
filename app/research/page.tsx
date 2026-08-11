@@ -97,7 +97,7 @@ export default function ResearchPage() {
                     <PlaceholderMedia
                       label=""
                       src={project.image}
-                      alt={project.imageAlt}
+                      alt=""
                       className="project-detail-hero"
                     />
                   )}
@@ -230,7 +230,7 @@ export default function ResearchPage() {
           <PlaceholderMedia
             label=""
             src="/images/research/Analyzer/main_window.png"
-            alt="Main window of the e-CALLISTO FITS Analyzer software"
+            alt=""
             className="research-software-image"
           />
         </div>

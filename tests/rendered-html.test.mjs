@@ -109,3 +109,16 @@ test("personal image stories distinguish documentary field images from portfolio
   assert.match(home, /astronomy-solar-telescope-setup\.webp/);
   assert.match(home, /Preparing an instrument for daytime observation\./);
 });
+
+test("rendered images do not expose alt text", async () => {
+  const routes = ["/", "/research", "/beyond", "/photography", "/outreach"];
+
+  for (const path of routes) {
+    const response = await render(path);
+    assert.equal(response.status, 200, path);
+
+    const html = await response.text();
+    assert.doesNotMatch(html, /<img\b[^>]*\balt="[^"]+"/i, path);
+    assert.doesNotMatch(html, /property="og:image:alt"/i, path);
+  }
+});

@@ -50,7 +50,7 @@ export default function HomePage() {
             <PlaceholderMedia
               label=""
               src="/images/sahan-liyanage-portrait.jpg"
-              alt="Professional portrait of Sahan S Liyanage"
+              alt=""
               className="portrait-frame"
               eager
             />
@@ -86,7 +86,7 @@ export default function HomePage() {
           <figure className="about-observation-figure">
             <img
               src="/images/personal/astronomy-solar-telescope-setup.webp"
-              alt="Sahan preparing a telescope for a daytime solar observation"
+              alt=""
               loading="lazy"
               decoding="async"
             />
@@ -173,7 +173,7 @@ export default function HomePage() {
           <PlaceholderMedia
             label=""
             src="/images/research/Analyzer/main_window.png"
-            alt="Main window of the e-CALLISTO FITS Analyzer software"
+            alt=""
             className="software-screenshot"
           />
           <ul className="capability-list">
@@ -225,7 +225,7 @@ export default function HomePage() {
               <PlaceholderMedia
                 label=""
                 src="/images/personal/astronomy-public-telescope.webp"
-                alt="Students gathered around a telescope during a public astronomy programme"
+                alt=""
               />
               <div>
                 <p className="eyebrow">Camps, instruments & outreach</p>
@@ -240,7 +240,7 @@ export default function HomePage() {
               <PlaceholderMedia
                 label=""
                 src="/images/personal/wildlife-wetland-telephoto.webp"
-                alt="Sahan using a telephoto lens from a wetland observation deck"
+                alt=""
               />
               <div>
                 <p className="eyebrow">Field observation</p>
@@ -269,17 +269,17 @@ export default function HomePage() {
             <PlaceholderMedia
               label=""
               src="/images/personal/music-percussion-performance.webp"
-              alt="Sahan playing percussion during a live musical performance"
+              alt=""
             />
             <PlaceholderMedia
               label=""
               src="/images/personal/music-stage-performance.webp"
-              alt="Sahan performing on stage with a musical ensemble"
+              alt=""
             />
             <PlaceholderMedia
               label=""
               src="/images/personal/music-ensemble-instruments.webp"
-              alt="Percussion instruments and musicians arranged for an outdoor performance"
+              alt=""
             />
           </div>
         </div>

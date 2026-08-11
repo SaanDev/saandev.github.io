@@ -40,7 +40,6 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1725,
         height: 912,
-        alt: "Sahan S Liyanage - Experimental and Computational Physicist, Researcher, and Scientific Software Developer",
       },
     ],
   },
