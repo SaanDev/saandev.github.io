@@ -94,6 +94,9 @@ export const projects: Project[] = [
       "Space Weather",
       "Machine Learning",
     ],
+    image: "/images/research/space-weather-dashboard/monitoring-overview.webp",
+    imageAlt:
+      "Space Weather Monitoring Dashboard with solar, geomagnetic, and heliospheric data panels",
     duration: "2026 - Present",
     background:
       "Space-weather interpretation often requires evidence from several instruments and data services. This project brings those streams together with alerts, a combined event timeline, and archive search so solar activity can be reviewed as a connected sequence rather than as isolated plots.",

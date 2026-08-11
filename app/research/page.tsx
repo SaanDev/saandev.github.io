@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DashboardShowcase } from "../components/DashboardShowcase";
 import { PageIntro } from "../components/PageIntro";
 import { PlaceholderMedia } from "../components/PlaceholderMedia";
 import {
@@ -102,6 +103,8 @@ export default function ResearchPage() {
                     />
                   )}
                 </div>
+
+                {project.id === "space-weather-dashboard" && <DashboardShowcase />}
 
                 <div className="project-detail-grid">
                   <section>

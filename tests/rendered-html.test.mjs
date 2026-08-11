@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { access } from "node:fs/promises";
 import test from "node:test";
 
 async function render(path = "/") {
@@ -69,6 +70,8 @@ test("research and CV pages contain verified supplied details without private co
   assert.match(research, /Raman Spectroscopic Analysis of Common Minerals in Sri Lanka/);
   assert.match(research, /Arecibo Observatory Type II event of 2 March 2022/);
   assert.match(research, /Space Weather Monitoring Dashboard/);
+  assert.match(research, /Inside the monitoring workspace/);
+  assert.match(research, /space-weather-dashboard\/monitoring-overview\.webp/);
   assert.match(research, /ecallistolib/);
 
   const cv = await cvResponse.text();
@@ -82,6 +85,23 @@ test("research and CV pages contain verified supplied details without private co
   const home = await homeResponse.text();
   assert.match(home, /\/images\/sahan-liyanage-portrait\.jpg/);
   assert.doesNotMatch(home, /paper-cover|report-cover/);
+});
+
+test("space-weather dashboard showcase includes every supplied view", async () => {
+  const dashboardImages = [
+    "alerts.webp",
+    "cme-forecast.webp",
+    "event-timeline.webp",
+    "monitoring-overview.webp",
+    "radio-burst-analysis.webp",
+    "sdo-analysis.webp",
+  ];
+
+  await Promise.all(
+    dashboardImages.map((image) =>
+      access(new URL(`../public/images/research/space-weather-dashboard/${image}`, import.meta.url)),
+    ),
+  );
 });
 
 test("personal stories and photography are organized into their dedicated pages", async () => {
