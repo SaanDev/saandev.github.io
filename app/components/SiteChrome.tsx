@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { navigation, siteConfig, socialProfiles } from "../data/content";
+
+type Theme = "light" | "dark";
 
 function SolarMark() {
   return (
@@ -13,13 +15,54 @@ function SolarMark() {
   );
 }
 
+function ThemeToggle() {
+  const theme = useSyncExternalStore<Theme>(
+    (onStoreChange) => {
+      const media = window.matchMedia("(prefers-color-scheme: dark)");
+      const onSystemThemeChange = () => {
+        if (window.localStorage.getItem("site-theme")) return;
+        document.documentElement.dataset.theme = media.matches ? "dark" : "light";
+        document.documentElement.style.colorScheme = media.matches ? "dark" : "light";
+        onStoreChange();
+      };
+      window.addEventListener("site-theme-change", onStoreChange);
+      media.addEventListener("change", onSystemThemeChange);
+      return () => {
+        window.removeEventListener("site-theme-change", onStoreChange);
+        media.removeEventListener("change", onSystemThemeChange);
+      };
+    },
+    () => document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+    () => "light",
+  );
+
+  function toggleTheme() {
+    const nextTheme: Theme = theme === "light" ? "dark" : "light";
+    document.documentElement.dataset.theme = nextTheme;
+    document.documentElement.style.colorScheme = nextTheme;
+    window.localStorage.setItem("site-theme", nextTheme);
+    window.dispatchEvent(new Event("site-theme-change"));
+  }
+
+  const nextTheme = theme === "light" ? "dark" : "light";
+
+  return (
+    <button
+      className="theme-toggle"
+      type="button"
+      aria-label={`Switch to ${nextTheme} theme`}
+      title={`Switch to ${nextTheme} theme`}
+      onClick={toggleTheme}
+    >
+      <span className="theme-toggle-icon" aria-hidden="true" />
+      <span className="theme-toggle-label">{theme === "light" ? "Light" : "Dark"}</span>
+    </button>
+  );
+}
+
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -32,21 +75,15 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <Link className="brand" href="/" aria-label="Sahan S Liyanage, home">
+        <Link
+          className="brand"
+          href="/"
+          aria-label="Sahan S Liyanage, home"
+          onClick={() => setOpen(false)}
+        >
           <SolarMark />
           <span>{siteConfig.name}</span>
         </Link>
-        <button
-          className="menu-toggle"
-          type="button"
-          aria-expanded={open}
-          aria-controls="primary-navigation"
-          aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-          onClick={() => setOpen((value) => !value)}
-        >
-          <span />
-          <span />
-        </button>
         <nav
           id="primary-navigation"
           className={`primary-nav ${open ? "is-open" : ""}`}
@@ -61,12 +98,15 @@ export function SiteHeader() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={active ? "active" : ""}
+                    onClick={() => setOpen(false)}
                   >
                     {item.label} <span className="submenu-indicator" aria-hidden="true">⌄</span>
                   </Link>
                   <div className="nav-submenu" aria-label={`${item.label} submenu`}>
                     {item.children.map((child) => (
-                      <Link href={child.href} key={child.href}>{child.label}</Link>
+                      <Link href={child.href} key={child.href} onClick={() => setOpen(false)}>
+                        {child.label}
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -78,38 +118,29 @@ export function SiteHeader() {
                 key={item.href}
                 aria-current={active ? "page" : undefined}
                 className={active ? "active" : ""}
+                onClick={() => setOpen(false)}
               >
                 {item.label}
               </Link>
             );
           })}
         </nav>
+        <div className="header-actions">
+          <ThemeToggle />
+          <button
+            className="menu-toggle"
+            type="button"
+            aria-expanded={open}
+            aria-controls="primary-navigation"
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            onClick={() => setOpen((value) => !value)}
+          >
+            <span />
+            <span />
+          </button>
+        </div>
       </div>
     </header>
-  );
-}
-
-function PlaceholderToggle() {
-  const [hidden, setHidden] = useState(false);
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem("hide-editing-placeholders") === "true";
-    setHidden(stored);
-    document.documentElement.classList.toggle("hide-placeholders", stored);
-  }, []);
-
-  function toggle() {
-    const next = !hidden;
-    setHidden(next);
-    window.localStorage.setItem("hide-editing-placeholders", String(next));
-    document.documentElement.classList.toggle("hide-placeholders", next);
-  }
-
-  return (
-    <button className="placeholder-toggle" type="button" onClick={toggle}>
-      <span className="toggle-dot" aria-hidden="true" />
-      {hidden ? "Show editing placeholders" : "Hide editing placeholders"}
-    </button>
   );
 }
 
@@ -159,11 +190,13 @@ export function SiteFooter() {
           ))}
         </nav>
         <div className="footer-note">
-          <p className="footer-label">Editing mode</p>
+          <p className="footer-label">Connect</p>
           <p>
-            Draft details remain clearly marked until verified content and user-supplied media are added.
+            Open to research collaboration, scientific software projects, and doctoral opportunities.
           </p>
-          <PlaceholderToggle />
+          <a className="footer-email" href={`mailto:${siteConfig.email}`}>
+            {siteConfig.email}
+          </a>
         </div>
       </div>
       <div className="container footer-bottom">

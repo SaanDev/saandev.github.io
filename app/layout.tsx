@@ -59,9 +59,27 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f8f5ef",
-  colorScheme: "light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f7f8" },
+    { media: "(prefers-color-scheme: dark)", color: "#11161b" },
+  ],
+  colorScheme: "light dark",
 };
+
+const themeScript = `
+  (() => {
+    try {
+      const saved = localStorage.getItem("site-theme");
+      const theme = saved === "light" || saved === "dark"
+        ? saved
+        : matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.style.colorScheme = theme;
+    } catch (_) {
+      document.documentElement.dataset.theme = "light";
+    }
+  })();
+`;
 
 const personSchema = {
   "@context": "https://schema.org",
@@ -103,7 +121,14 @@ const personSchema = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${sourceSerif.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <a className="skip-link" href="#main-content">
           Skip to main content

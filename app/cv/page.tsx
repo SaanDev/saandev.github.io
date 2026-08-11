@@ -308,7 +308,7 @@ export default function CVPage() {
 
           <section id="awards" className="cv-section">
             <p className="cv-kicker">Awards and honours</p>
-            <div className="cv-record"><div><h2>Dean's List</h2><p>University of Colombo</p></div><p>Academic Year 2019/2020</p></div>
+            <div className="cv-record"><div><h2>Dean’s List</h2><p>University of Colombo</p></div><p>Academic Year 2019/2020</p></div>
           </section>
 
           <section id="leadership" className="cv-section">
