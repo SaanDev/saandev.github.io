@@ -34,6 +34,8 @@ test("server-renders the academic homepage with complete primary navigation", as
   assert.match(html, /Scientific Software/);
   assert.match(html, /Field &amp; Creative Practice/);
   assert.match(html, /Contact Me/i);
+  const primaryNavigation = html.match(/<nav id="primary-navigation"[\s\S]*?<\/nav>/)?.[0] ?? "";
+  assert.match(primaryNavigation, /href="\/photography"[^>]*>Photography<\/a>/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
 });
 

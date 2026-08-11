@@ -31,6 +31,7 @@ export const navigation: NavigationItem[] = [
   { label: "Publications", href: "/publications" },
   { label: "Outreach", href: "/outreach" },
   { label: "Beyond", href: "/beyond" },
+  { label: "Photography", href: "/photography" },
   { label: "CV", href: "/cv" },
   { label: "Contact", href: "/contact" },
 ];
