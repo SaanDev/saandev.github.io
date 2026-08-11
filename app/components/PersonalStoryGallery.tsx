@@ -21,8 +21,7 @@ export function PersonalStoryGallery({
           className={`personal-story-image personal-story-image-${image.layout || "portrait"} personal-story-image-${(index % 5) + 1}`}
           key={image.src}
         >
-          <img src={image.src} alt="" loading="lazy" decoding="async" />
-          <figcaption>{image.caption}</figcaption>
+          <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
         </figure>
       ))}
     </div>

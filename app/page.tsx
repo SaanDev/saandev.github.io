@@ -50,7 +50,7 @@ export default function HomePage() {
             <PlaceholderMedia
               label=""
               src="/images/sahan-liyanage-portrait.jpg"
-              alt=""
+              alt="Professional portrait of Sahan S Liyanage"
               className="portrait-frame"
               eager
             />
@@ -86,11 +86,10 @@ export default function HomePage() {
           <figure className="about-observation-figure">
             <img
               src="/images/personal/astronomy-solar-telescope-setup.webp"
-              alt=""
+              alt="Sahan preparing a telescope for a daytime solar observation"
               loading="lazy"
               decoding="async"
             />
-            <figcaption>Preparing an instrument for daytime observation.</figcaption>
           </figure>
         </div>
       </section>
@@ -173,7 +172,7 @@ export default function HomePage() {
           <PlaceholderMedia
             label=""
             src="/images/research/Analyzer/main_window.png"
-            alt=""
+            alt="Main window of the e-CALLISTO FITS Analyzer software"
             className="software-screenshot"
           />
           <ul className="capability-list">
@@ -225,7 +224,7 @@ export default function HomePage() {
               <PlaceholderMedia
                 label=""
                 src="/images/personal/astronomy-public-telescope.webp"
-                alt=""
+                alt="Students gathered around a telescope during a public astronomy programme"
               />
               <div>
                 <p className="eyebrow">Camps, instruments & outreach</p>
@@ -240,7 +239,7 @@ export default function HomePage() {
               <PlaceholderMedia
                 label=""
                 src="/images/personal/wildlife-wetland-telephoto.webp"
-                alt=""
+                alt="Sahan using a telephoto lens from a wetland observation deck"
               />
               <div>
                 <p className="eyebrow">Field observation</p>
@@ -269,17 +268,17 @@ export default function HomePage() {
             <PlaceholderMedia
               label=""
               src="/images/personal/music-percussion-performance.webp"
-              alt=""
+              alt="Sahan playing percussion during a live musical performance"
             />
             <PlaceholderMedia
               label=""
               src="/images/personal/music-stage-performance.webp"
-              alt=""
+              alt="Sahan performing on stage with a musical ensemble"
             />
             <PlaceholderMedia
               label=""
               src="/images/personal/music-ensemble-instruments.webp"
-              alt=""
+              alt="Percussion instruments and musicians arranged for an outdoor performance"
             />
           </div>
         </div>

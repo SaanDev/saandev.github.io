@@ -18,7 +18,7 @@ export function PlaceholderMedia({
       <div className={`media-frame has-image ${className}`}>
         <img
           src={src}
-          alt=""
+          alt={alt}
           loading={eager ? "eager" : "lazy"}
           decoding="async"
         />

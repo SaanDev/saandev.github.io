@@ -10,7 +10,7 @@ function GalleryVisual({ item, large = false }: { item: GalleryItem; large?: boo
     return (
       <img
         src={item.image}
-        alt=""
+        alt={item.alt}
         loading={large ? "eager" : "lazy"}
         decoding="async"
       />
