@@ -40,7 +40,7 @@ export default function PhotographyPage() {
       <PageIntro
         eyebrow="Photography"
         title="A living archive of light."
-        description="Thirty-four photographs move between the night sky, wildlife encounters, landscapes, architecture, and the changing character of light."
+        description="A growing collection moves between the night sky, wildlife encounters, landscapes, architecture, and the changing character of light."
         dark
       />
 
@@ -63,7 +63,7 @@ export default function PhotographyPage() {
         <div className="container">
           <div className="photo-gallery-heading">
             <p className="eyebrow">The collection</p>
-            <h2 id="gallery-heading">Thirty-four frames. Three ways of seeing.</h2>
+            <h2 id="gallery-heading">{galleryItems.length} frames. Three ways of seeing.</h2>
             <p className="gallery-context-note">
               Browse the complete collection or isolate one body of work. Select any frame for an uninterrupted full-screen view; arrow keys and swipe gestures move through the sequence.
             </p>

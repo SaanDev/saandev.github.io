@@ -43,7 +43,7 @@ test("server-renders every requested primary page", async () => {
     ["/publications", /Browse scientific outputs/],
     ["/outreach", /Outreach and participation/],
     ["/beyond", /Ways of seeing and making/],
-    ["/photography", /Thirty-four frames\. Three ways of seeing\./],
+    ["/photography", /Three ways of seeing\./],
     ["/cv", /Academic experience and research practice/],
     ["/contact", /What would you like to explore/],
   ];
@@ -100,7 +100,10 @@ test("personal stories and photography are organized into their dedicated pages"
   assert.match(photography, /lunar-eclipse-sequence\.webp/);
   assert.match(photography, /black-winged-stilt\.webp/);
   assert.match(photography, /airport-light-trails\.webp/);
-  assert.match(photography, /34(?:<!-- -->)? photographs/);
+  assert.match(photography, /galactic-centre\.webp/);
+  assert.match(photography, /elephants-greeting\.webp/);
+  assert.match(photography, /48(?:<!-- -->)? photographs/);
+  assert.match(photography, /48(?:<!-- -->)? frames/);
   assert.doesNotMatch(photography, /\[ADD /);
 
   const outreach = await outreachResponse.text();
