@@ -267,18 +267,18 @@ export default function HomePage() {
           <div className="music-gallery">
             <PlaceholderMedia
               label=""
-              src="/images/personal/music-percussion-performance.webp"
-              alt="Sahan playing percussion during a live musical performance"
+              src="/images/personal/music-naada-nu-vocal-performance.webp"
+              alt="Sahan performing as a vocalist at the Naada Nu 23 annual concert"
             />
             <PlaceholderMedia
               label=""
-              src="/images/personal/music-stage-performance.webp"
-              alt="Sahan performing on stage with a musical ensemble"
+              src="/images/personal/music-naada-nu-ensemble.webp"
+              alt="Sahan singing with the ensemble at the Naada Nu 23 annual concert"
             />
             <PlaceholderMedia
               label=""
-              src="/images/personal/music-ensemble-instruments.webp"
-              alt="Percussion instruments and musicians arranged for an outdoor performance"
+              src="/images/personal/music-naada-nu-percussion.webp"
+              alt="Sahan preparing percussion instruments during the Naada Nu 23 concert"
             />
           </div>
         </div>

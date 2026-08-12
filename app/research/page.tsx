@@ -99,12 +99,31 @@ export default function ResearchPage() {
                       label=""
                       src={project.image}
                       alt={project.imageAlt}
-                      className="project-detail-hero"
+                      className={`project-detail-hero${project.imageFit === "cover" ? " project-detail-hero-cover" : ""}`}
                     />
                   )}
                 </div>
 
                 {project.id === "space-weather-dashboard" && <DashboardShowcase />}
+
+                {project.gallery && (
+                  <section className="project-gallery" aria-labelledby={`${project.id}-gallery-title`}>
+                    <div className="project-gallery-heading">
+                      <p className="eyebrow">Laboratory record</p>
+                      <h3 id={`${project.id}-gallery-title`}>Raman spectroscopy setup</h3>
+                    </div>
+                    <div className="project-gallery-grid">
+                      {project.gallery.map((image) => (
+                        <figure
+                          className={`project-gallery-image project-gallery-image-${image.layout}`}
+                          key={image.src}
+                        >
+                          <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+                        </figure>
+                      ))}
+                    </div>
+                  </section>
+                )}
 
                 <div className="project-detail-grid">
                   <section>

@@ -117,6 +117,26 @@ export const astronomyImages: PersonalImage[] = [
 
 export const musicImages: PersonalImage[] = [
   {
+    src: "/images/personal/music-naada-nu-ensemble.webp",
+    alt: "Sahan singing with the ensemble at the Naada Nu 23 annual concert",
+    layout: "wide",
+  },
+  {
+    src: "/images/personal/music-naada-nu-vocal-performance.webp",
+    alt: "Sahan performing as a vocalist at the Naada Nu 23 annual concert",
+    layout: "portrait",
+  },
+  {
+    src: "/images/personal/music-naada-nu-percussion.webp",
+    alt: "Sahan preparing percussion instruments during the Naada Nu 23 concert",
+    layout: "portrait",
+  },
+  {
+    src: "/images/personal/music-naada-nu-vocal-monochrome.webp",
+    alt: "Black-and-white portrait of Sahan singing on stage at Naada Nu 23",
+    layout: "portrait",
+  },
+  {
     src: "/images/personal/music-percussion-performance.webp",
     alt: "Sahan playing percussion during a live musical performance",
     layout: "portrait",

@@ -73,6 +73,10 @@ test("research and CV pages contain verified supplied details without private co
   assert.match(research, /Inside the monitoring workspace/);
   assert.match(research, /space-weather-dashboard\/monitoring-overview\.webp/);
   assert.match(research, /ecallistolib/);
+  assert.match(research, /raman-spectroscopy\/active-laser-setup\.webp/);
+  assert.match(research, /raman-spectroscopy\/spectrograph-instrument\.webp/);
+  assert.match(research, /raman-spectroscopy\/laboratory-workstation\.webp/);
+  assert.match(research, /raman-spectroscopy\/optical-setup\.webp/);
 
   const cv = await cvResponse.text();
   assert.match(cv, /May 2026 - Present/);
@@ -115,6 +119,10 @@ test("personal stories and photography are organized into their dedicated pages"
   const beyond = await beyondResponse.text();
   assert.match(beyond, /wildlife-photographer-telephoto\.webp/);
   assert.match(beyond, /music-stage-performance\.webp/);
+  assert.match(beyond, /music-naada-nu-vocal-performance\.webp/);
+  assert.match(beyond, /music-naada-nu-vocal-monochrome\.webp/);
+  assert.match(beyond, /music-naada-nu-percussion\.webp/);
+  assert.match(beyond, /music-naada-nu-ensemble\.webp/);
   assert.match(beyond, /they are not presented as photographs from my wildlife portfolio/i);
   assert.doesNotMatch(beyond, /astronom/i);
 
@@ -135,7 +143,9 @@ test("personal stories and photography are organized into their dedicated pages"
 
   const home = await homeResponse.text();
   assert.match(home, /Field &amp; Creative Practice/);
-  assert.match(home, /music-percussion-performance\.webp/);
+  assert.match(home, /music-naada-nu-vocal-performance\.webp/);
+  assert.match(home, /music-naada-nu-ensemble\.webp/);
+  assert.match(home, /music-naada-nu-percussion\.webp/);
   assert.match(home, /astronomy-solar-telescope-setup\.webp/);
   assert.doesNotMatch(home, /Preparing an instrument for daytime observation\./);
 });

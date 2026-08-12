@@ -69,6 +69,12 @@ export type Project = {
   duration: string;
   image?: string;
   imageAlt?: string;
+  imageFit?: "contain" | "cover";
+  gallery?: {
+    src: string;
+    alt: string;
+    layout: "portrait" | "wide";
+  }[];
   background: string;
   questions: string[];
   dataMethods: string[];
@@ -280,6 +286,26 @@ export const projects: Project[] = [
       "Python",
     ],
     duration: "November 2022 - March 2023",
+    image: "/images/research/raman-spectroscopy/active-laser-setup.webp",
+    imageAlt: "Raman spectroscopy optical bench illuminated by the active 532 nm laser",
+    imageFit: "cover",
+    gallery: [
+      {
+        src: "/images/research/raman-spectroscopy/spectrograph-instrument.webp",
+        alt: "Andor Kymera spectrograph and detector mounted on the Raman optical bench",
+        layout: "portrait",
+      },
+      {
+        src: "/images/research/raman-spectroscopy/laboratory-workstation.webp",
+        alt: "Raman laboratory workstation with optical bench and acquisition computer",
+        layout: "portrait",
+      },
+      {
+        src: "/images/research/raman-spectroscopy/optical-setup.webp",
+        alt: "Complete Raman spectroscopy optical arrangement with the green laser aligned",
+        layout: "wide",
+      },
+    ],
     background: "Sri Lanka contains many high-purity mineral varieties, but the project report identified a lack of a dedicated Raman-spectroscopy database for Sri Lankan minerals. The work examined commonly found samples individually and in chemically or structurally related groups.",
     questions: [
       "Which Raman peaks characterize the selected common Sri Lankan minerals?",
