@@ -77,6 +77,18 @@ test("research and CV pages contain verified supplied details without private co
   assert.match(research, /raman-spectroscopy\/spectrograph-instrument\.webp/);
   assert.match(research, /raman-spectroscopy\/laboratory-workstation\.webp/);
   assert.match(research, /raman-spectroscopy\/optical-setup\.webp/);
+  const cosparWorkshopImages = [
+    "workshop-group.webp",
+    "analysis-session-group.webp",
+    "certificate-presentation.webp",
+    "computational-session.webp",
+    "workshop-instructor-portrait.webp",
+    "international-participants.webp",
+    "solar-physics-instructor.webp",
+  ];
+  for (const image of cosparWorkshopImages) {
+    assert.match(research, new RegExp(`cospar-2024/${image.replace(".", "\\.")}`));
+  }
 
   const cv = await cvResponse.text();
   assert.match(cv, /May 2026 - Present/);

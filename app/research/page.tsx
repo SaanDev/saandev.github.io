@@ -24,6 +24,44 @@ export const metadata: Metadata = {
   },
 };
 
+const cosparWorkshopImages = [
+  {
+    src: "/images/research/cospar-2024/workshop-group.webp",
+    alt: "COSPAR Capacity Building Workshop participants and instructors at Samarkand State University",
+    layout: "wide",
+  },
+  {
+    src: "/images/research/cospar-2024/analysis-session-group.webp",
+    alt: "Workshop participants and instructors after a solar radio analysis session",
+    layout: "landscape",
+  },
+  {
+    src: "/images/research/cospar-2024/certificate-presentation.webp",
+    alt: "Sahan Liyanage receiving his COSPAR workshop certificate of attendance",
+    layout: "portrait",
+  },
+  {
+    src: "/images/research/cospar-2024/computational-session.webp",
+    alt: "Participants working with scientific software during a computational session",
+    layout: "landscape",
+  },
+  {
+    src: "/images/research/cospar-2024/workshop-instructor-portrait.webp",
+    alt: "Sahan Liyanage with a COSPAR workshop instructor in the lecture room",
+    layout: "portrait",
+  },
+  {
+    src: "/images/research/cospar-2024/international-participants.webp",
+    alt: "Sahan Liyanage with fellow international participants at the COSPAR workshop",
+    layout: "landscape",
+  },
+  {
+    src: "/images/research/cospar-2024/solar-physics-instructor.webp",
+    alt: "Sahan Liyanage with a solar physics instructor during the COSPAR workshop",
+    layout: "portrait",
+  },
+] as const;
+
 export default function ResearchPage() {
   return (
     <main id="main-content">
@@ -181,20 +219,42 @@ export default function ResearchPage() {
       </section>
 
       <section className="section section-tint" id="workshops-training">
-        <div className="container split-heading-layout">
-          <div>
-            <p className="eyebrow">04 · Workshops and trainings</p>
-            <h2>Developing research practice through shared learning.</h2>
+        <div className="container">
+          <div className="split-heading-layout">
+            <div>
+              <p className="eyebrow">04 · Workshops and trainings</p>
+              <h2>Developing research practice through shared learning.</h2>
+            </div>
+            <article className="timeline-entry">
+              <div className="timeline-marker" aria-hidden="true" />
+              <p>19-30 August 2024</p>
+              <h3>COSPAR Capacity Building Workshop 2024</h3>
+              <p className="timeline-institution">Samarkand State University, Samarkand City, Uzbekistan</p>
+              <p>
+                Training on coronal and interplanetary shocks using SOHO, SDO, STEREO, ground-based observations, SolarSoft, SunPy, Astropy, and Python.
+              </p>
+            </article>
           </div>
-          <article className="timeline-entry">
-            <div className="timeline-marker" aria-hidden="true" />
-            <p>19-30 August 2024</p>
-            <h3>COSPAR Capacity Building Workshop 2024</h3>
-            <p className="timeline-institution">Samarkand State University, Samarkand City, Uzbekistan</p>
-            <p>
-              Training on coronal and interplanetary shocks using SOHO, SDO, STEREO, ground-based observations, SolarSoft, SunPy, Astropy, and Python.
-            </p>
-          </article>
+
+          <section className="workshop-gallery" aria-labelledby="cospar-gallery-title">
+            <div className="workshop-gallery-heading">
+              <div>
+                <p className="eyebrow">Workshop record</p>
+                <h3 id="cospar-gallery-title">Collaboration, analysis, and shared learning</h3>
+              </div>
+              <p>Samarkand · August 2024</p>
+            </div>
+            <div className="workshop-gallery-grid">
+              {cosparWorkshopImages.map((image) => (
+                <figure
+                  className={`workshop-gallery-image workshop-gallery-image-${image.layout}`}
+                  key={image.src}
+                >
+                  <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+                </figure>
+              ))}
+            </div>
+          </section>
         </div>
       </section>
 
