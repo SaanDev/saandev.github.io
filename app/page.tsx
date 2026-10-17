@@ -56,13 +56,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section home-photography" id="photography">
+      <section className="section home-photography" id="beyond">
         <div className="container">
-          <div className="home-section-heading"><div><p className="eyebrow">Beyond physics</p><h2>Through my lens</h2></div><Link className="text-link" href="/photography">View photography ↗</Link></div>
+          <div className="home-section-heading"><div><p className="eyebrow">Beyond physics</p><h2>Beyond the classroom</h2></div><Link className="text-link" href="/beyond">Explore Beyond ↗</Link></div>
           <div className="home-photo-grid">
-            <Link href="/photography" aria-label="Explore astrophotography"><img src="/images/photography/astrophotography/milky-way-road.webp" alt="The Milky Way above a quiet road" loading="lazy" /></Link>
-            <Link href="/photography" aria-label="Explore wildlife photography"><img src="/images/photography/wildlife/kingfisher.webp" alt="A kingfisher photographed in the wild" loading="lazy" /></Link>
-            <Link href="/photography" aria-label="Explore landscape photography"><img src="/images/photography/other/sunset-over-water.webp" alt="Sunset reflected over water" loading="lazy" /></Link>
+            <Link href="/beyond/photography" aria-label="Explore photography"><img src="/images/photography/astrophotography/milky-way-road.webp" alt="The Milky Way above a quiet road" loading="lazy" /></Link>
+            <Link href="/beyond/music" aria-label="Explore music"><img src="/images/personal/music-naada-nu-vocal-performance.webp" alt="Sahan singing on stage" loading="lazy" /></Link>
+            <Link href="/beyond/outreach" aria-label="Explore outreach and activities"><img src="/images/personal/astronomy-public-telescope.webp" alt="Students taking part in an astronomy programme" loading="lazy" /></Link>
           </div>
         </div>
       </section>

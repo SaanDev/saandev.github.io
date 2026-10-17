@@ -22,7 +22,7 @@ export const navigation: NavigationItem[] = [
   { label: "Home", href: "/" },
   { label: "Research", href: "/research" },
   { label: "Publications", href: "/publications" },
-  { label: "Photography", href: "/photography" },
+  { label: "Beyond", href: "/beyond" },
   { label: "CV", href: "/cv" },
   { label: "Contact", href: "/contact" },
 ];

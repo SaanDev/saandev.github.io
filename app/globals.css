@@ -4306,3 +4306,24 @@ p:last-child {
   .home-photo-grid a:first-child img { height: 230px; }
   .desktop-break { display: none; }
 }
+
+/* Beyond: a compact directory with navigation shared by its subpages. */
+.beyond-navigation { background: var(--white); border-bottom: 1px solid var(--border); }
+.beyond-navigation > div { display: flex; flex-wrap: wrap; gap: 8px 28px; padding-block: 16px; }
+.beyond-navigation a { padding-block: 4px; font-size: .8rem; color: var(--muted); border-bottom: 2px solid transparent; }
+.beyond-navigation a:hover, .beyond-navigation a[aria-current="page"] { color: var(--navy); border-bottom-color: var(--gold); }
+.beyond-directory { padding-top: 48px; }
+.beyond-directory-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+.beyond-directory-card { display: block; overflow: hidden; border: 1px solid var(--border); background: var(--white); }
+.beyond-directory-card > img { width: 100%; height: 340px; object-fit: cover; object-position: center 35%; }
+.beyond-directory-card > div { padding: 28px; }
+.beyond-directory-card h2 { display: flex; justify-content: space-between; gap: 20px; font-size: 1.7rem; margin-bottom: 12px; }
+.beyond-directory-card h2 span { color: var(--gold-dark); }
+.beyond-directory-card p { color: var(--muted); font-size: .9rem; }
+.beyond-directory-card:hover { border-color: var(--gold); }
+@media (max-width: 560px) {
+  .beyond-directory-grid { grid-template-columns: 1fr; gap: 24px; }
+  .beyond-directory-card > img { height: 260px; }
+  .beyond-directory-card > div { padding: 22px; }
+  .beyond-navigation > div { gap: 8px 18px; }
+}
