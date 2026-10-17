@@ -1,5 +1,7 @@
 "use client";
 
+import { Icon } from "./Icons";
+
 import { useMemo, useState } from "react";
 import { publicationCategories, publications } from "../data/content";
 
@@ -116,7 +118,7 @@ export function PublicationsClient() {
         <div className="action-notice" role="status">
           {notice}
           <button type="button" onClick={() => setNotice("")} aria-label="Dismiss notice">
-            ×
+            <Icon name="close" />
           </button>
         </div>
       )}

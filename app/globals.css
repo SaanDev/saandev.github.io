@@ -1868,7 +1868,7 @@ p:last-child {
   position: absolute;
   left: 0;
   color: var(--gold-dark);
-  content: "↗";
+  content: "";
 }
 
 .project-findings-panel {

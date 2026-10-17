@@ -1,3 +1,5 @@
+import { Icon } from "../components/Icons";
+import { SocialLinks } from "../components/SocialLinks";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "../components/PageIntro";
@@ -106,12 +108,12 @@ export default function CVPage() {
         description="Physics graduate seeking graduate study opportunities, with experience in research, scientific computing, and university teaching."
       >
         <div className="button-row cv-actions">
-          <a className="button button-primary" href={siteConfig.cvUrl} download="Sahan-Liyanage-CV.pdf">
-            Download CV
+          <a className="button button-primary" href={siteConfig.cvUrl} download="GLSS_Liyanage_CV.pdf">
+            <Icon name="download" /> Download CV
           </a>
           <PrintButton />
         </div>
-        <p className="last-updated">Last updated: October 2026</p>
+        <p className="last-updated">The original PDF is available to download or open in your browser to print.</p>
       </PageIntro>
 
       <div className="container cv-layout">
@@ -139,13 +141,7 @@ export default function CVPage() {
             <p>
               I hold a BSc Honours in Physics from the University of Colombo and am seeking graduate study opportunities in physics. My experience includes solar-radio research, optical spectroscopy, scientific software development, and university teaching.
             </p>
-            <div className="cv-profile-links">
-              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
-              <a href="https://www.linkedin.com/in/saanliyanage/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-              <a href="https://orcid.org/0000-0002-0849-6739" target="_blank" rel="noreferrer">ORCID ↗</a>
-              <a href="https://github.com/SaanDev" target="_blank" rel="noreferrer">GitHub ↗</a>
-              <a href="https://scholar.google.com/citations?user=bOW7eCAAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar ↗</a>
-            </div>
+            <SocialLinks />
           </section>
 
           <section id="position" className="cv-section">
@@ -204,7 +200,7 @@ export default function CVPage() {
                 <div className="cv-record"><h2>{project.title}</h2><p>{project.duration}</p></div>
                 <p>{project.summary}</p>
                 <ul className="tag-list">{project.keywords.map((keyword) => <li key={keyword}>{keyword}</li>)}</ul>
-                {project.links.length > 0 && <div className="cv-project-links">{project.links.map((link) => <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label} ↗</a>)}</div>}
+                {project.links.length > 0 && <div className="cv-project-links">{project.links.map((link) => <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label} <Icon name="arrow-up-right" /></a>)}</div>}
               </div>
             ))}
           </section>
@@ -215,7 +211,7 @@ export default function CVPage() {
               {publications.map((publication) => (
                 <li key={publication.id}>
                   <p>{publication.authors} ({publication.year}). {publication.title}. <em>{publication.venue}</em>. {publication.details}.</p>
-                  <div className="cv-project-links">{publication.links.slice(0, 2).map((link) => <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label} ↗</a>)}</div>
+                  <div className="cv-project-links">{publication.links.slice(0, 2).map((link) => <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label} <Icon name="arrow-up-right" /></a>)}</div>
                 </li>
               ))}
             </ol>
@@ -272,7 +268,7 @@ export default function CVPage() {
             </div>
           </section>
 
-          <Link className="text-link cv-contact-link" href="/contact">Contact Sahan about research or collaboration →</Link>
+          <Link className="text-link cv-contact-link" href="/contact">Contact Sahan about research or collaboration <Icon name="arrow-right" /></Link>
         </div>
       </div>
     </main>

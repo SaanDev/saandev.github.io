@@ -1,18 +1,13 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { Inter } from "next/font/google";
 import { RevealObserver } from "./components/RevealObserver";
 import { SiteFooter, SiteHeader } from "./components/SiteChrome";
 import { siteConfig } from "./data/content";
 import "./globals.css";
+import "./professional.css";
 
 const inter = Inter({
   variable: "--font-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const sourceSerif = Source_Serif_4({
-  variable: "--font-serif",
   subsets: ["latin"],
   display: "swap",
 });
@@ -58,8 +53,8 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f6f7f8" },
-    { media: "(prefers-color-scheme: dark)", color: "#11161b" },
+    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
+    { media: "(prefers-color-scheme: dark)", color: "#10151d" },
   ],
   colorScheme: "light dark",
 };
@@ -121,7 +116,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${sourceSerif.variable}`}
+      className={inter.variable}
       suppressHydrationWarning
     >
       <head>

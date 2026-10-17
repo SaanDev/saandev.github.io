@@ -1,3 +1,4 @@
+import { Icon } from "../components/Icons";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "../components/PageIntro";
@@ -17,7 +18,7 @@ export default function BeyondPage() {
       <div className="container beyond-directory-grid">
         {beyondSections.map((item) => <Link className="beyond-directory-card" href={item.href} key={item.href}>
           <img src={item.image} alt={item.alt} loading="lazy" />
-          <div><h2>{item.title}<span aria-hidden="true">↗</span></h2><p>{item.description}</p></div>
+          <div><h2>{item.title}<span aria-hidden="true"><Icon name="arrow-up-right" /></span></h2><p>{item.description}</p></div>
         </Link>)}
       </div>
     </section>

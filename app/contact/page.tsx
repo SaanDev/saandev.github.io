@@ -1,3 +1,5 @@
+import { Icon } from "../components/Icons";
+import { SocialIcon } from "../components/Icons";
 import type { Metadata } from "next";
 import { PageIntro } from "../components/PageIntro";
 import { siteConfig, socialProfiles } from "../data/content";
@@ -29,7 +31,7 @@ export default function ContactPage() {
           <p className="eyebrow">Email me</p>
           <h2>Graduate study & research opportunities</h2>
           <p>I’m seeking graduate study opportunities in physics and welcome conversations about potential projects and research groups.</p>
-          <a className="button button-primary" href={`mailto:${siteConfig.email}`}>{siteConfig.email} ↗</a>
+          <a className="button button-primary" href={`mailto:${siteConfig.email}`}>{siteConfig.email} <Icon name="arrow-up-right" /></a>
         </div>
       </section>
 
@@ -46,12 +48,12 @@ export default function ContactPage() {
             {socialProfiles.map((profile) => (
               profile.url ? (
                 <a href={profile.url} target="_blank" rel="noreferrer" key={profile.label}>
-                  <span>{profile.short}</span>
-                  <div><strong>{profile.label}</strong><small>Open profile ↗</small></div>
+                  <span className="profile-card-icon"><SocialIcon label={profile.label} /></span>
+                  <div><strong>{profile.label}</strong><small>Open profile <Icon name="arrow-up-right" /></small></div>
                 </a>
               ) : (
                 <div className="profile-placeholder placeholder-note" key={profile.label}>
-                  <span>{profile.short}</span>
+                  <span className="profile-card-icon"><SocialIcon label={profile.label} /></span>
                   <div><strong>{profile.label}</strong><small>{profile.placeholder}</small></div>
                 </div>
               )

@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
-import { access } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import test from "node:test";
 
 async function render(path = "/") {
@@ -164,7 +165,7 @@ test("personal stories and photography are organized into their dedicated pages"
   assert.match(home, /milky-way-road\.webp/);
   assert.match(home, /music-naada-nu-vocal-performance\.webp/);
   assert.match(home, /https:\/\/ecallistoanalyzer\.org\//);
-  assert.doesNotMatch(home, /GPA|3\.57|Second Class|referee/);
+  assert.doesNotMatch(home.replace(/<(svg|script|style)\b[\s\S]*?<\/\1>/g, "").replace(/<[^>]*>/g, ""), /GPA|3\.57|Second Class|referee/);
   const nav = home.match(/<nav id="primary-navigation"[\s\S]*?<\/nav>/)?.[0] ?? "";
   assert.doesNotMatch(nav, /href="\/(outreach|photography)"/);
 
@@ -196,5 +197,30 @@ test("Beyond links to each dedicated subpage and old routes redirect", async () 
     const response = await render(`/${slug}`);
     assert.equal(response.status, 308);
     assert.equal(new URL(response.headers.get("location"), "http://localhost").pathname, `/beyond/${slug}`);
+  }
+});
+
+
+test("download and print use the unchanged original CV", async () => {
+  const pdf = await readFile(new URL("../public/documents/GLSS_Liyanage_CV.pdf", import.meta.url));
+  assert.equal(createHash("sha256").update(pdf).digest("hex"), "258d78c44dc1e8836b8b6612d8c2165cc44e541199c9f0a2968712d81404574c");
+  const html = await (await render("/cv")).text();
+  assert.match(html, /href="\/documents\/GLSS_Liyanage_CV\.pdf" download="GLSS_Liyanage_CV\.pdf"/);
+  assert.match(html, /href="\/documents\/GLSS_Liyanage_CV\.pdf#toolbar=1" target="_blank"/);
+  assert.doesNotMatch(html, /sahan-liyanage-cv-web/);
+});
+
+test("profiles have vector icons and pages contain no emoji-style arrow glyphs", async () => {
+  for (const route of ["/", "/contact"]) {
+    const html = await (await render(route)).text();
+    for (const label of ["Email", "LinkedIn", "ResearchGate", "Google Scholar", "ORCID", "GitHub"]) {
+      const profile = html.match(new RegExp(`<a[^>]*aria-label="${label}"[^>]*>[\\s\\S]*?<\\/a>`))?.[0];
+      assert.ok(profile, `${route}: ${label} accessible link`);
+      assert.match(profile, /<svg/);
+    }
+  }
+  for (const route of ["/", "/research", "/publications", "/cv", "/contact", "/beyond", "/beyond/photography"]) {
+    const html = await (await render(route)).text();
+    assert.doesNotMatch(html, /[↗→←⌄]/, route);
   }
 });

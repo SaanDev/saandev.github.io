@@ -1,5 +1,7 @@
 "use client";
 
+import { Icon } from "./Icons";
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   galleryItems,
@@ -135,7 +137,7 @@ export function PhotographyGallery() {
               <span className="photo-sequence" aria-hidden="true">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <span className="photo-open-label">Open <span aria-hidden="true">↗</span></span>
+              <span className="photo-open-label">Open <span aria-hidden="true"><Icon name="arrow-up-right" /></span></span>
             </button>
           </article>
         ))}
@@ -155,7 +157,7 @@ export function PhotographyGallery() {
                 {active.category} <span aria-hidden="true">·</span> {activeIndex + 1} / {visible.length}
               </p>
               <button ref={closeRef} type="button" onClick={close} aria-label="Close image viewer">
-                Close <span aria-hidden="true">×</span>
+                Close <span aria-hidden="true"><Icon name="close" /></span>
               </button>
             </div>
             <div
@@ -172,10 +174,10 @@ export function PhotographyGallery() {
             >
               <GalleryVisual item={active} large />
               <button className="lightbox-prev" type="button" onClick={() => move(-1)} aria-label="Previous image">
-                ←
+                <Icon name="arrow-left" />
               </button>
               <button className="lightbox-next" type="button" onClick={() => move(1)} aria-label="Next image">
-                →
+                <Icon name="arrow-right" />
               </button>
               <p className="lightbox-copyright">© Sahan S Liyanage</p>
             </div>

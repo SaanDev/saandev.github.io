@@ -1,3 +1,4 @@
+import { Icon } from "../components/Icons";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DashboardShowcase } from "../components/DashboardShowcase";
@@ -175,7 +176,7 @@ export default function ResearchPage() {
                   <div className="project-links-cell">
                     <span>Related outputs</span>
                     {project.links.map((link) => (
-                      <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label} ↗</a>
+                      <a href={link.href} key={link.href} target="_blank" rel="noreferrer">{link.label} <Icon name="arrow-up-right" /></a>
                     ))}
                   </div>
                 </div>

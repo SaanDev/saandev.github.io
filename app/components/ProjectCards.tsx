@@ -1,3 +1,4 @@
+import { Icon } from "./Icons";
 import Link from "next/link";
 import { projects } from "../data/content";
 import { PlaceholderMedia } from "./PlaceholderMedia";
@@ -41,7 +42,7 @@ export function ProjectCards({ showImages = true, limit }: ProjectCardsProps) {
                 ))}
               </ul>
               <Link className="text-link" href={`/research#${project.id}`}>
-                Read more <span aria-hidden="true">↗</span>
+                Read more <span aria-hidden="true"><Icon name="arrow-up-right" /></span>
               </Link>
             </div>
           </article>

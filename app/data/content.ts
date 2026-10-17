@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Sahan S Liyanage is a physics graduate seeking graduate study opportunities in physics, with experience in research, scientific computing, and instrumentation.",
   email: "sahanslst@gmail.com",
-  cvUrl: "/documents/sahan-liyanage-cv-web.pdf",
+  cvUrl: "/documents/GLSS_Liyanage_CV.pdf",
   eCallistoUrl: "https://ecallistoanalyzer.org/",
   softwareUrl: "https://github.com/SaanDev/e-Callisto_FITS_Analyzer",
   siteUrl:

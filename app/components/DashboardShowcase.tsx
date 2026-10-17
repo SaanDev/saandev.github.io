@@ -1,5 +1,7 @@
 "use client";
 
+import { Icon } from "./Icons";
+
 import { useEffect, useRef, useState } from "react";
 
 const dashboardViews = [
@@ -110,11 +112,11 @@ export function DashboardShowcase() {
           </div>
           <div className="dashboard-browser-navigation">
             <button type="button" onClick={showPrevious} aria-label="Show previous dashboard view">
-              ←
+              <Icon name="arrow-left" />
             </button>
             <span>Scroll to inspect the full view</span>
             <button type="button" onClick={showNext} aria-label="Show next dashboard view">
-              →
+              <Icon name="arrow-right" />
             </button>
           </div>
         </div>
