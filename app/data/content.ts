@@ -1,12 +1,12 @@
 export const siteConfig = {
   name: "Sahan S Liyanage",
-  title: "Experimental & Computational Physicist | Researcher | Scientific Software Developer",
-  shortTitle: "Experimental and Computational Physicist",
+  title: "Physics Graduate",
+  shortTitle: "Physics Graduate",
   description:
-    "Personal academic website of Sahan S Liyanage, an experimental and computational physicist working across solar and space physics, spectroscopy, instrumentation, scientific programming, and research-led teaching.",
+    "Sahan S Liyanage is a physics graduate seeking graduate study opportunities in physics, with experience in research, scientific computing, and instrumentation.",
   email: "sahanslst@gmail.com",
   cvUrl: "/documents/sahan-liyanage-cv-web.pdf",
-  eCallistoUrl: "https://www.e-callisto.org/Software/Callisto-Software.html",
+  eCallistoUrl: "https://ecallistoanalyzer.org/",
   softwareUrl: "https://github.com/SaanDev/e-Callisto_FITS_Analyzer",
   siteUrl:
     process.env.NEXT_PUBLIC_SITE_URL || "https://sahan-s-liyanage.example",
@@ -20,17 +20,8 @@ export type NavigationItem = {
 
 export const navigation: NavigationItem[] = [
   { label: "Home", href: "/" },
-  {
-    label: "Research",
-    href: "/research",
-    children: [
-      { label: "Projects", href: "/research#projects" },
-      { label: "Workshops and Trainings", href: "/research#workshops-training" },
-    ],
-  },
+  { label: "Research", href: "/research" },
   { label: "Publications", href: "/publications" },
-  { label: "Outreach", href: "/outreach" },
-  { label: "Beyond", href: "/beyond" },
   { label: "Photography", href: "/photography" },
   { label: "CV", href: "/cv" },
   { label: "Contact", href: "/contact" },
@@ -188,8 +179,8 @@ export const projects: Project[] = [
       "Scientific Software",
     ],
     duration: "2024 - Present",
-    image: "/images/research/Analyzer/main_window.png",
-    imageAlt: "Main window of the e-CALLISTO FITS Analyzer software",
+    image: "/images/research/Analyzer/radio.webp",
+    imageAlt: "Solar radio dynamic spectrum displayed in e-CALLISTO FITS Analyzer",
     background:
       "The e-CALLISTO network contains observations from more than 150 stations, but raw spectra can be affected by radio-frequency interference, background noise, irregular station frequency coverage, and the division of events into 15-minute files. The software addresses these practical barriers while preserving interactive scientific control.",
     questions: [
@@ -219,7 +210,7 @@ export const projects: Project[] = [
     links: [
       { label: "Read published article", href: "https://doi.org/10.1093/rasti/rzag056" },
       { label: "Author manuscript", href: "/publications/ecallisto-fits-analyzer-manuscript.pdf" },
-      { label: "Official e-CALLISTO software", href: "https://www.e-callisto.org/Software/Callisto-Software.html" },
+      { label: "Project website", href: "https://ecallistoanalyzer.org/" },
       { label: "Source code", href: "https://github.com/SaanDev/e-Callisto_FITS_Analyzer" },
     ],
   },

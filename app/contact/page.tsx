@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ContactForm } from "../components/ContactForm";
 import { PageIntro } from "../components/PageIntro";
 import { siteConfig, socialProfiles } from "../data/content";
 
@@ -16,47 +15,21 @@ export const metadata: Metadata = {
   },
 };
 
-const conversationTopics = [
-  "Research collaboration",
-  "PhD opportunities",
-  "Scientific software discussions",
-  "Experimental or computational projects",
-  "Astronomy outreach",
-  "Photography-related communication",
-];
-
 export default function ContactPage() {
   return (
     <main id="main-content">
       <PageIntro
         eyebrow="Contact"
-        title="Let’s discuss a research question."
-        description="I welcome thoughtful messages about physics research, future doctoral opportunities, experimental or computational projects, scientific software, astronomy outreach, and photography."
+        title="Let’s connect."
+        description="Get in touch about graduate study, physics research, or scientific software."
       />
 
       <section className="section contact-main">
-        <div className="container contact-grid">
-          <aside className="contact-aside">
-            <p className="eyebrow">Good reasons to get in touch</p>
-            <ul>
-              {conversationTopics.map((topic, index) => (
-                <li key={topic}><span>{String(index + 1).padStart(2, "0")}</span>{topic}</li>
-              ))}
-            </ul>
-            <div className="direct-email">
-              <span>Direct email</span>
-              <a href={`mailto:${siteConfig.email}`}><strong>{siteConfig.email}</strong></a>
-              <p>Use this address for research and professional enquiries.</p>
-            </div>
-          </aside>
-          <div>
-            <div className="form-heading">
-              <p className="eyebrow">Send a message</p>
-              <h2>What would you like to explore?</h2>
-              <p>All fields are required. The form will send directly to the configured email service once connected.</p>
-            </div>
-            <ContactForm />
-          </div>
+        <div className="container">
+          <p className="eyebrow">Email me</p>
+          <h2>Graduate study & research opportunities</h2>
+          <p>I’m seeking graduate study opportunities in physics and welcome conversations about potential projects and research groups.</p>
+          <a className="button button-primary" href={`mailto:${siteConfig.email}`}>{siteConfig.email} ↗</a>
         </div>
       </section>
 
@@ -67,7 +40,7 @@ export default function ContactPage() {
               <p className="eyebrow">Professional profiles</p>
               <h2>Find my work elsewhere</h2>
             </div>
-            <p>Verified academic and professional profiles listed in my current CV.</p>
+            <p>Research, publications, and open-source work.</p>
           </div>
           <div className="profile-grid">
             {socialProfiles.map((profile) => (

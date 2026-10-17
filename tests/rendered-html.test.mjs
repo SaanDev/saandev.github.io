@@ -30,11 +30,11 @@ test("server-renders the academic homepage with complete primary navigation", as
 
   const html = await response.text();
   assert.match(html, /Sahan S Liyanage/);
-  assert.match(html, /Experimental &amp; Computational Physicist/);
-  assert.match(html, /Featured Research/);
-  assert.match(html, /Scientific Software/);
-  assert.match(html, /Field &amp; Creative Practice/);
-  assert.match(html, /Contact Me/i);
+  assert.match(html, /Physics Graduate/i);
+  assert.match(html, /Selected projects/);
+  assert.match(html, /Scientific software/i);
+  assert.match(html, /Through my lens/);
+  assert.match(html, /Let’s connect/);
   const primaryNavigation = html.match(/<nav id="primary-navigation"[\s\S]*?<\/nav>/)?.[0] ?? "";
   assert.match(primaryNavigation, /href="\/photography"[^>]*>Photography<\/a>/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
@@ -48,7 +48,7 @@ test("server-renders every requested primary page", async () => {
     ["/beyond", /Ways of seeing and making/],
     ["/photography", /Three ways of seeing\./],
     ["/cv", /Academic experience and research practice/],
-    ["/contact", /What would you like to explore/],
+    ["/contact", /Graduate study &amp; research opportunities/],
   ];
 
   for (const [path, expected] of routes) {
@@ -94,7 +94,9 @@ test("research and CV pages contain verified supplied details without private co
   assert.match(cv, /May 2026 - Present/);
   assert.match(cv, /3\.57 \/ 4\.00/);
   assert.match(cv, /COSPAR Capacity Building Workshop 2024/);
-  assert.match(cv, /Dean.s List/);
+  assert.match(cv, /Visiting Lecturer/);
+  assert.match(cv, /COSPAR Capacity Building Workshop 2026/);
+  assert.doesNotMatch(cv, /id="referees"/);
   assert.match(cv, /University of Colombo School of Computing/);
   assert.doesNotMatch(cv, /Gunananda Mawatha|\+94 71 409 0587|adassuriya@phys\.cmb\.ac\.lk/);
 
@@ -154,12 +156,14 @@ test("personal stories and photography are organized into their dedicated pages"
   assert.match(outreach, /astronomy-solar-instrument\.webp/);
 
   const home = await homeResponse.text();
-  assert.match(home, /Field &amp; Creative Practice/);
-  assert.match(home, /music-naada-nu-vocal-performance\.webp/);
-  assert.match(home, /music-naada-nu-ensemble\.webp/);
-  assert.match(home, /music-naada-nu-percussion\.webp/);
-  assert.match(home, /astronomy-solar-telescope-setup\.webp/);
-  assert.doesNotMatch(home, /Preparing an instrument for daytime observation\./);
+  assert.match(home, /Through my lens/);
+  assert.match(home, /milky-way-road\.webp/);
+  assert.match(home, /kingfisher\.webp/);
+  assert.match(home, /https:\/\/ecallistoanalyzer\.org\//);
+  assert.doesNotMatch(home, /GPA|3\.57|Second Class|referee|music-naada/);
+  const nav = home.match(/<nav id="primary-navigation"[\s\S]*?<\/nav>/)?.[0] ?? "";
+  assert.doesNotMatch(nav, /href="\/(outreach|beyond)"/);
+
 });
 
 test("rendered images do not show visible captions", async () => {

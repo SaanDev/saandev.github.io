@@ -7,14 +7,6 @@ import { navigation, siteConfig, socialProfiles } from "../data/content";
 
 type Theme = "light" | "dark";
 
-function SolarMark() {
-  return (
-    <span className="solar-mark" aria-hidden="true">
-      <span />
-    </span>
-  );
-}
-
 function ThemeToggle() {
   const theme = useSyncExternalStore<Theme>(
     (onStoreChange) => {
@@ -144,63 +136,13 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="site-footer">
-      <div className="container footer-grid">
-        <div className="footer-identity">
-          <div className="brand footer-brand">
-            <SolarMark />
-            <span>{siteConfig.name}</span>
-          </div>
-          <p>{siteConfig.shortTitle}</p>
-          <div className="social-row" aria-label="Professional profiles">
-            {socialProfiles.map((profile) =>
-              profile.url ? (
-                <a
-                  href={profile.url}
-                  key={profile.label}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={profile.label}
-                >
-                  {profile.short}
-                </a>
-              ) : (
-                <Link
-                  href="/contact#profiles"
-                  key={profile.label}
-                  aria-label={`${profile.label} profile placeholder`}
-                  title={profile.placeholder}
-                >
-                  {profile.short}
-                </Link>
-              ),
-            )}
-          </div>
+    <footer className="site-footer compact-footer">
+      <div className="container compact-footer-inner">
+        <p>© {new Date().getFullYear()} {siteConfig.name}</p>
+        <div className="compact-footer-links" aria-label="Professional profiles">
+          {socialProfiles.filter((profile) => ["LinkedIn", "GitHub", "Google Scholar"].includes(profile.label)).map((profile) => <a key={profile.label} href={profile.url} target="_blank" rel="noreferrer">{profile.label} ↗</a>)}
         </div>
-        <nav className="footer-nav" aria-label="Footer navigation">
-          <p className="footer-label">Explore</p>
-          {navigation.map((item) => (
-            <Link href={item.href} key={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <div className="footer-note">
-          <p className="footer-label">Connect</p>
-          <p>
-            Open to research collaboration, scientific software projects, and doctoral opportunities.
-          </p>
-          <a className="footer-email" href={`mailto:${siteConfig.email}`}>
-            {siteConfig.email}
-          </a>
-        </div>
-      </div>
-      <div className="container footer-bottom">
-        <p>© {year} Sahan S Liyanage. All rights reserved.</p>
-        <p>Built for research, collaboration, and public engagement.</p>
       </div>
     </footer>
   );

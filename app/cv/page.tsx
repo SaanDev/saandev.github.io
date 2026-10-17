@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "../components/PageIntro";
 import { PrintButton } from "../components/PrintButton";
-import { projects, publications, researchInterests, siteConfig } from "../data/content";
+import { projects, publications, siteConfig } from "../data/content";
 
 export const metadata: Metadata = {
   title: "Curriculum Vitae",
@@ -73,6 +73,7 @@ const presentations = [
 ];
 
 const teaching = [
+  { role: "Visiting Lecturer", institution: "Department of Physics, University of Colombo", dates: "October 2026 - Present", courses: ["Certificate in Astronomy course"] },
   {
     role: "Teaching Assistant",
     institution: "University of Colombo School of Computing",
@@ -96,41 +97,13 @@ const teaching = [
   },
 ];
 
-const leadership = [
-  ["Vice President", "Astronomical Society, University of Colombo", "2022 - 2023"],
-  ["Coordinator", "Astronomical Society, University of Colombo", "2020 - 2022"],
-  ["Music Director", "Music Society, University of Colombo", "2022 - 2023"],
-  ["Marketing Director", "Leo Club, University of Colombo", "2020 - 2021"],
-];
-
-const volunteering = [
-  {
-    title: "Science Bus - Phases I, II, and III",
-    institution: "Physics Society, University of Colombo",
-    dates: "2021 - 2023",
-    detail: "Contributed to an SPIE-funded travelling project that brought hands-on science activities to school students in rural Sri Lanka.",
-  },
-  {
-    title: "Star Quest - All-Island Astronomical Quiz",
-    institution: "Astronomical Society, University of Colombo",
-    dates: "2022 - 2025",
-    detail: "Helped create questions, coordinate participants, run the event, and grade entries from school students across Sri Lanka.",
-  },
-  {
-    title: "Naada Nu 23 - Annual Musical Concert",
-    institution: "Music Society, University of Colombo",
-    dates: "2023",
-    detail: "Served as music director, contributed to event organisation, and performed on stage.",
-  },
-];
-
 export default function CVPage() {
   return (
     <main id="main-content" className="cv-page">
       <PageIntro
         eyebrow="Curriculum Vitae"
         title="Academic experience and research practice."
-        description="A public online edition of my current CV. My home address, telephone number, and referee contact details are intentionally excluded."
+        description="Physics graduate seeking graduate study opportunities, with experience in research, scientific computing, and university teaching."
       >
         <div className="button-row cv-actions">
           <a className="button button-primary" href={siteConfig.cvUrl} download="Sahan-Liyanage-CV.pdf">
@@ -138,7 +111,7 @@ export default function CVPage() {
           </a>
           <PrintButton />
         </div>
-        <p className="last-updated">Last updated: August 2026</p>
+        <p className="last-updated">Last updated: October 2026</p>
       </PageIntro>
 
       <div className="container cv-layout">
@@ -155,10 +128,6 @@ export default function CVPage() {
             <a href="#teaching">Teaching</a>
             <a href="#engagements">Academic engagements</a>
             <a href="#skills">Skills and techniques</a>
-            <a href="#awards">Awards</a>
-            <a href="#leadership">Leadership</a>
-            <a href="#volunteering">Volunteering</a>
-            <a href="#referees">References</a>
           </nav>
         </aside>
 
@@ -168,7 +137,7 @@ export default function CVPage() {
             <h2>Sahan S Liyanage</h2>
             <p className="cv-lead">{siteConfig.title}</p>
             <p>
-              Driven researcher with a strong background in experimental and computational physics, spanning astrophysics, spectroscopy, instrumentation, and scientific programming. Experienced in coordinating university courses and laboratories, publishing peer-reviewed work, presenting research, and supporting academic growth.
+              I hold a BSc Honours in Physics from the University of Colombo and am seeking graduate study opportunities in physics. My experience includes solar-radio research, optical spectroscopy, scientific software development, and university teaching.
             </p>
             <div className="cv-profile-links">
               <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
@@ -210,12 +179,6 @@ export default function CVPage() {
               <div><span>Cumulative GPA</span><strong>3.57 / 4.00</strong><small>126 credit hours</small></div>
               <div><span>Degree classification</span><strong>Second Upper</strong><small>BSc Honours in Physics</small></div>
             </div>
-            <p><strong>Relevant coursework:</strong> Quantum Mechanics I & II, Classical Mechanics, Electromagnetic Fields I & II, Statistical Physics, Advanced Optics, Solid State Physics, Mathematical Physics I & II, Nuclear and Particle Physics, Methods in Computational Physics, Electronics, Data Acquisition and Signal Processing, and advanced physics laboratories.</p>
-            <div className="cv-record">
-              <div><h2>Secondary Education</h2><p>Central College, Anuradhapura, Sri Lanka</p></div>
-              <p>2015 - 2017</p>
-            </div>
-            <p>GCE Advanced Level (2018), Physical Sciences: Combined Mathematics - B, Physics - B, Chemistry - B.</p>
           </section>
 
           <section id="experience" className="cv-section">
@@ -286,6 +249,10 @@ export default function CVPage() {
             <p className="cv-kicker">Academic engagements</p>
             <div className="cv-entry-list">
               <article>
+                <div className="cv-record"><div><h2>Instructor - COSPAR Capacity Building Workshop 2026</h2><p>National Research Institute of Astronomy and Geophysics, Cairo, Egypt</p></div><p>31 August - 11 September 2026</p></div>
+                <p>Taught solar-radio data analysis using Python at the workshop on Earth-Affecting Solar Transients.</p>
+              </article>
+              <article>
                 <div className="cv-record"><div><h2>COSPAR Capacity Building Workshop 2024</h2><p>Samarkand State University, Samarkand, Uzbekistan</p></div><p>19-30 August 2024</p></div>
                 <p>Completed practical training on coronal and interplanetary shocks using SOHO, SDO, STEREO, ground-based observations, SolarSoft, SunPy, AstroPy, and Python.</p>
               </article>
@@ -299,48 +266,10 @@ export default function CVPage() {
           <section id="skills" className="cv-section">
             <p className="cv-kicker">Skills and techniques</p>
             <div className="cv-skills-grid">
-              <div><h2>Research domains</h2><p>{researchInterests.map((item) => item.label).join(" · ")}</p></div>
               <div><h2>Programming and scientific computing</h2><p>Python · C/C++ · MATLAB · SunPy · AstroPy · NumPy · SciPy · Matplotlib · FITS · Qt GUI development</p></div>
               <div><h2>Laboratory and instrumentation</h2><p>Raman and UV-Vis spectroscopy · Astronomical spectroscopy · e-CALLISTO radio spectrometry · Analogue and digital electronics · Data acquisition · Signal processing · Microcontrollers</p></div>
               <div><h2>Software and professional practice</h2><p>OriginPro · SolidWorks · Microsoft Office · Adobe Photoshop · LaTeX · Arduino · Linux · Web development · Project planning · Teaching · Mentoring · Team coordination</p></div>
             </div>
-          </section>
-
-          <section id="awards" className="cv-section">
-            <p className="cv-kicker">Awards and honours</p>
-            <div className="cv-record"><div><h2>Dean’s List</h2><p>University of Colombo</p></div><p>Academic Year 2019/2020</p></div>
-          </section>
-
-          <section id="leadership" className="cv-section">
-            <p className="cv-kicker">Leadership and extracurricular activities</p>
-            <div className="cv-entry-list compact">
-              {leadership.map(([role, institution, dates]) => (
-                <article key={`${role}-${institution}`}><div className="cv-record"><div><h2>{role}</h2><p>{institution}</p></div><p>{dates}</p></div></article>
-              ))}
-            </div>
-          </section>
-
-          <section id="volunteering" className="cv-section">
-            <p className="cv-kicker">Volunteering experience</p>
-            <div className="cv-entry-list">
-              {volunteering.map((entry) => (
-                <article key={entry.title}>
-                  <div className="cv-record"><div><h2>{entry.title}</h2><p>{entry.institution}</p></div><p>{entry.dates}</p></div>
-                  <p>{entry.detail}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section id="referees" className="cv-section">
-            <p className="cv-kicker">References</p>
-            <p>Professional references are available on request. Referee names, telephone numbers, and email addresses are intentionally omitted from this public website.</p>
-          </section>
-
-          <section className="cv-download-note">
-            <h2>Privacy-safe downloadable CV</h2>
-            <p>The downloadable web edition omits the private home address, telephone number, and referee contact details contained in the source CV.</p>
-            <a className="button button-primary" href={siteConfig.cvUrl} download="Sahan-Liyanage-CV.pdf">Download PDF</a>
           </section>
 
           <Link className="text-link cv-contact-link" href="/contact">Contact Sahan about research or collaboration →</Link>

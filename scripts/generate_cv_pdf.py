@@ -10,6 +10,7 @@ from reportlab.platypus import (
     ListFlowable,
     ListItem,
     Paragraph,
+    PageBreak,
     SimpleDocTemplate,
     Spacer,
     Table,
@@ -256,7 +257,7 @@ def build():
     story = [
         Paragraph("Sahan S Liyanage", styles["Name"]),
         Paragraph(
-            "Experimental and Computational Physicist | Researcher | Scientific Software Developer",
+            "Physics Graduate | Seeking Graduate Study Opportunities",
             styles["ProfessionalTitle"],
         ),
         Paragraph(
@@ -269,7 +270,7 @@ def build():
         ),
         Table(
             [[Paragraph(
-                "Driven researcher with a strong background in experimental and computational physics, spanning astrophysics, spectroscopy, instrumentation, and scientific programming. Experienced in coordinating university courses and laboratories, publishing peer-reviewed work, presenting research, and supporting academic growth.",
+                "Physics graduate from the University of Colombo seeking graduate study opportunities in physics. Experience in solar-radio research, optical spectroscopy, scientific software development, university teaching, and research mentoring.",
                 styles["BodySmall"],
             )]],
             colWidths=[178 * mm],
@@ -364,6 +365,7 @@ def build():
         )
     )
 
+    story.append(PageBreak())
     story += section("Projects and Scientific Software")
     story.append(
         role(
@@ -398,6 +400,7 @@ def build():
                 "Cross-platform framework for retrieving, cleaning, combining, visualizing, and analyzing e-CALLISTO dynamic spectra at event level.",
                 "Uses Python, PySide6, NumPy, SciPy, Astropy, SunPy, Matplotlib, PyQtGraph, netCDF4, OpenPyXL, Requests, and BeautifulSoup.",
                 '<link href="https://github.com/SaanDev/e-Callisto_FITS_Analyzer">github.com/SaanDev/e-Callisto_FITS_Analyzer</link>',
+                '<link href="https://ecallistoanalyzer.org/">ecallistoanalyzer.org</link>',
             ],
         )
     )
@@ -454,6 +457,7 @@ def build():
     )
 
     story += section("Teaching Experience")
+    story.append(role("Visiting Lecturer", "Department of Physics, University of Colombo", "Oct 2026 - Present", ["Visiting lecturer for the Certificate in Astronomy course."]))
     story.append(
         role(
             "Teaching Assistant",
@@ -480,6 +484,7 @@ def build():
     )
 
     story += section("Academic Engagements")
+    story.append(role("Instructor - COSPAR Capacity Building Workshop 2026", "National Research Institute of Astronomy and Geophysics, Cairo, Egypt", "31 Aug - 11 Sep 2026", ["Taught solar-radio data analysis using Python at the workshop on Earth-Affecting Solar Transients."]))
     story.append(
         role(
             "Participant - COSPAR Capacity Building Workshop 2024",
@@ -562,14 +567,10 @@ def build():
         )
     )
 
-    story += section("References")
-    story.append(
-        Paragraph(
-            "Professional references are available on request. Referee names, telephone numbers, and email addresses are intentionally omitted from this public web edition.",
-            styles["BodySmall"],
-        )
-    )
-
+    # Keep section headings and their spacing with the following entry.
+    for item in story:
+        if isinstance(item, Spacer) or (isinstance(item, Table) and len(item._cellvalues[0]) == 1):
+            item.keepWithNext = True
     doc.build(story, onFirstPage=footer, onLaterPages=footer)
     PUBLIC_OUTPUT.write_bytes(OUTPUT.read_bytes())
     print(OUTPUT)

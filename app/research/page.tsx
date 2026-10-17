@@ -5,10 +5,6 @@ import { PageIntro } from "../components/PageIntro";
 import { PlaceholderMedia } from "../components/PlaceholderMedia";
 import {
   projects,
-  researchMethods,
-  researchThemes,
-  siteConfig,
-  softwareCapabilities,
 } from "../data/content";
 
 export const metadata: Metadata = {
@@ -67,8 +63,8 @@ export default function ResearchPage() {
     <main id="main-content">
       <PageIntro
         eyebrow="Research"
-        title="Following physical questions across scales."
-        description="My current projects use observations, experiments, physical models, and computation to study solar, space, plasma, and astrophysical phenomena. The same approach shapes a wider interest in matter, radiation, fields, and energy across diverse physical systems."
+        title="Research & projects."
+        description="My work spans solar-radio research, spectroscopy, and scientific software. These projects bring together observation, experiment, and computation."
       >
         <div className="button-row">
           <a className="button button-primary" href="#projects">View featured projects</a>
@@ -76,50 +72,10 @@ export default function ResearchPage() {
         </div>
       </PageIntro>
 
-      <section className="section research-overview">
-        <div className="container split-heading-layout">
-          <div>
-            <p className="eyebrow">01 · Research overview</p>
-            <h2>A broad experimental and computational foundation</h2>
-          </div>
-          <div className="prose-large">
-            <p>
-              My present research examines dynamic processes in the solar atmosphere and near-Earth environment. Radio, extreme-ultraviolet, magnetic-field, and white-light observations provide complementary evidence, while plasma theory and numerical analysis connect those measurements to physical mechanisms.
-            </p>
-            <p>
-              These projects have developed a research approach that is not tied to one instrument or scale: define a measurable question, understand the governing physics, test interpretations against data, and make the analysis transparent and reproducible. Experimental spectroscopy and scientific software development provide complementary experience beyond astronomical observations.
-            </p>
-            <p>
-              Questions involving light–matter interactions, atomic and molecular systems, nuclei and energetic particles, material behaviour, plasmas, and astrophysical environments share many of these habits of thought. This breadth guides the kind of doctoral training and research problems I am seeking.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-tint">
-        <div className="container">
-          <div className="section-heading section-heading-row">
-            <div>
-              <p className="eyebrow">02 · Research interests</p>
-              <h2>Questions across physical scales</h2>
-            </div>
-            <p>A spectrum of interests connected by measurement, modelling, and quantitative analysis.</p>
-          </div>
-          <ol className="theme-list">
-            {researchThemes.map((theme, index) => (
-              <li key={theme}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{theme}</strong>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
       <section className="section project-details-section" id="projects">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">03 · Featured projects</p>
+            <p className="eyebrow">Selected work</p>
             <h2>Research and development in detail</h2>
           </div>
           <div className="project-details-list">
@@ -143,6 +99,10 @@ export default function ResearchPage() {
                 </div>
 
                 {project.id === "space-weather-dashboard" && <DashboardShowcase />}
+                {project.id === "ecallisto-fits-analyzer" && <div className="analyzer-gallery">
+                  <img src="/images/research/Analyzer/solar.webp" alt="Solar image analysis in e-CALLISTO FITS Analyzer" loading="lazy" />
+                  <img src="/images/research/Analyzer/gcs.webp" alt="Coronal mass ejection modelling in e-CALLISTO FITS Analyzer" loading="lazy" />
+                </div>}
 
                 {project.gallery && (
                   <section className="project-gallery" aria-labelledby={`${project.id}-gallery-title`}>
@@ -222,7 +182,7 @@ export default function ResearchPage() {
         <div className="container">
           <div className="split-heading-layout">
             <div>
-              <p className="eyebrow">04 · Workshops and trainings</p>
+              <p className="eyebrow">Workshops and teaching</p>
               <h2>Developing research practice through shared learning.</h2>
             </div>
             <article className="timeline-entry">
@@ -235,6 +195,12 @@ export default function ResearchPage() {
               </p>
             </article>
           </div>
+
+          <article className="timeline-entry" style={{ marginTop: "32px" }}>
+            <p>31 August - 11 September 2026 · Cairo, Egypt</p>
+            <h3>Instructor - COSPAR Capacity Building Workshop 2026</h3>
+            <p>Taught solar-radio data analysis using Python at the workshop on Earth-Affecting Solar Transients, hosted by NRIAG.</p>
+          </article>
 
           <section className="workshop-gallery" aria-labelledby="cospar-gallery-title">
             <div className="workshop-gallery-heading">
@@ -258,109 +224,10 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="section-heading section-heading-row">
-            <div>
-              <p className="eyebrow">05 · Research methods</p>
-              <h2>From signal to physical interpretation</h2>
-            </div>
-            <p>A working cycle that connects multiple observations with computation and physical reasoning.</p>
-          </div>
-          <div className="method-grid">
-            {researchMethods.map((method) => (
-              <article key={method.number}>
-                <span>{method.number}</span>
-                <h3>{method.title}</h3>
-                <p>{method.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="scientific-software">
-        <div className="container research-software-grid">
-          <div>
-            <p className="eyebrow">06 · Scientific software</p>
-            <h2>Tools designed around the analysis process</h2>
-            <p className="prose-large">
-              The e-CALLISTO FITS Analyzer brings data preparation, visualization, interactive measurement, model-based estimation, and scientific export into a single cross-platform workflow.
-            </p>
-            <ul className="capability-list compact">
-              {softwareCapabilities.map((capability) => <li key={capability}>{capability}</li>)}
-            </ul>
-            <div className="button-row" id="software-access-note">
-              <a
-                className="button button-primary"
-                href={siteConfig.eCallistoUrl || "#software-access-note"}
-                aria-describedby={!siteConfig.eCallistoUrl ? "ecallisto-url-note" : undefined}
-              >
-                Access through e-CALLISTO
-              </a>
-              <a
-                className="button button-secondary"
-                href={siteConfig.softwareUrl || "#software-access-note"}
-              >
-                GitHub or documentation
-              </a>
-            </div>
-            <p id="ecallisto-url-note" className="editing-note verified-note">
-              Native installers are available through the official e-CALLISTO software page, and the source code is published on GitHub.
-            </p>
-          </div>
-          <PlaceholderMedia
-            label=""
-            src="/images/research/Analyzer/main_window.png"
-            alt="Main window of the e-CALLISTO FITS Analyzer software"
-            className="research-software-image"
-          />
-        </div>
-      </section>
-
-      <section className="section section-tint research-experience">
-        <div className="container split-heading-layout">
-          <div>
-            <p className="eyebrow">07 · Research experience</p>
-            <h2>Academic appointments and project work</h2>
-          </div>
-          <div className="experience-list">
-            <article>
-              <p>May 2026 - Present</p>
-              <h3>Research Assistant</h3>
-              <p>Astronomy and Space Applications Division, Arthur C. Clarke Institute for Modern Technologies</p>
-              <p>Conducting calibrated e-CALLISTO solar-radio observations, H-alpha imaging, and astronomical spectroscopy; maintaining observing hardware; and developing automated pipelines for data acquisition, processing, archiving, and monitoring.</p>
-            </article>
-            <article>
-              <p>May 2025 - April 2026</p>
-              <h3>Undergraduate Research Mentor</h3>
-              <p>Final-year project: Estimating Coronal Magnetic Field Strength from Band Splitting in Type II Solar Radio Bursts.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section future-directions">
-        <div className="container future-directions-grid">
-          <div>
-            <p className="eyebrow">08 · Future directions</p>
-            <h2>Building transferable insight through experiment, theory, and computation.</h2>
-          </div>
-          <div>
-            <p>
-              My current work on coronal shocks and solar-radio signatures continues to develop my experience in multi-instrument observations, plasma interpretation, signal analysis, and reproducible computation. Raman spectroscopy, instrumentation, and software development have also strengthened my interest in experimental measurement and the interaction of radiation with matter.
-            </p>
-            <p>
-              At the doctoral level, I hope to pursue a well-defined physical problem whose methods can reveal deeper connections across scales—whether through precision measurement, spectroscopy, material or particle behaviour, field and plasma dynamics, astrophysical observation, or computational modelling.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="section research-contact">
         <div className="container contact-callout-inner">
           <div>
-            <p className="eyebrow">09 · Research collaboration contact</p>
+            <p className="eyebrow">Get in touch</p>
             <h2>Interested in a shared question?</h2>
             <p>I welcome conversations about observational projects, scientific software, complementary data, and future research directions.</p>
           </div>

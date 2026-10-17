@@ -20,7 +20,7 @@ const sourceSerif = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
-    default: "Sahan S Liyanage | Experimental and Computational Physicist",
+    default: "Sahan S Liyanage | Physics Graduate",
     template: "%s | Sahan S Liyanage",
   },
   description: siteConfig.description,
@@ -32,23 +32,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     siteName: siteConfig.name,
-    title: "Sahan S Liyanage | Experimental and Computational Physicist",
+    title: "Sahan S Liyanage | Physics Graduate",
     description: siteConfig.description,
     url: "/",
     images: [
       {
-        url: "/og.png",
-        width: 1725,
-        height: 912,
-        alt: "Sahan S Liyanage - Experimental and Computational Physicist, Researcher, and Scientific Software Developer",
+        url: "/images/sahan-liyanage-portrait.jpg",
+        alt: "Sahan S Liyanage - Physics Graduate",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sahan S Liyanage | Experimental and Computational Physicist",
+    title: "Sahan S Liyanage | Physics Graduate",
     description: siteConfig.description,
-    images: ["/og.png"],
+    images: ["/images/sahan-liyanage-portrait.jpg"],
   },
   robots: {
     index: true,
