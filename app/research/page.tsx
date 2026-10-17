@@ -58,6 +58,14 @@ const cosparWorkshopImages = [
   },
 ] as const;
 
+const cospar2026Images = [
+  { file: "workshop-group", alt: "COSPAR 2026 workshop participants gathered outside NRIAG in Cairo", width: 1800, height: 1200, layout: "wide" },
+  { file: "teaching-session", alt: "Sahan speaking into a microphone while working at a laptop during COSPAR 2026", width: 1200, height: 1800, layout: "portrait" },
+  { file: "presentation-team", alt: "Sahan with a workshop team in front of their Earth-affecting CME analysis presentation", width: 1800, height: 1200, layout: "landscape" },
+  { file: "certificate-presentation", alt: "Certificate presentation at the COSPAR 2026 workshop in Cairo", width: 1800, height: 1200, layout: "landscape" },
+  { file: "workshop-colleague", alt: "Sahan with a colleague beside the COSPAR 2026 workshop banners", width: 1800, height: 1200, layout: "wide" },
+] as const;
+
 export default function ResearchPage() {
   return (
     <main id="main-content">
@@ -201,6 +209,32 @@ export default function ResearchPage() {
             <h3>Instructor - COSPAR Capacity Building Workshop 2026</h3>
             <p>Taught solar-radio data analysis using Python at the workshop on Earth-Affecting Solar Transients, hosted by NRIAG.</p>
           </article>
+
+          <section className="workshop-gallery" id="cospar-2026" aria-labelledby="cospar-2026-title">
+            <div className="workshop-gallery-heading">
+              <div>
+                <p className="eyebrow">COSPAR 2026</p>
+                <h3 id="cospar-2026-title">Teaching, collaboration, and shared discoveries</h3>
+              </div>
+              <p>Cairo · August–September 2026</p>
+            </div>
+            <div className="cospar-2026-grid">
+              {cospar2026Images.map((image) => (
+                <figure className={`cospar-2026-photo cospar-2026-photo-${image.layout}`} key={image.file}>
+                  <img
+                    src={`/images/research/cospar-2026/${image.file}.webp`}
+                    srcSet={`/images/research/cospar-2026/${image.file}-900.webp ${image.layout === "portrait" ? 600 : 900}w, /images/research/cospar-2026/${image.file}.webp ${image.width}w`}
+                    sizes={image.layout === "wide" ? "(max-width: 820px) calc(100vw - 36px), (max-width: 1248px) calc(100vw - 48px), 1200px" : "(max-width: 820px) calc(100vw - 36px), (max-width: 1248px) calc((100vw - 62px) / 2), 593px"}
+                    width={image.width}
+                    height={image.height}
+                    alt={image.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              ))}
+            </div>
+          </section>
 
           <section className="workshop-gallery" aria-labelledby="cospar-gallery-title">
             <div className="workshop-gallery-heading">
