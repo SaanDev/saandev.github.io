@@ -29,7 +29,7 @@ export default function HomePage() {
             <Link className="button button-secondary" href="/cv">View CV</Link>
           </div>
         </div>
-        <img className="intro-portrait" src="/images/sahan-liyanage-portrait.jpg" alt="Sahan S Liyanage" fetchPriority="high" />
+        <img className="intro-portrait" src="/images/sahan-liyanage-portrait.webp" alt="Sahan S Liyanage" fetchPriority="high" />
       </section>
 
       <section className="section skills-section" id="skills">

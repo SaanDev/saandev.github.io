@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     url: "/",
     images: [
       {
-        url: "/images/sahan-liyanage-portrait.jpg",
+        url: "/images/sahan-liyanage-portrait.webp",
         alt: "Sahan S Liyanage - Physics Graduate",
       },
     ],
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sahan S Liyanage | Physics Graduate",
     description: siteConfig.description,
-    images: ["/images/sahan-liyanage-portrait.jpg"],
+    images: ["/images/sahan-liyanage-portrait.webp"],
   },
   robots: {
     index: true,

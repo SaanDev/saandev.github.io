@@ -103,7 +103,7 @@ test("research and CV pages contain verified supplied details without private co
   assert.doesNotMatch(cv, /Gunananda Mawatha|\+94 71 409 0587|adassuriya@phys\.cmb\.ac\.lk/);
 
   const home = await homeResponse.text();
-  assert.match(home, /\/images\/sahan-liyanage-portrait\.jpg/);
+  assert.match(home, /\/images\/sahan-liyanage-portrait\.webp/);
   assert.doesNotMatch(home, /paper-cover|report-cover/);
 });
 
