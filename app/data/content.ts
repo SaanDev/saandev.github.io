@@ -9,7 +9,7 @@ export const siteConfig = {
   eCallistoUrl: "https://ecallistoanalyzer.org/",
   softwareUrl: "https://github.com/SaanDev/e-Callisto_FITS_Analyzer",
   siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL || "https://sahan-s-liyanage.example",
+    process.env.NEXT_PUBLIC_SITE_URL || "https://saandev.github.io",
 };
 
 export type NavigationItem = {

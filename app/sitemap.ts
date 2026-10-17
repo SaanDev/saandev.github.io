@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "./data/content";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return ["", "/research", "/publications", "/beyond", "/beyond/photography", "/beyond/music", "/beyond/nature", "/beyond/outreach", "/cv", "/contact"].map(
     (path) => ({

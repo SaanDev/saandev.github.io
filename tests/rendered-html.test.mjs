@@ -190,7 +190,7 @@ test("Beyond links to each dedicated subpage and old routes redirect", async () 
     const subpage = await (await render(`/beyond/${slug}`)).text();
     assert.match(subpage, /aria-label="Beyond navigation"/);
     assert.ok(subpage.includes(`href="/beyond/${slug}" aria-current="page"`));
-    assert.ok(subpage.includes(`rel="canonical" href="https://sahan-s-liyanage.example/beyond/${slug}"`));
+    assert.ok(subpage.includes(`rel="canonical" href="https://saandev.github.io/beyond/${slug}"`));
   }
   for (const slug of ["photography", "outreach"]) {
     const response = await render(`/${slug}`);
