@@ -1,5 +1,7 @@
 "use client";
 
+import { ResponsiveImage } from "./ResponsiveImage";
+
 import { Icon } from "./Icons";
 
 import { useEffect, useRef, useState } from "react";
@@ -103,10 +105,10 @@ export function DashboardShowcase() {
             ref={viewportRef}
             aria-live="polite"
           >
-            <img
+            <ResponsiveImage
               src={activeView.src}
               alt={activeView.alt}
-              loading={activeIndex === 0 ? "eager" : "lazy"}
+              loading="lazy"
               decoding="async"
             />
           </div>

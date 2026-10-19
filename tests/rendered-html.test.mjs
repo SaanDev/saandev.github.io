@@ -183,6 +183,34 @@ test("rendered images do not show visible captions", async () => {
   }
 });
 
+test("pages serve responsive WebP images with dimensions and valid static candidates", async () => {
+  for (const route of ["/", "/research", "/beyond", "/beyond/photography", "/beyond/music", "/beyond/nature", "/beyond/outreach"]) {
+    const html = await (await render(route)).text();
+    const images = html.match(/<img\b[^>]*>/g) ?? [];
+    assert.ok(images.length, `${route}: images rendered`);
+    for (const image of images) {
+      assert.match(image, /src="[^"]+\.webp"/, route);
+      assert.match(image, /width="[1-9]\d*"/, route);
+      assert.match(image, /height="[1-9]\d*"/, route);
+      assert.match(image, /sizes="[^"]+"/, route);
+      assert.match(image, /decoding="async"/, route);
+      const candidates = image.match(/srcSet="([^"]+)"/i)?.[1];
+      assert.ok(candidates, `${route}: responsive candidates`);
+      for (const candidate of candidates.split(",")) {
+        const [path, width] = candidate.trim().split(/\s+/);
+        assert.match(width, /^[1-9]\d*w$/);
+        await access(new URL(`../public${path}`, import.meta.url));
+      }
+      if (image.includes('class="intro-portrait"')) {
+        assert.match(image, /loading="eager"/);
+        assert.match(image, /fetchPriority="high"/i);
+      } else {
+        assert.match(image, /loading="lazy"/, route);
+      }
+    }
+  }
+});
+
 
 test("Beyond links to each dedicated subpage and old routes redirect", async () => {
   const html = await (await render("/beyond")).text();

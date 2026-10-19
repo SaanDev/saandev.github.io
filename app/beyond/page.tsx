@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "../components/ResponsiveImage";
 import { Icon } from "../components/Icons";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -17,7 +18,7 @@ export default function BeyondPage() {
     <section className="section beyond-directory" aria-label="Explore my interests">
       <div className="container beyond-directory-grid">
         {beyondSections.map((item) => <Link className="beyond-directory-card" href={item.href} key={item.href}>
-          <img src={item.image} alt={item.alt} loading="lazy" />
+          <ResponsiveImage sizes="(max-width: 820px) calc(100vw - 48px), 590px" src={item.image} alt={item.alt} loading="lazy" />
           <div><h2>{item.title}<span aria-hidden="true"><Icon name="arrow-up-right" /></span></h2><p>{item.description}</p></div>
         </Link>)}
       </div>

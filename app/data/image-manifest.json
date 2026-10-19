@@ -1,0 +1,2102 @@
+{
+  "/images/personal/astronomy-camp-group.webp": {
+    "width": 1800,
+    "height": 1013,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-camp-group/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-camp-group/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-camp-group.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/personal/astronomy-camp-team.webp": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-camp-team/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-camp-team/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-camp-team.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/personal/astronomy-night-observation.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-night-observation/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-night-observation/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-night-observation.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/astronomy-night-telescope.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-night-telescope/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-night-telescope/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-night-telescope.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/astronomy-observatory-telescope.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-observatory-telescope/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-observatory-telescope/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-observatory-telescope.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/astronomy-outreach-team.webp": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-outreach-team/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-outreach-team/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-outreach-team.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/personal/astronomy-public-telescope.webp": {
+    "width": 1280,
+    "height": 960,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-public-telescope/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-public-telescope/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-public-telescope.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/personal/astronomy-school-solar-observation.webp": {
+    "width": 1280,
+    "height": 960,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-school-solar-observation/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-school-solar-observation/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-school-solar-observation.webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/personal/astronomy-society-group.webp": {
+    "width": 1800,
+    "height": 1785,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-society-group/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-society-group/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-society-group.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/personal/astronomy-solar-instrument.webp": {
+    "width": 1012,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-solar-instrument/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-solar-instrument/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-solar-instrument.webp",
+        "width": 1012
+      }
+    ]
+  },
+  "/images/personal/astronomy-solar-telescope-setup.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-solar-telescope-setup/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-solar-telescope-setup/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-solar-telescope-setup.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/astronomy-talk.webp": {
+    "width": 1012,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/astronomy-talk/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/astronomy-talk/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/astronomy-talk.webp",
+        "width": 1012
+      }
+    ]
+  },
+  "/images/personal/music-ensemble-instruments.webp": {
+    "width": 1800,
+    "height": 1013,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/music-ensemble-instruments/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/music-ensemble-instruments/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/music-ensemble-instruments.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/personal/music-naada-nu-ensemble.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/music-naada-nu-ensemble/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/music-naada-nu-ensemble/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/music-naada-nu-ensemble.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/personal/music-naada-nu-percussion.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/music-naada-nu-percussion/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/music-naada-nu-percussion/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/music-naada-nu-percussion.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/personal/music-naada-nu-vocal-monochrome.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/music-naada-nu-vocal-monochrome/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/music-naada-nu-vocal-monochrome/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/music-naada-nu-vocal-monochrome.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/personal/music-naada-nu-vocal-performance.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/music-naada-nu-vocal-performance/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/music-naada-nu-vocal-performance/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/music-naada-nu-vocal-performance.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/personal/music-percussion-performance.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/music-percussion-performance/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/music-percussion-performance/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/music-percussion-performance.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/personal/music-stage-performance.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/music-stage-performance/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/music-stage-performance/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/music-stage-performance.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/personal/wildlife-conservation-event.webp": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-conservation-event/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-conservation-event/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-conservation-event.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/personal/wildlife-field-team-coast.webp": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-field-team-coast/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-field-team-coast/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-field-team-coast.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/personal/wildlife-field-team-forest.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-field-team-forest/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-field-team-forest/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-field-team-forest.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/wildlife-field-team-vehicle.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-field-team-vehicle/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-field-team-vehicle/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-field-team-vehicle.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/wildlife-photographer-telephoto.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-photographer-telephoto/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-photographer-telephoto/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-photographer-telephoto.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/wildlife-rainforest-observation.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-rainforest-observation/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-rainforest-observation/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-rainforest-observation.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/wildlife-shoreline-photography.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-shoreline-photography/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-shoreline-photography/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-shoreline-photography.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/wildlife-stream-telephoto.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-stream-telephoto/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-stream-telephoto/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-stream-telephoto.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/personal/wildlife-wetland-telephoto.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/personal/wildlife-wetland-telephoto/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/personal/wildlife-wetland-telephoto/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/personal/wildlife-wetland-telephoto.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/photography/astrophotography/comet.webp": {
+    "width": 2200,
+    "height": 1741,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/comet/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/comet/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/comet.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/astrophotography/detailed-moon.webp": {
+    "width": 1639,
+    "height": 1496,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/detailed-moon/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/detailed-moon/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/detailed-moon.webp",
+        "width": 1639
+      }
+    ]
+  },
+  "/images/photography/astrophotography/full-moon.webp": {
+    "width": 2200,
+    "height": 2200,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/full-moon/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/full-moon/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/full-moon.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/astrophotography/galactic-centre.webp": {
+    "width": 2200,
+    "height": 2306,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/galactic-centre/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/galactic-centre/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/galactic-centre.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/astrophotography/lunar-eclipse-sequence.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/lunar-eclipse-sequence/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/lunar-eclipse-sequence/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/lunar-eclipse-sequence.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/astrophotography/lunar-eclipse.webp": {
+    "width": 2200,
+    "height": 1375,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/lunar-eclipse/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/lunar-eclipse/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/lunar-eclipse.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/astrophotography/lunar-terminator.webp": {
+    "width": 1749,
+    "height": 1870,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/lunar-terminator/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/lunar-terminator/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/lunar-terminator.webp",
+        "width": 1749
+      }
+    ]
+  },
+  "/images/photography/astrophotography/milky-way-road.webp": {
+    "width": 2200,
+    "height": 3300,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/milky-way-road/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/milky-way-road/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/milky-way-road.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/astrophotography/milky-way-rooftop.webp": {
+    "width": 2200,
+    "height": 1467,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/milky-way-rooftop/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/milky-way-rooftop/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/milky-way-rooftop.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/astrophotography/star-cluster.webp": {
+    "width": 2200,
+    "height": 1465,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/star-cluster/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/star-cluster/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/star-cluster.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/astrophotography/sunspots.webp": {
+    "width": 1571,
+    "height": 1571,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/astrophotography/sunspots/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/astrophotography/sunspots/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/astrophotography/sunspots.webp",
+        "width": 1571
+      }
+    ]
+  },
+  "/images/photography/other/airport-light-trails.webp": {
+    "width": 2200,
+    "height": 1376,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/other/airport-light-trails/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/other/airport-light-trails/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/other/airport-light-trails.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/other/stupa-across-water.webp": {
+    "width": 2200,
+    "height": 2933,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/other/stupa-across-water/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/other/stupa-across-water/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/other/stupa-across-water.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/other/stupa-landscape.webp": {
+    "width": 2200,
+    "height": 1375,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/other/stupa-landscape/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/other/stupa-landscape/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/other/stupa-landscape.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/other/sunset-over-water.webp": {
+    "width": 2200,
+    "height": 2646,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/other/sunset-over-water/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/other/sunset-over-water/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/other/sunset-over-water.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/beach-kingfisher.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/beach-kingfisher/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/beach-kingfisher/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/beach-kingfisher.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/birds-in-flight.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/birds-in-flight/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/birds-in-flight/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/birds-in-flight.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/black-winged-stilt.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/black-winged-stilt/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/black-winged-stilt/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/black-winged-stilt.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/blue-magpie.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/blue-magpie/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/blue-magpie/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/blue-magpie.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/bulbul.webp": {
+    "width": 2200,
+    "height": 2751,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/bulbul/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/bulbul/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/bulbul.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/crested-eagle.webp": {
+    "width": 2200,
+    "height": 2751,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/crested-eagle/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/crested-eagle/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/crested-eagle.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/eagle-portrait.webp": {
+    "width": 2200,
+    "height": 1760,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/eagle-portrait/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/eagle-portrait/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/eagle-portrait.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/elephant-in-grassland.webp": {
+    "width": 2200,
+    "height": 1375,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/elephant-in-grassland/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/elephant-in-grassland/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/elephant-in-grassland.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/elephant.webp": {
+    "width": 2200,
+    "height": 2751,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/elephant/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/elephant/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/elephant.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/elephants-greeting.webp": {
+    "width": 2200,
+    "height": 1238,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/elephants-greeting/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/elephants-greeting/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/elephants-greeting.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/flamingo-flock.webp": {
+    "width": 2200,
+    "height": 1238,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/flamingo-flock/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/flamingo-flock/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/flamingo-flock.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/flamingos-in-flight.webp": {
+    "width": 2200,
+    "height": 1238,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/flamingos-in-flight/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/flamingos-in-flight/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/flamingos-in-flight.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/forest-bird.webp": {
+    "width": 2200,
+    "height": 2751,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/forest-bird/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/forest-bird/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/forest-bird.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/forest-fowl.webp": {
+    "width": 2200,
+    "height": 1761,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/forest-fowl/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/forest-fowl/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/forest-fowl.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/golden-jackal.webp": {
+    "width": 2200,
+    "height": 1238,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/golden-jackal/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/golden-jackal/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/golden-jackal.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/green-lizard.webp": {
+    "width": 1682,
+    "height": 1346,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/green-lizard/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/green-lizard/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/green-lizard.webp",
+        "width": 1682
+      }
+    ]
+  },
+  "/images/photography/wildlife/ground-bird.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/ground-bird/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/ground-bird/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/ground-bird.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/kingfisher.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/kingfisher/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/kingfisher/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/kingfisher.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/long-tailed-bird.webp": {
+    "width": 2200,
+    "height": 2751,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/long-tailed-bird/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/long-tailed-bird/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/long-tailed-bird.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/macaque-closeup.webp": {
+    "width": 1824,
+    "height": 2280,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/macaque-closeup/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/macaque-closeup/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/macaque-closeup.webp",
+        "width": 1824
+      }
+    ]
+  },
+  "/images/photography/wildlife/macaque-profile.webp": {
+    "width": 2200,
+    "height": 1467,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/macaque-profile/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/macaque-profile/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/macaque-profile.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/macaque-through-branches.webp": {
+    "width": 1496,
+    "height": 1496,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/macaque-through-branches/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/macaque-through-branches/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/macaque-through-branches.webp",
+        "width": 1496
+      }
+    ]
+  },
+  "/images/photography/wildlife/owl-under-leaves.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/owl-under-leaves/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/owl-under-leaves/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/owl-under-leaves.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/parakeet-portrait.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/parakeet-portrait/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/parakeet-portrait/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/parakeet-portrait.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/parakeet.webp": {
+    "width": 2200,
+    "height": 2200,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/parakeet/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/parakeet/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/parakeet.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/shorebird.webp": {
+    "width": 2200,
+    "height": 1467,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/shorebird/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/shorebird/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/shorebird.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/spoonbills.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/spoonbills/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/spoonbills/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/spoonbills.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/sunbird.webp": {
+    "width": 2200,
+    "height": 1238,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/sunbird/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/sunbird/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/sunbird.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/wading-birds.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/wading-birds/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/wading-birds/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/wading-birds.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/white-eye.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/white-eye/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/white-eye/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/white-eye.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/wood-owl.webp": {
+    "width": 2200,
+    "height": 2751,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/wood-owl/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/wood-owl/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/wood-owl.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/yawning-macaque.webp": {
+    "width": 2200,
+    "height": 1760,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/yawning-macaque/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/yawning-macaque/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/yawning-macaque.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/photography/wildlife/yellow-green-songbird.webp": {
+    "width": 2200,
+    "height": 2750,
+    "variants": [
+      {
+        "src": "/images/responsive/photography/wildlife/yellow-green-songbird/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/photography/wildlife/yellow-green-songbird/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/photography/wildlife/yellow-green-songbird.webp",
+        "width": 2200
+      }
+    ]
+  },
+  "/images/research/Analyzer/gcs.webp": {
+    "width": 1800,
+    "height": 1249,
+    "variants": [
+      {
+        "src": "/images/responsive/research/Analyzer/gcs/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/Analyzer/gcs/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/Analyzer/gcs.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/Analyzer/main_window.webp": {
+    "width": 2387,
+    "height": 1496,
+    "variants": [
+      {
+        "src": "/images/responsive/research/Analyzer/main_window/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/Analyzer/main_window/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/Analyzer/main_window.webp",
+        "width": 2387
+      }
+    ]
+  },
+  "/images/research/Analyzer/radio.webp": {
+    "width": 1800,
+    "height": 1120,
+    "variants": [
+      {
+        "src": "/images/responsive/research/Analyzer/radio/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/Analyzer/radio/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/Analyzer/radio.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/Analyzer/solar.webp": {
+    "width": 1800,
+    "height": 1172,
+    "variants": [
+      {
+        "src": "/images/responsive/research/Analyzer/solar/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/Analyzer/solar/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/Analyzer/solar.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/coronal-height-fit.webp": {
+    "width": 1105,
+    "height": 1430,
+    "variants": [
+      {
+        "src": "/images/responsive/research/coronal-height-fit/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/coronal-height-fit/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/coronal-height-fit.webp",
+        "width": 1105
+      }
+    ]
+  },
+  "/images/research/coronal-paper-cover.webp": {
+    "width": 1275,
+    "height": 1650,
+    "variants": [
+      {
+        "src": "/images/responsive/research/coronal-paper-cover/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/coronal-paper-cover/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/coronal-paper-cover.webp",
+        "width": 1275
+      }
+    ]
+  },
+  "/images/research/coronal-results.webp": {
+    "width": 1105,
+    "height": 1430,
+    "variants": [
+      {
+        "src": "/images/responsive/research/coronal-results/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/coronal-results/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/coronal-results.webp",
+        "width": 1105
+      }
+    ]
+  },
+  "/images/research/cospar-2024/analysis-session-group.webp": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2024/analysis-session-group/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2024/analysis-session-group/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2024/analysis-session-group.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/cospar-2024/certificate-presentation.webp": {
+    "width": 1013,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2024/certificate-presentation/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2024/certificate-presentation/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2024/certificate-presentation.webp",
+        "width": 1013
+      }
+    ]
+  },
+  "/images/research/cospar-2024/computational-session.webp": {
+    "width": 1800,
+    "height": 1239,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2024/computational-session/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2024/computational-session/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2024/computational-session.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/cospar-2024/international-participants.webp": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2024/international-participants/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2024/international-participants/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2024/international-participants.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/cospar-2024/solar-physics-instructor.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2024/solar-physics-instructor/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2024/solar-physics-instructor/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2024/solar-physics-instructor.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/research/cospar-2024/workshop-group.webp": {
+    "width": 1800,
+    "height": 1074,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2024/workshop-group/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2024/workshop-group/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2024/workshop-group.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/cospar-2024/workshop-instructor-portrait.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2024/workshop-instructor-portrait/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2024/workshop-instructor-portrait/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2024/workshop-instructor-portrait.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/research/cospar-2026/certificate-presentation-900.webp": {
+    "width": 900,
+    "height": 600,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/certificate-presentation-900/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/research/cospar-2026/certificate-presentation-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/images/research/cospar-2026/certificate-presentation.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/certificate-presentation/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2026/certificate-presentation/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2026/certificate-presentation.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/cospar-2026/presentation-team-900.webp": {
+    "width": 900,
+    "height": 600,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/presentation-team-900/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/research/cospar-2026/presentation-team-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/images/research/cospar-2026/presentation-team.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/presentation-team/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2026/presentation-team/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2026/presentation-team.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/cospar-2026/teaching-session-900.webp": {
+    "width": 600,
+    "height": 900,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/teaching-session-900/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/research/cospar-2026/teaching-session-900.webp",
+        "width": 600
+      }
+    ]
+  },
+  "/images/research/cospar-2026/teaching-session.webp": {
+    "width": 1200,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/teaching-session/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2026/teaching-session/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2026/teaching-session.webp",
+        "width": 1200
+      }
+    ]
+  },
+  "/images/research/cospar-2026/workshop-colleague-900.webp": {
+    "width": 900,
+    "height": 600,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/workshop-colleague-900/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/research/cospar-2026/workshop-colleague-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/images/research/cospar-2026/workshop-colleague.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/workshop-colleague/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2026/workshop-colleague/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2026/workshop-colleague.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/cospar-2026/workshop-group-900.webp": {
+    "width": 900,
+    "height": 600,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/workshop-group-900/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/research/cospar-2026/workshop-group-900.webp",
+        "width": 900
+      }
+    ]
+  },
+  "/images/research/cospar-2026/workshop-group.webp": {
+    "width": 1800,
+    "height": 1200,
+    "variants": [
+      {
+        "src": "/images/responsive/research/cospar-2026/workshop-group/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/cospar-2026/workshop-group/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/cospar-2026/workshop-group.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/ecallisto-interface.webp": {
+    "width": 1075,
+    "height": 1413,
+    "variants": [
+      {
+        "src": "/images/responsive/research/ecallisto-interface/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/ecallisto-interface/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/ecallisto-interface.webp",
+        "width": 1075
+      }
+    ]
+  },
+  "/images/research/ecallisto-paper-cover.webp": {
+    "width": 1241,
+    "height": 1630,
+    "variants": [
+      {
+        "src": "/images/responsive/research/ecallisto-paper-cover/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/ecallisto-paper-cover/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/ecallisto-paper-cover.webp",
+        "width": 1241
+      }
+    ]
+  },
+  "/images/research/ecallisto-processing.webp": {
+    "width": 1075,
+    "height": 1413,
+    "variants": [
+      {
+        "src": "/images/responsive/research/ecallisto-processing/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/ecallisto-processing/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/ecallisto-processing.webp",
+        "width": 1075
+      }
+    ]
+  },
+  "/images/research/ecallisto-workflow.webp": {
+    "width": 1075,
+    "height": 1413,
+    "variants": [
+      {
+        "src": "/images/responsive/research/ecallisto-workflow/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/ecallisto-workflow/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/ecallisto-workflow.webp",
+        "width": 1075
+      }
+    ]
+  },
+  "/images/research/raman-experimental-setup.webp": {
+    "width": 1075,
+    "height": 1521,
+    "variants": [
+      {
+        "src": "/images/responsive/research/raman-experimental-setup/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/raman-experimental-setup/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/raman-experimental-setup.webp",
+        "width": 1075
+      }
+    ]
+  },
+  "/images/research/raman-report-cover.webp": {
+    "width": 1241,
+    "height": 1754,
+    "variants": [
+      {
+        "src": "/images/responsive/research/raman-report-cover/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/raman-report-cover/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/raman-report-cover.webp",
+        "width": 1241
+      }
+    ]
+  },
+  "/images/research/raman-results.webp": {
+    "width": 1075,
+    "height": 1521,
+    "variants": [
+      {
+        "src": "/images/responsive/research/raman-results/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/raman-results/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/raman-results.webp",
+        "width": 1075
+      }
+    ]
+  },
+  "/images/research/raman-spectroscopy/active-laser-setup.webp": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/images/responsive/research/raman-spectroscopy/active-laser-setup/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/raman-spectroscopy/active-laser-setup/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/raman-spectroscopy/active-laser-setup.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/raman-spectroscopy/laboratory-workstation.webp": {
+    "width": 1012,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/research/raman-spectroscopy/laboratory-workstation/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/raman-spectroscopy/laboratory-workstation/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/raman-spectroscopy/laboratory-workstation.webp",
+        "width": 1012
+      }
+    ]
+  },
+  "/images/research/raman-spectroscopy/optical-setup.webp": {
+    "width": 1800,
+    "height": 1350,
+    "variants": [
+      {
+        "src": "/images/responsive/research/raman-spectroscopy/optical-setup/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/raman-spectroscopy/optical-setup/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/raman-spectroscopy/optical-setup.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/raman-spectroscopy/spectrograph-instrument.webp": {
+    "width": 1350,
+    "height": 1800,
+    "variants": [
+      {
+        "src": "/images/responsive/research/raman-spectroscopy/spectrograph-instrument/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/raman-spectroscopy/spectrograph-instrument/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/raman-spectroscopy/spectrograph-instrument.webp",
+        "width": 1350
+      }
+    ]
+  },
+  "/images/research/space-weather-dashboard/alerts.webp": {
+    "width": 1800,
+    "height": 1306,
+    "variants": [
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/alerts/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/alerts/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/space-weather-dashboard/alerts.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/space-weather-dashboard/cme-forecast.webp": {
+    "width": 1800,
+    "height": 2537,
+    "variants": [
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/cme-forecast/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/cme-forecast/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/space-weather-dashboard/cme-forecast.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/space-weather-dashboard/event-timeline.webp": {
+    "width": 1800,
+    "height": 2288,
+    "variants": [
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/event-timeline/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/event-timeline/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/space-weather-dashboard/event-timeline.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/space-weather-dashboard/monitoring-overview.webp": {
+    "width": 1800,
+    "height": 2403,
+    "variants": [
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/monitoring-overview/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/monitoring-overview/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/space-weather-dashboard/monitoring-overview.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/space-weather-dashboard/radio-burst-analysis.webp": {
+    "width": 1800,
+    "height": 3725,
+    "variants": [
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/radio-burst-analysis/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/radio-burst-analysis/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/space-weather-dashboard/radio-burst-analysis.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/research/space-weather-dashboard/sdo-analysis.webp": {
+    "width": 1800,
+    "height": 918,
+    "variants": [
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/sdo-analysis/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/responsive/research/space-weather-dashboard/sdo-analysis/960.webp",
+        "width": 960
+      },
+      {
+        "src": "/images/research/space-weather-dashboard/sdo-analysis.webp",
+        "width": 1800
+      }
+    ]
+  },
+  "/images/sahan-liyanage-portrait.webp": {
+    "width": 960,
+    "height": 958,
+    "variants": [
+      {
+        "src": "/images/responsive/sahan-liyanage-portrait/480.webp",
+        "width": 480
+      },
+      {
+        "src": "/images/sahan-liyanage-portrait.webp",
+        "width": 960
+      }
+    ]
+  }
+}

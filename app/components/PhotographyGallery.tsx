@@ -1,5 +1,7 @@
 "use client";
 
+import { ResponsiveImage } from "./ResponsiveImage";
+
 import { Icon } from "./Icons";
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -20,8 +22,10 @@ const filters: { label: string; value: GalleryFilter }[] = [
 
 function GalleryVisual({ item, large = false }: { item: GalleryItem; large?: boolean }) {
   return (
-    <img
+    <ResponsiveImage
       src={item.image}
+      srcSet={large ? `${item.image} ${item.width}w` : undefined}
+      sizes={large ? "100vw" : "(max-width: 600px) calc(100vw - 48px), (max-width: 1100px) calc((100vw - 62px) / 2), 390px"}
       alt={item.alt}
       width={item.width}
       height={item.height}

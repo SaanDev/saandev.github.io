@@ -24,6 +24,26 @@ npm test
 
 `npm test` creates a production build and verifies every primary page renders.
 
+## Image optimization
+
+Public raster images use WebP. Keep SVG icons as vectors. Use
+`ResponsiveImage` for website images: it supplies intrinsic dimensions, lazy
+loading, asynchronous decoding, and static responsive WebP candidates. Set
+`sizes` to match the layout; reserve eager loading and high priority for the
+homepage portrait. The photography viewer retains the full-size originals.
+
+After adding or replacing images in `public/images`, regenerate variants and
+the committed image manifest (requires Python 3 and Pillow):
+
+```bash
+python3 scripts/generate_responsive_images.py
+```
+
+The generator preserves originals and creates 480px and 960px versions without
+upscaling. Scientific plots and screenshots use lossless WebP encoding after
+resizing. Commit `public/images/responsive` and `app/data/image-manifest.json`
+alongside the source images; deployment needs no runtime image service.
+
 ## GitHub Pages deployment
 
 The `Deploy Next.js site to Pages` workflow builds a static export and deploys

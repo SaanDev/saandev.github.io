@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "./components/ResponsiveImage";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Icon } from "./components/Icons";
@@ -39,7 +40,7 @@ export default function HomePage() {
           <SocialLinks className="intro-profiles" />
         </div>
         <div className="intro-image-wrap">
-          <img className="intro-portrait" src="/images/sahan-liyanage-portrait.webp" width="960" height="958" alt="Sahan S Liyanage" fetchPriority="high" />
+          <ResponsiveImage loading="eager" sizes="(max-width: 820px) calc(100vw - 68px), 430px" className="intro-portrait" src="/images/sahan-liyanage-portrait.webp" width="960" height="958" alt="Sahan S Liyanage" fetchPriority="high" />
         </div>
       </section>
 
@@ -62,7 +63,7 @@ export default function HomePage() {
           </div>
           <article className="featured-tool">
             <a className="featured-tool-image" href={siteConfig.eCallistoUrl} target="_blank" rel="noreferrer" aria-label="Visit e-CALLISTO FITS Analyzer website">
-              <img src="/images/research/Analyzer/radio.webp" alt="e-CALLISTO FITS Analyzer displaying a solar radio burst spectrum" loading="lazy" />
+              <ResponsiveImage src="/images/research/Analyzer/radio.webp" alt="e-CALLISTO FITS Analyzer displaying a solar radio burst spectrum" loading="lazy" />
             </a>
             <div className="featured-tool-copy">
               <p className="eyebrow">Scientific software · Lead developer</p><h3>e-CALLISTO FITS Analyzer</h3>
@@ -89,7 +90,7 @@ export default function HomePage() {
             <Link className="text-link" href="/beyond">Explore Beyond <Icon name="arrow-right" /></Link>
           </div>
           <div className="home-photo-grid">{beyond.map((item) => <Link href={item.href} key={item.href} aria-label={`Explore ${item.title.toLowerCase()}`}>
-            <img src={item.image} alt={item.alt} loading="lazy" /><span className="beyond-preview-label">{item.title}<Icon name="arrow-up-right" /></span>
+            <ResponsiveImage sizes="(max-width: 540px) calc(100vw - 48px), (max-width: 820px) 30vw, 390px" src={item.image} alt={item.alt} loading="lazy" /><span className="beyond-preview-label">{item.title}<Icon name="arrow-up-right" /></span>
           </Link>)}</div>
         </div>
       </section>

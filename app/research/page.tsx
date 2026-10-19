@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "../components/ResponsiveImage";
 import { Icon } from "../components/Icons";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -109,8 +110,8 @@ export default function ResearchPage() {
 
                 {project.id === "space-weather-dashboard" && <DashboardShowcase />}
                 {project.id === "ecallisto-fits-analyzer" && <div className="analyzer-gallery">
-                  <img src="/images/research/Analyzer/solar.webp" alt="Solar image analysis in e-CALLISTO FITS Analyzer" loading="lazy" />
-                  <img src="/images/research/Analyzer/gcs.webp" alt="Coronal mass ejection modelling in e-CALLISTO FITS Analyzer" loading="lazy" />
+                  <ResponsiveImage src="/images/research/Analyzer/solar.webp" alt="Solar image analysis in e-CALLISTO FITS Analyzer" loading="lazy" />
+                  <ResponsiveImage src="/images/research/Analyzer/gcs.webp" alt="Coronal mass ejection modelling in e-CALLISTO FITS Analyzer" loading="lazy" />
                 </div>}
 
                 {project.gallery && (
@@ -125,7 +126,7 @@ export default function ResearchPage() {
                           className={`project-gallery-image project-gallery-image-${image.layout}`}
                           key={image.src}
                         >
-                          <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+                          <ResponsiveImage src={image.src} alt={image.alt} loading="lazy" decoding="async" />
                         </figure>
                       ))}
                     </div>
@@ -222,7 +223,7 @@ export default function ResearchPage() {
             <div className="cospar-2026-grid">
               {cospar2026Images.map((image) => (
                 <figure className={`cospar-2026-photo cospar-2026-photo-${image.layout}`} key={image.file}>
-                  <img
+                  <ResponsiveImage
                     src={`/images/research/cospar-2026/${image.file}.webp`}
                     srcSet={`/images/research/cospar-2026/${image.file}-900.webp ${image.layout === "portrait" ? 600 : 900}w, /images/research/cospar-2026/${image.file}.webp ${image.width}w`}
                     sizes={image.layout === "wide" ? "(max-width: 820px) calc(100vw - 36px), (max-width: 1248px) calc(100vw - 48px), 1200px" : "(max-width: 820px) calc(100vw - 36px), (max-width: 1248px) calc((100vw - 62px) / 2), 593px"}
@@ -251,7 +252,7 @@ export default function ResearchPage() {
                   className={`workshop-gallery-image workshop-gallery-image-${image.layout}`}
                   key={image.src}
                 >
-                  <img src={image.src} alt={image.alt} loading="lazy" decoding="async" />
+                  <ResponsiveImage src={image.src} alt={image.alt} loading="lazy" decoding="async" />
                 </figure>
               ))}
             </div>

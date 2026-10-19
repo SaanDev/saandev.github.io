@@ -1,3 +1,4 @@
+import { ResponsiveImage } from "./ResponsiveImage";
 type PlaceholderMediaProps = {
   label: string;
   className?: string;
@@ -16,7 +17,7 @@ export function PlaceholderMedia({
   if (src) {
     return (
       <div className={`media-frame has-image ${className}`}>
-        <img
+        <ResponsiveImage
           src={src}
           alt={alt}
           loading={eager ? "eager" : "lazy"}
