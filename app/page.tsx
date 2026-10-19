@@ -18,9 +18,9 @@ const skills = [
 ];
 
 const beyond = [
-  { href: "/beyond/photography", title: "Photography", image: "/images/photography/astrophotography/milky-way-road.webp", alt: "The Milky Way above a quiet road" },
-  { href: "/beyond/music", title: "Music", image: "/images/personal/music-naada-nu-vocal-performance.webp", alt: "Sahan singing on stage" },
-  { href: "/beyond/outreach", title: "Outreach", image: "/images/personal/astronomy-public-telescope.webp", alt: "Students taking part in an astronomy programme" },
+  { href: "/beyond/photography", title: "Photography" },
+  { href: "/beyond/music", title: "Music" },
+  { href: "/beyond/outreach", title: "Outreach" },
 ];
 
 export default function HomePage() {
@@ -90,7 +90,7 @@ export default function HomePage() {
             <Link className="text-link" href="/beyond">Explore Beyond <Icon name="arrow-right" /></Link>
           </div>
           <div className="home-photo-grid">{beyond.map((item) => <Link href={item.href} key={item.href} aria-label={`Explore ${item.title.toLowerCase()}`}>
-            <ResponsiveImage sizes="(max-width: 540px) calc(100vw - 48px), (max-width: 820px) 30vw, 390px" src={item.image} alt={item.alt} loading="lazy" /><span className="beyond-preview-label">{item.title}<Icon name="arrow-up-right" /></span>
+            <span className="beyond-preview-label">{item.title}<Icon name="arrow-up-right" /></span>
           </Link>)}</div>
         </div>
       </section>

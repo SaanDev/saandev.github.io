@@ -162,8 +162,11 @@ test("personal stories and photography are organized into their dedicated pages"
 
   const home = await homeResponse.text();
   assert.match(home, /Beyond the classroom/);
-  assert.match(home, /milky-way-road\.webp/);
-  assert.match(home, /music-naada-nu-vocal-performance\.webp/);
+  const homeBeyond = home.match(/<section[^>]*id="beyond"[\s\S]*?<\/section>/)?.[0] ?? "";
+  for (const topic of ["photography", "music", "outreach"]) {
+    assert.ok(homeBeyond.includes(`href="/beyond/${topic}"`));
+  }
+  assert.doesNotMatch(homeBeyond, /<img\b/);
   assert.match(home, /https:\/\/ecallistoanalyzer\.org\//);
   assert.doesNotMatch(home.replace(/<(svg|script|style)\b[\s\S]*?<\/\1>/g, "").replace(/<[^>]*>/g, ""), /GPA|3\.57|Second Class|referee/);
   const nav = home.match(/<nav id="primary-navigation"[\s\S]*?<\/nav>/)?.[0] ?? "";
